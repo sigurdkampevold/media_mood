@@ -29,6 +29,9 @@ url: https://sigurdkampevold.github.io # the base hostname & protocol for your s
 twitter_username: jekyllrb
 github_username: sigurdkampevold
 
+# Added in hope of running
+encoding: utf-8
+
 # Build settings
 theme: minimal-mistakes-jekyll
 minimal_mistakes_skin: default
@@ -54,3 +57,6 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+sass:
+  add_charset: true
