@@ -37,6 +37,7 @@ minimal_mistakes_skin: default
 plugins:
   - jekyll-feed
   - jekyll-include-cache
+include: ["_pages"]
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
