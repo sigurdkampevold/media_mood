@@ -8,6 +8,11 @@ header:
   image: /images/md-mahdi-8SQ_wsDC0uY-unsplash.jpg
   caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
 permalink: /
+title: Data Story
 ---
 
-**_This will be our data story_**
+## What Should We Do?
+Here, we will outline our data story.
+
+## How Should We Do It?
+And here, we will introduce our methods.
