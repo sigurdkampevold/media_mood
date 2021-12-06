@@ -11,8 +11,10 @@ permalink: /
 title: Data Story
 ---
 
-## What Should We Do?
+## Where We Are
+
 Here, we will outline our data story.
 
 ## How Should We Do It?
+
 And here, we will introduce our methods.
