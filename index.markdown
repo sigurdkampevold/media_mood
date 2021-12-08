@@ -5,6 +5,7 @@
 layout: single
 classes: wide
 header:
+  overlay-filter: 0.5
   image: /images/md-mahdi-8SQ_wsDC0uY-unsplash.jpg
   caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
 permalink: /
@@ -25,6 +26,13 @@ We aim to present our findings on the abovementioned topics in the upcoming data
 
 Sentiment analyses aim to identify and extract subjective information in text, telling whether the phrase is positive, negative, or neutral. Using libraries, one could input a sentence, such as a quote from the media, and get a score. This will be our primary tool in finding trends in the mood of the media.
 
-![](./images/1*_JW1JaMpK_fVGld8pd1_JQ.gif)
+![](./images/sentiment_tweets.gif)
 
-<figcaption style="position:relative; left: 200px">Source: Hackernoon</figcaption>
+<figcaption style="position: relative; left: 200px">Source: Hackernoon</figcaption>
+
+- Eksemplifisere quotes -- Compound, Subjectivity
+- This is Our Data -- Milestone 2
+- Does the Mood in the Media Differ Throughout Time?
+- Does the Mood in the Media Differ Across Media Outlets?
+- Do Men and Women Differ in Mood?
+- Are Politicans More Negative or Positive Than Their Peers?
