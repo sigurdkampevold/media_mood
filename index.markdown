@@ -38,7 +38,7 @@ Sentiment analyses aim to identify and extract subjective information in text, t
 - Are Politicans More Negative or Positive Than Their Peers?
 
 
-Scatterplot polarity versus subjectivity (Asbjørn)
+
 {% include_relative /_plots/scatterplot_medias.html %}
 
 
