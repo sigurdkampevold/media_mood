@@ -3,8 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: single
-# classes: wide
-title: An Investigation of the Mood in the Media
+title: "An Investigation of the Mood in the Media"
 header:
   overlay_filter: 0.3
   overlay_image: /images/md-mahdi-8SQ_wsDC0uY-unsplash.jpg
@@ -63,7 +62,7 @@ On the other hand, the above quotation receives a compound score of $0.8176$, wh
      </blockquote>
 </div>
 
-As you might have thought of, the art of dedicating compound scores to quotations is not perfect. Our tool, *Vader* represents each document or text as a bag of words. On the other hand, the algorithm is likely not to discover the underlying context of a quotation, and could thus mark a quotation of positive, even if it is considering a deeply serious matter. 
+As you might have thought of, the art of dedicating compound scores to quotations is not perfect. Our tool, *Vader* represents each document or text as a bag of words, without capturing the information in word proximity or context. Moreover, *Vader* gives additional weight to special words, for instance words written in uppercase or emojis. The methods are based on research done with actual humans, and are therefore not considered a machine learning method. On the other hand, the algorithm is likely not to discover the underlying context of a quotation, and could thus mark a quotation of positive, even if it is considering a deeply serious matter. 
 
 ##### *Subjectivity Scores*
 
