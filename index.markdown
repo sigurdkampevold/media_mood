@@ -3,7 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: single
-classes: wide
+# classes: wide
 header:
   overlay-filter: 0.5
   image: /images/md-mahdi-8SQ_wsDC0uY-unsplash.jpg
@@ -22,7 +22,7 @@ Based on our initial questions, our thoughts wandered into what we could say spe
 
 We aim to present our findings on the abovementioned topics in the upcoming data story. Starting with the QuoteBank data set provided by **dlab @ EPFL**, we will utilize information from Wikidata to research our questions by sentiment analyses.
 
-#### _Sentiments Analyses_ -- What are They?
+### _Sentiments Analyses_ -- What Are They?
 
 Sentiment analyses aim to identify and extract subjective information in text, telling whether the phrase is positive, negative, or neutral. Using libraries, one could input a sentence, such as a quote from the media, and get a score. This will be our primary tool in finding trends in the mood of the media.
 
@@ -30,16 +30,44 @@ Sentiment analyses aim to identify and extract subjective information in text, t
 
 <figcaption style="position: relative; left: 200px">Source: Hackernoon</figcaption>
 
-In our analyses, we have utilized the *compound score* of the quotes in Quotebank. This is a measure of the total sentiment of a quote, indicating the sum of positive, negative and neutral scores, eventually normalized to be a value between $-1$ and $1$
+##### *Compound Scores* -- Huh?
 
-- Eksemplifisere quotes -- Compound, Subjectivity
+In our analyses, we have utilized the _compound score_ of the quotes in Quotebank. This is a measure of the total sentiment of a quote, indicating the sum of positive, negative and neutral scores of the words in a text, eventually normalized to be a value between $-1$ and $1$. A score of $-1$ indicates the most negative compound, while a score of $+1$ indicates the most positive.
+
+<div>
+    <blockquote> 
+        Fear itself is always more dangerous than the thing you fear. The fear of death is worse than dying. Fear takes you hostage and kills your resistance. Nowhere is fear more fatal than in prison.
+        <cite> Mehmet Altan </cite>
+     </blockquote>
+</div>
+
+The above quotation has a compound score of $-0.9891$, indicating that it is quite negative, as you probably could predict when reading it.
+
+<div>
+    <blockquote> 
+        I was glad to see him, and I'd like to think he was glad to see me.
+        <cite> L. Kennedy </cite>
+     </blockquote>
+</div>
+
+On the other hand, the above quotation receives a compound score of $0.8176$, which is reasonable as it contains some light, positive words. While these quotations show the extremes on the compound scale, the majority of quotations lie in the middle. For instance, the following quotation gets a score of $0.00$, and is therefore considered absoluteley neutral:
+
+<div>
+    <blockquote> 
+        There's a fact of life. The Assad regime has stabilized the situation in much of Syria.
+        <cite> Eran Lerman </cite>
+     </blockquote>
+</div>
+
+As you might have thought of, the art of dedicating compound scores to quotations is not perfect. The machine learning methods generating such scores give different aspects of the given text a score and averaging it over the sentence. Such an algorithm could be sensitive for some extremely positive or negative words, while other while be given a lower weight. On the other hand, the algorithm is likely not to discover the underlying context of a quotation, and could thus mark a quotation of positive, even if it is considering a deeply serious matter. 
+
+##### *Subjectivity Scores*
+
 - This is Our Data -- Milestone 2
 - Does the Mood in the Media Differ Throughout Time?
 - Does the Mood in the Media Differ Across Media Outlets?
 - Do Men and Women Differ in Mood?
 - Are Politicans More Negative or Positive Than Their Peers?
-
-
 
 {% include_relative /_plots/scatterplot_medias.html %}
 
@@ -48,6 +76,3 @@ In our analyses, we have utilized the *compound score* of the quotes in Quoteban
 {% include_relative /_plots/polarity_distribution_categories_same_plot.html %}
 
 {% include_relative /_plots/polarity_distribution_media.html %}
-
-
-

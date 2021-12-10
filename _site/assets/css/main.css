@@ -240,7 +240,7 @@ p, pre, blockquote, ul, ol, dl, figure, table, fieldset { orphans: 3; widows: 3;
 abbr[title], abbr[data-original-title] { text-decoration: none; cursor: help; border-bottom: 1px dotted #3d4144; }
 
 /* blockquotes */
-blockquote { margin: 2em 1em 2em 0; padding-left: 1em; padding-right: 1em; font-style: italic; border-left: 0.25em solid #6f777d; }
+blockquote { margin: 2em 1em 2em 0; padding-left: 1em; padding-right: 1em; font-style: italic; } /* border-left: 0.25em solid #6f777d; */
 blockquote cite { font-style: italic; }
 blockquote cite:before { content: "\2014"; padding-right: 5px; }
 
