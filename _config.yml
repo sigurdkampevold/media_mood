@@ -37,7 +37,13 @@ minimal_mistakes_skin: default
 plugins:
   - jekyll-feed
   - jekyll-include-cache
-include: ["_pages"]
+
+# Added the file "./_includes/scripts.html" and included it in order to support LaTeX
+include: ["_pages", "./_includes/scripts.html"]
+
+# Added in order to use LaTeX
+markdown: kramdown
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

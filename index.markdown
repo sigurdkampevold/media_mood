@@ -30,6 +30,8 @@ Sentiment analyses aim to identify and extract subjective information in text, t
 
 <figcaption style="position: relative; left: 200px">Source: Hackernoon</figcaption>
 
+In our analyses, we have utilized the *compound score* of the quotes in Quotebank. This is a measure of the total sentiment of a quote, indicating the sum of positive, negative and neutral scores, eventually normalized to be a value between $-1$ and $1$
+
 - Eksemplifisere quotes -- Compound, Subjectivity
 - This is Our Data -- Milestone 2
 - Does the Mood in the Media Differ Throughout Time?
