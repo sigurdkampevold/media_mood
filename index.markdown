@@ -90,8 +90,10 @@ As you might have thought of, the art of dedicating compound scores to quotation
 **Weekdays**
 {% include_relative /_plots/boxplot_day.html %}
 
+Her skal jeg fikser slikt at counten er i prosent ikke absoluttverdi.
 {% include_relative /_plots/hist_monfri.html %}
 
+Ditto.
 {% include_relative /_plots/hist_monfri_blob.html %}
 
 **Months**
