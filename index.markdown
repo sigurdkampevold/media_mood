@@ -43,3 +43,6 @@ Sentiment analyses aim to identify and extract subjective information in text, t
 
 {% include_relative /_plots/polarity_distribution_categories.html %}
 
+{% include_relative /_plots/polarity_distribution_media.html %}
+
+
