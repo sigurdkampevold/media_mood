@@ -72,6 +72,33 @@ As you might have thought of, the art of dedicating compound scores to quotation
 - Do Men and Women Differ in Mood?
 - Are Politicans More Negative or Positive Than Their Peers?
 
+
+#### *The data*
+
+{% include_relative /_plots/line_dig.html %}
+
+{% include_relative /_plots/line_comp.html %}
+
+{% include_relative /_plots/pol_dist.html %}
+
+{% include_relative /_plots/pol_dist.html %}
+
+{% include_relative /_plots/sub_dist.html %}
+
+#### *Time analysis*
+
+**Weekdays**
+{% include_relative /_plots/boxplot_day.html %}
+
+{% include_relative /_plots/hist_monfri.html %}
+
+{% include_relative /_plots/hist_monfri_blob.html %}
+
+**Months**
+{% include_relative /_plots/boxplot_month.html %}
+
+##### *Media*
+
 {% include_relative /_plots/scatterplot_medias.html %}
 
 {% include_relative /_plots/polarity_distribution_categories.html %}
