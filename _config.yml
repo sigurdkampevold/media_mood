@@ -38,8 +38,8 @@ plugins:
   - jekyll-feed
   - jekyll-include-cache
 
-# Added the file "./_includes/scripts.html" and included it in order to support LaTeX
-include: ["_pages", "./_includes/scripts.html"]
+# Added the file "./_includes/scripts.html" and included it in order to support LaTeX, as well as "assets"
+include: ["assets", "_pages", "./_includes/scripts.html"]
 
 # Added in order to use LaTeX
 markdown: kramdown
