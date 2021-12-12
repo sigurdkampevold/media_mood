@@ -1275,3 +1275,5 @@ body { display: -webkit-box; display: -ms-flexbox; display: flex; min-height: 10
 blockquote { margin: 1em 1em 1em 0; padding-left: 1em; padding-right: 1em; font-style: italic; border-left: 0.25em solid #ffffff; border-top: 0.25em solid #dbdbdb; border-bottom: 0.25em solid #dbdbdb; }
 
 #main { clear: both; margin-left: auto; margin-right: auto; padding-left: 1em; padding-right: 1em; -webkit-animation: intro 0.3s both; animation: intro 0.3s both; max-width: 100%; -webkit-animation-delay: 0.15s; animation-delay: 0.15s; width: 1400px; }
+
+.feature__wrapper { clear: both; margin-bottom: 2em; border-bottom: 1px solid #f2f3f3; max-width: 100%; width: 1400px; }

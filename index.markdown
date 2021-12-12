@@ -3,31 +3,31 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: single
-title: "An Investigation of the Mood in the Media"
+title: "I Can Teach You a Thing or Two About Mood"
 header:
   overlay_filter: 0.3
   overlay_image: /images/md-mahdi-8SQ_wsDC0uY-unsplash.jpg
   caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
 permalink: /
 intro:
-  - excerpt: "Here we will write a cool quote or another motivational saying for our data story. Looking forward to it!"
+  - excerpt: "*The most important decision you take is to be in a good mood* -- Voltaire"
 ---
 
 {% include feature_row id="intro" type="center" %}
 
 ## Where We Started
 
-_People's moods differ throughout time_. Sometimes, we are affected by personal matters, social affairs, or the weather. Other times, more prominent aspects might affect our mood; we can be affected by the outcome of political elections, international disputes, or long-lasting pandemics. However, we constantly talk about our mood and its causes.
+_People's moods differ throughout time_. Sometimes, we are affected by personal matters, social affairs, or the weather. Other times, more prominent aspects might affect our mood; we can be affected by the outcome of political elections, international disputes, or long-lasting pandemics. However, we constantly talk about our mood and its causes, and we might be affected by what we read in the media.
 
 Provided with the QuoteBank data set, we became interested in what it could reveal about the truth in the everyday talk about our mood. For example, does the temper become better towards the weekend, or do we all love Mondays deep inside? As the weather probably affects our mood, is the mood better during the summer and worse when the cold hits us in the winter? Moreover, as the data set consists of quotes from the media, what can we say about the trends of the mood in the media throughout time?
 
-Based on our initial questions, our thoughts wandered into what we could say specifically about the mood in the media. As the media sets the agenda for the public debate, it is interesting to see how much positivity and negativity reach the readers' minds. Which media outlets provide us with the most positivity, and which are more negative? Moreover, can we see any differences across the subsets of speakers in the data set? For example, are politicians in position more positive in their quotes, and are those in opposition more negative? Do women tend to be more optimistic than their peers?
+Based on our initial questions, our thoughts wandered into what we could say specifically about the mood in the media. As the media sets the agenda for the public debate, it is interesting to see how much positivity and negativity reach the readers' minds. Which media outlets provide us with the most positivity, and which are more negative? Moreover, can we see any differences across the subsets of speakers in the data set? For example, are politicians more positive in their quotes than others? Do women tend to be more optimistic than their peers?
 
 We aim to present our findings on the abovementioned topics in the upcoming data story. Starting with the QuoteBank data set provided by **dlab @ EPFL**, we will utilize information from Wikidata to research our questions by sentiment analyses.
 
 ### _Sentiments Analyses_ -- What Are They?
 
-Sentiment analyses aim to identify and extract subjective information in text, telling whether the phrase is positive, negative, or neutral. Using libraries, one could input a sentence, such as a quote from the media, and get a score. This will be our primary tool in finding trends in the mood of the media.
+Sentiment analyses aim to identify and extract subjective information in text, telling whether a phrase is positive, negative, or neutral. Using libraries, one could input a sentence, such as a quote from the media, and get a score. This will be our primary tool in finding trends in the mood of the media.
 
 <p style="text-align: center">
 <img src="./images/sentiment_tweets.gif" style="position: relative; ">
@@ -50,11 +50,11 @@ The above quotation has a compound score of $-0.9891$, indicating that it is qui
 <div>
     <blockquote> 
         I was glad to see him, and I'd like to think he was glad to see me.
-        <cite> L. Kennedy </cite>
+        <cite> <br>L. Kennedy </cite>
      </blockquote>
 </div>
 
-On the other hand, the above quotation receives a compound score of $0.8176$, which is reasonable as it contains some light, positive words. While these quotations show the extremes on the compound scale, the majority of quotations lie in the middle. For instance, the following quotation gets a score of $0.00$, and is therefore considered absoluteley neutral:
+On the other hand, the above quotation receives a compound score of $0.8176$, which is reasonable as it contains some light, positive words. While these quotations show the extremes on the compound scale, the majority of quotations lie in the middle. For instance, the following quotation gets a score of $0.00$, and is therefore considered absolutely neutral:
 
 <div>
     <blockquote> 
@@ -63,9 +63,36 @@ On the other hand, the above quotation receives a compound score of $0.8176$, wh
      </blockquote>
 </div>
 
-As you might have thought of, the art of dedicating compound scores to quotations is not perfect. Our tool, _Vader_ represents each document or text as a bag of words, without capturing the information in word proximity or context. Moreover, _Vader_ gives additional weight to special words, for instance words written in uppercase or emojis. The methods are based on research done with actual humans, and are therefore not considered a machine learning method. On the other hand, the algorithm is likely not to discover the underlying context of a quotation, and could thus mark a quotation of positive, even if it is considering a deeply serious matter.
+As you might have thought of, the art of dedicating compound scores to quotations is not perfect. Our tool, _Vader_, represents each document or text as a bag of words, without capturing the information in word proximity or context. Hence, a lot of the contextual information is lost. Moreover, _Vader_ gives additional weight to special words and phrases, for instance words written in uppercase or emojis. The methods are based on research done with actual humans, and are therefore not considered a machine learning method. On the other hand, the algorithm is likely not to discover the underlying context of a quotation, and could thus mark a quotation of positive, even if it is considering a deeply serious matter, such as we could see above.
 
-##### _Subjectivity Scores_
+##### _Subjectivity Scores_ -- Uhm?
+
+To make our analyses richer, we will also utilize a measure of _subjectivity_. Here, we use the _TextBlob_ library to compute the subjectivity scores of the quotes in Quotebank, indicating whether a quote's content is subjective, objective or somewhere inbetween. A subjectivity score of $1.00$ indicate the most subjective quotes, while a score of $0.00$ indicate objectivity. Therefore, the subjectivity scores indicate the amount of personal opinions and factual information contained in a text, phrase or quote.
+
+<div>
+  <blockquote>
+    Think of that. That crazy Nancy. She is crazy. And shifty Schiff. How about this guy? He makes up my conversation, which was perfect. He makes up my conversation. He sees what I said. It doesn't play well because it was perfect.
+    <cite> Donald Trump </cite>
+  </blockquote>
+</div>
+
+Let's consider subjectivity score of the above quote. As the speaker of the quote is Donald Trump, you might not be surprised that it receives a subjectivity score of $1.00$. Actually, a large amount of the quotes in Quotebank receives high subjectivity scores, simply because they are communicating the opinions of the speaker. On the other hand, the following quote receives a subjectivity score of $0.00$. This is reasonable as it, for most of us, represent an objective fact:
+
+<div>
+  <blockquote>
+    Boris Johnson got 43 percent of the vote.
+    <cite> David Lammy </cite>
+  </blockquote>
+</div>
+
+As you might have guessed, computing subjectivity scores is not a precise science either. As _Vader_, _TextBlob_ consider texts as bags of words, meaning that it doesn't capture the entire context. Thus, _TextBlob_ links words to their probable subjectivity, and averages over the phrase. In addition, the tool looks at _intensity_, determining whether a word affect the next, e.g., adverbs like _very_. However, as the library doesn't capture the entire context and averages the subjectivity scores of words over a phrase, we migth discover some weird results. For instance, it is probably not reasonable, at least for most of us, that the following quote, receives a subjectivity score of $0.00$, indicating that it is objective:
+
+<div>
+  <blockquote>
+    He's fallen asleep. He has no idea what the hell he's doing or saying.
+    <cite> Donald Trump about Joe Biden </cite>
+  </blockquote>
+</div>
 
 - This is Our Data -- Milestone 2
 - Does the Mood in the Media Differ Throughout Time?
@@ -108,3 +135,5 @@ Ditto.
 {% include_relative /_plots/polarity_distribution_categories_same_plot.html %}
 
 {% include_relative /_plots/polarity_distribution_media.html %}
+
+When concluding on mood through the week, we could use the following Google search: _Does the mood get better towards the weekend?_, as it gives some interesting researchs.
