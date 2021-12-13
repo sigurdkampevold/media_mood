@@ -10,7 +10,7 @@ header:
   caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
 permalink: /
 intro:
-  - excerpt: "*The most important decision you take is to be in a good mood* -- Voltaire"
+  - excerpt: "*The most important decision you take is to be in a good mood.* -- Voltaire"
 ---
 
 {% include feature_row id="intro" type="center" %}
@@ -23,9 +23,18 @@ Provided with the QuoteBank data set, we became interested in what it could reve
 
 Based on our initial questions, our thoughts wandered into what we could say specifically about the mood in the media. As the media sets the agenda for the public debate, it is interesting to see how much positivity and negativity reach the readers' minds. Which media outlets provide us with the most positivity, and which are more negative? Moreover, can we see any differences across the subsets of speakers in the data set? For example, are politicians more positive in their quotes than others? Do women tend to be more optimistic than their peers?
 
-We aim to present our findings on the abovementioned topics in the upcoming data story. Starting with the QuoteBank data set provided by **dlab @ EPFL**, we will utilize information from Wikidata to research our questions by sentiment analyses.
+We aim to present our findings on the abovementioned topics in the upcoming data story. Starting with the [QuoteBank](https://dlab.epfl.ch/people/west/pub/Vaucher-Spitz-Catasta-West_WSDM-21.pdf) data set provided by **dlab @ EPFL**, we will utilize information from Wikidata to research our questions by sentiment analyses.
 
 ## What We Have
+
+#### Quotebank
+
+The Quotebank data set provides quotes in the media from more than a decade, having 178 million quotations from 2008 to 2020 attributed to their resepctive speakers. Using machine learning methods, **dlab @ EPFL** has build a framework for recognizing and attributing quotations from media articles, thus building the data set. However, we have only utilized quotations from 2015 to 2020, distributed through the years as in the following diagram:
+
+{% include_relative /_plots/line_dig.html %}
+
+As you could see, there are some significant "holes" in the data set in 2016, having significantly less quotations than the majority of the period.
+
 
 ## _Sentiments Analyses_ -- What Are They?
 
@@ -52,7 +61,7 @@ The above quotation has a compound score of $-0.9891$, indicating that it is qui
 <div>
     <blockquote> 
         I was glad to see him, and I'd like to think he was glad to see me.
-        <cite> <br>L. Kennedy </cite>
+        <cite> L. Kennedy </cite>
      </blockquote>
 </div>
 
@@ -103,8 +112,6 @@ As you might have guessed, computing subjectivity scores is not a precise scienc
 - Are Politicans More Negative or Positive Than Their Peers?
 
 #### _The data_
-
-{% include_relative /_plots/line_dig.html %}
 
 {% include_relative /_plots/line_comp.html %}
 
