@@ -119,11 +119,11 @@ So, after looking at some examples of quotes and their respective compound and s
 
 {% include_relative /_plots/comp_dist.html %}
 
-Not surprising, the distribution is heavily centered around at a compound score of $0.0$. As the compound score of *Vader* is computed through averaging, this seems reasonable. However, we do see that the distribution seems to be more heavy on the positive values, maybe indicating that the quotations in the media are more positive than negative, although neutrality sweeps the board. 
+Not surprising, the distribution is heavily centered around at a compound score of $0.0$. As the compound score of _Vader_ is computed through averaging, this seems reasonable. However, we do see that the distribution seems to be more heavy on the positive values, maybe indicating that the quotations in the media are more positive than negative, although neutrality sweeps the board.
 
 {% include_relative /_plots/sub_dist.html %}
 
-Over to the subjectivity, a score of $0.0$ is once again the most frequent one. This could maybe be more surprising, as quotations and citations often refer to the opinions of the speaker. However, it seems like *TextBlob*'s methods overwhelmingly often end up with a score of $0.0$. Initially, one might think that as *TextBlob* doesn't capture the underlying context, it doesn't extract the subjectivity neither. Eventually, we do also mind that the remaining distribution is centered around $0.5$, but also having a clear upswing towards $1.0$.
+Over to the subjectivity, a score of $0.0$ is once again the most frequent one. This could maybe be more surprising, as quotations and citations often refer to the opinions of the speaker. However, it seems like _TextBlob_'s methods overwhelmingly often end up with a score of $0.0$. Initially, one might think that as _TextBlob_ doesn't capture the underlying context, it doesn't extract the subjectivity neither. Eventually, we do also mind that the remaining distribution is centered around $0.5$, but also having a clear upswing towards $1.0$.
 
 #### _Mood across time -- Do we really love Mondays deep inside?_
 
@@ -133,7 +133,7 @@ As previously mentioned, we were curious about how the mood differs throughout t
 
 The statistical tests we will utilize are t-test and a variant named Welch's t-test. Shortly described, these tests test whether the mean of two groups is statistically significantly different. They will both be used for hypothesis testing, namely testing the null hypothesis:
 
-****H0:** The mean of group 1 equals the mean of group 2.**
+\***\*H0:** The mean of group 1 equals the mean of group 2.\*\*
 
 From the results of a t-test, we can infer a p-value that tells us how statistically significant the results are. The p-value describes how likely it is, under the null hypothesis, to observe results as extreme or more extreme than the result we observed. In this data story, we will use a significance level of 1%, i.e., if the p-value is lower than 1%, we will reject the null hypothesis. This is only a short and simplified explanation of t-tests. For a more thorough description, see SOURCE.
 
@@ -173,6 +173,9 @@ To assess the impact, we will study the media's mood differences in January and 
 
 In the plot at the start of this section, where we show the distribution of compound sentiment score over time, the mood drops drastically in March 2020. There are also other sections of the plot where the mood drops drastically, but this is the only section where there is no significant drop in the number of quotes, and the mood stays down for a period. This points towards there being some substance in our hypothesis. Furthermore, we calculate the mean compound score for the two periods. In the pre-Covid period, the mean compound score is 0.19. However, in the Covid period, the mean compound score is 0.16. In other words, the compound score is 18.75% higher in the Covid period.
 
+[comment]: # "We are writing about an hypothesis above, if this is a hypothesis, it should be pointed out earlier I guess?"
+[comment]: # "Double check the numbers above, don't seem right at first sight!"
+
 To determine whether the observed difference is significant, we utilize the previously mentioned t-test. The p-value is 0.000, which signifies that the result is very significant. We reject the null hypothesis that the mood in the pre-Covid period equals the mood in the post-Covid period. In other words, there is clear evidence for the Covid-19 pandemic to have impacted the mood in the media.
 
 ##### _Media_
@@ -189,7 +192,7 @@ Clearly, there is a difference!
 
 First let us have a look at the two extremes: New York Times and Woman’s Day. The reputable New York Times receives an average compound score of 0.085, while Woman’s Day providing recipes and relationship advice, get a score of 0.235. For the subjectivity score the same outlets get a score of respectively 0.344 and 0.426. The differences are clear, and statistically very significant. Is this a general trend for newspapers and magazines?
 
-To examine this, we further assign the media outlets with four subcategories: subcategories Newspapers, Sports and celebrity magazines and “others”.   Below, the distribution of the compound scores for the four subcategories are drawn. The amount of positive quotes in sport and celebrity magazines (average compound score 0.27 and 0.17) clearly surpasses those from the newspapers (average compound 0.14).   
+To examine this, we further assign the media outlets with four subcategories: subcategories Newspapers, Sports and celebrity magazines and “others”. Below, the distribution of the compound scores for the four subcategories are drawn. The amount of positive quotes in sport and celebrity magazines (average compound score 0.27 and 0.17) clearly surpasses those from the newspapers (average compound 0.14).
 
 {% include_relative /_plots/polarity_distribution_categories_same_plot.html %}
 
