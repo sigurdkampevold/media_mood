@@ -179,12 +179,6 @@ In the plot at the start of this section, where we show the distribution of comp
 To determine whether the observed difference is significant, we utilize the previously mentioned t-test. The p-value is 0.000, which signifies that the result is very significant. We reject the null hypothesis that the mood in the pre-Covid period equals the mood in the post-Covid period. In other words, there is clear evidence for the Covid-19 pandemic to have impacted the mood in the media. 
 
 
-Her skal jeg fikser slikt at counten er i prosent ikke absoluttverdi.
-{% include_relative /_plots/hist_monfri.html %}
-
-Ditto.
-{% include_relative /_plots/hist_monfri_blob.html %}
-
 
 
 ##### _Media_
