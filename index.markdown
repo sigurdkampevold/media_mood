@@ -29,11 +29,11 @@ We aim to present our findings on the abovementioned topics in the upcoming data
 
 #### Quotebank
 
-The Quotebank data set provides quotes in the media from more than a decade, having 178 million quotations from 2008 to 2020 attributed to their resepctive speakers. Using machine learning methods, **dlab @ EPFL** has build a framework for recognizing and attributing quotations from media articles, thus building the data set. However, we have only utilized quotations from 2015 to 2020, distributed through the years as in the following diagram:
+The Quotebank data set provides quotes in the media from more than a decade, having 178 million quotations from 2008 to 2020 attributed with their respective speakers and dates. Using machine learning methods, **dlab @ EPFL** has build a framework for recognizing and attributing quotations from media articles, thus building the data set. However, we have only utilized quotations from 2015 to 2020, distributed through the years as in the following diagram:
 
 {% include_relative /_plots/line_dig.html %}
 
-As you could see, there are some significant "holes" in the data set in 2016, having significantly less quotations than the majority of the period.
+As you could see, there are some significant "holes" in the data set in 2016, having significantly less quotations than the majority of the period. We also see that the amount of quotations each day decreases towards the end of the data set in 2020. This is a finding that could be important for our future investigations. As well as quotations and their respective speakers, Quotebank attributes quotations with the media outlet in which it was first discovered, how many times it has occurred and how the algorithm recognized it as a quote. 
 
 
 ## _Sentiments Analyses_ -- What Are They?
