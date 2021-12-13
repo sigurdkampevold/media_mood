@@ -25,13 +25,15 @@ Based on our initial questions, our thoughts wandered into what we could say spe
 
 We aim to present our findings on the abovementioned topics in the upcoming data story. Starting with the QuoteBank data set provided by **dlab @ EPFL**, we will utilize information from Wikidata to research our questions by sentiment analyses.
 
-### _Sentiments Analyses_ -- What Are They?
+## What We Have
+
+## _Sentiments Analyses_ -- What Are They?
 
 Sentiment analyses aim to identify and extract subjective information in text, telling whether a phrase is positive, negative, or neutral. Using libraries, one could input a sentence, such as a quote from the media, and get a score. This will be our primary tool in finding trends in the mood of the media.
 
 <p style="text-align: center">
 <img src="./images/sentiment_tweets.gif" style="position: relative; ">
-<figcaption style="position: relative; left: 310px">Source: Hackernoon</figcaption>
+<figcaption style="position: relative; text-align: center">Source: Hackernoon</figcaption>
 </p>
 
 ##### _Compound Scores_ -- Huh?
@@ -137,6 +139,5 @@ Ditto.
 {% include_relative /_plots/polarity_distribution_media.html %}
 
 {% include_relative /_plots/wsj_moving.html %}
-
 
 When concluding on mood through the week, we could use the following Google search: _Does the mood get better towards the weekend?_, as it gives some interesting researchs.
