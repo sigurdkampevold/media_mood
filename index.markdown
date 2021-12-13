@@ -121,18 +121,62 @@ As you might have guessed, computing subjectivity scores is not a precise scienc
 
 #### _The data_
 
-{% include_relative /_plots/line_comp.html %}
-
 {% include_relative /_plots/pol_dist.html %}
 
 {% include_relative /_plots/pol_dist.html %}
 
 {% include_relative /_plots/sub_dist.html %}
 
-#### _Time analysis_
+#### _Mood across time -- Do we really love Mondays deep inside?_
 
-**Weekdays**
+As previously mentioned, we were curious about how the mood differs throughout time. More specifically, we wanted to test whether the temper changes across weekdays and seasons of the year. To determine the validness of our hypothesis, we utilize the previously mentioned sentiment analysis combined with statistical tests to identify the statistical significance.
+
+**Statistical tests**
+The statistical tests we will utilize are t-test and a variant named Welch's t-test. Shortly described, these tests test whether the mean of two groups is statistically significantly different. They will both be used for hypothesis testing, namely testing the null hypothesis:
+
+H0: The mean of group 1 equals the mean of group 2.
+
+From the results of a t-test, we can infer a p-value that tells us how statistically significant the results are. The p-value describes how likely it is, under the null hypothesis, to observe results as extreme or more extreme than the result we observed. In this data story, we will use a significance level of 1%, i.e., if the p-value is lower than 1%, we will reject the null hypothesis. This is only a short and simplified explanation of t-tests. For a more thorough description, see SOURCE.
+
+**Score distribution over time**
+{% include_relative /_plots/line_comp.html %}
+
+The plot above shows the distribution of compound sentiment scores over time. The sentiment is mostly equal over time with slight variance, but the score is significantly lower in some periods. By comparing the plot to the distribution of quotes shown earlier, we see that these low sentiment periods correspond with periods with very few quotes. This is caused by high variance in periods with few quotes.
+
+
+**Are we happier on Fridays, or do we really love Mondays deep inside?**
+
+Firstly, we will investigate how the mood changes during the week.
+
+INPUT: # QUOTES WEEKDAYS
+As expected, there are more quotes from weekdays than from the weekend.
+
 {% include_relative /_plots/boxplot_day.html %}
+
+We see that the sentiment scores across days are very similar by investigating the boxplot. The mean compound sentiment score for the different days are approximately equal. Disappointingly, this provides no evidence for the mood differing across weekdays.
+
+
+**We are happier during summer than the rainy autumn, right?**
+Disenchanted by the lack of differences across weekdays, we decided to study the differences across months.
+
+INPUT: #QUOTES Months
+There are some differences in the number of quotes per month in the dataset. These differences correspond to the previously mentioned periods with few quotes.
+
+
+{% include_relative /_plots/boxplot_month.html %}
+
+As for the weekday analysis, the month analysis shows minimal differences. Even though the medians for the months vary some, the interquartile range is approximately equal for all five months. We can, therefore, not conclude with any differences in mood based on months and seasons. 
+
+**Covid-19 made us less happy, shocker right?**
+
+As the illuminated reader may know, in March 2020, a certain pandemic hit the world. The Quotebank dataset provides a unique opportunity to assess how the mood in the media changed during this time. 
+
+To assess the impact, we will study the media's mood differences in January and February 2020 (pre-Covid) vs. March and April 2020 (Covid). This is a simplification but adequate for our purposes.
+
+In the plot at the start of this section, where we show the distribution of compound sentiment score over time, the mood drops drastically in March 2020.  There are also other sections of the plot where the mood drops drastically, but this is the only section where there is no significant drop in the number of quotes, and the mood stays down for a period. This points towards there being some substance in our hypothesis. Furthermore, we calculate the mean compound score for the two periods. In the pre-Covid period, the mean compound score is 0.19. However, in the Covid period, the mean compound score is 0.16. In other words, the compound score is 18.75% higher in the Covid period.
+
+To determine whether the observed difference is significant, we utilize the previously mentioned t-test. The p-value is 0.000, which signifies that the result is very significant. We reject the null hypothesis that the mood in the pre-Covid period equals the mood in the post-Covid period. In other words, there is clear evidence for the Covid-19 pandemic to have impacted the mood in the media. 
+
 
 Her skal jeg fikser slikt at counten er i prosent ikke absoluttverdi.
 {% include_relative /_plots/hist_monfri.html %}
@@ -140,8 +184,7 @@ Her skal jeg fikser slikt at counten er i prosent ikke absoluttverdi.
 Ditto.
 {% include_relative /_plots/hist_monfri_blob.html %}
 
-**Months**
-{% include_relative /_plots/boxplot_month.html %}
+
 
 ##### _Media_
 
