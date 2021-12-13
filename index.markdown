@@ -29,12 +29,15 @@ We aim to present our findings on the abovementioned topics in the upcoming data
 
 #### Quotebank
 
-The Quotebank data set provides quotes in the media from more than a decade, having 178 million quotations from 2008 to 2020 attributed with their respective speakers and dates. Using machine learning methods, **dlab @ EPFL** has build a framework for recognizing and attributing quotations from media articles, thus building the data set. However, we have only utilized quotations from 2015 to 2020, distributed through the years as in the following diagram:
+The Quotebank data set provides quotes in the media from more than a decade, having 178 million quotations from 2008 to 2020 attributed with their probable speakers and dates. Using machine learning methods, **dlab @ EPFL** has build a framework for recognizing and attributing quotations from media articles, thus building the data set. However, we have only utilized quotations from 2015 to 2020, distributed through the years as in the following diagram:
 
 {% include_relative /_plots/line_dig.html %}
 
-As you could see, there are some significant "holes" in the data set in 2016, having significantly less quotations than the majority of the period. We also see that the amount of quotations each day decreases towards the end of the data set in 2020. This is a finding that could be important for our future investigations. As well as quotations and their respective speakers, Quotebank attributes quotations with the media outlet in which it was first discovered, how many times it has occurred and how the algorithm recognized it as a quote. 
+As you could see, there are some significant "holes" in the data set in 2016, having significantly less quotations than the majority of the period. We also see that the amount of quotations each day decreases towards the end of the data set in 2020. This is a finding that could be important for our future investigations. As well as quotations and their respective speakers, Quotebank attributes quotations with the media outlet in which it was first discovered, how many times it has occurred and how the algorithm recognized it as a quote. Eventually, the algorithm has attributed the quotations with links to the Wikidata entries of its probable speaker.
 
+#### Wikidata
+
+Well, that the quotations are attributed with links to the Wikidata entries mean that we could utilize the information about the speakers in an effortless way. Wikidata is an open database associated with Wikipedia, and is meant to provide standardized types of information such that it can be used easily.
 
 ## _Sentiments Analyses_ -- What Are They?
 
