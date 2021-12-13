@@ -136,4 +136,7 @@ Ditto.
 
 {% include_relative /_plots/polarity_distribution_media.html %}
 
+{% include_relative /_plots/wsj_moving.html %}
+
+
 When concluding on mood through the week, we could use the following Google search: _Does the mood get better towards the weekend?_, as it gives some interesting researchs.
