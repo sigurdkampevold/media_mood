@@ -200,7 +200,9 @@ Below is a scatterplot showing the connection between mean polarity and subjecti
 {% include_relative /_plots/scatterplot_medias.html %}
 
 Clearly, there is a difference!
+
 First let us have a look at the two if the extremes: New York Times and Woman’s Day. The reputable New York Times receives an average compound score of 0,085, while Woman’s Day providing recipes and relationship advice, get a score of 0,235. For the subjectivity score the same outlets get a score of respectively 0,344 and 0,426. The differences are clear, and statistically very significant. Is this a general trend for newspapers and magazines? 
+
 Below, the distribution of the compound scores for the four subcategories Newspapers, Sports and celebrity magazines and a collection of various magazines further known as “others”. The amount of positive quotes in sport and celebrity magazines (average compound score 0.27 and 0.17) clearly surpasses those from the newspapers (average compound 0.2).   
 
 
