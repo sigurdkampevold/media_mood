@@ -207,7 +207,7 @@ To examine this, we further assign the media outlets with four subcategories: su
 
 {% include_relative /_plots/polarity_distribution_categories_same_plot.html %}
 
-To conclude it seems safe to assume that if you are one of those who are influenced by what you read. Put away your newspapers and start reading some gossip!
+To conclude it seems safe to assume that if you are one of those who are influenced by what you read: Put away your newspapers and start reading some gossip!
 
 {% include_relative /_plots/wsj_moving.html %}
 
