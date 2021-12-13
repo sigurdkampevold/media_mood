@@ -149,7 +149,7 @@ The plot above shows the distribution of compound sentiment scores over time. Th
 
 Firstly, we will investigate how the mood changes during the week.
 
-INPUT: # QUOTES WEEKDAYS
+{% include_relative /_plots/quotesperday.html %}
 
 As expected, there are more quotes from weekdays than from the weekend.
 
@@ -161,7 +161,7 @@ We see that the sentiment scores across days are very similar by investigating t
 **We are happier during summer than the rainy autumn, right?**
 Disenchanted by the lack of differences across weekdays, we decided to study the differences across months.
 
-INPUT: #QUOTES Months
+{% include_relative /_plots/quotespermonth.html %}
 
 There are some differences in the number of quotes per month in the dataset. These differences correspond to the previously mentioned periods with few quotes.
 
