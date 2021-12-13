@@ -3,11 +3,12 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: single
-title: "I Can Teach You a Thing or Two About Mood"
+title: "A Thing or Two About Mood"
 header:
   overlay_filter: 0.3
   overlay_image: /images/md-mahdi-8SQ_wsDC0uY-unsplash.jpg
   caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
+excerpt: A data story investigating the mood in the media
 permalink: /
 intro:
   - excerpt: "*The most important decision you take is to be in a good mood.* -- Voltaire"
