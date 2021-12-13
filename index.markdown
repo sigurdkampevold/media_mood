@@ -121,9 +121,7 @@ As you might have guessed, computing subjectivity scores is not a precise scienc
 
 #### _The data_
 
-{% include_relative /_plots/pol_dist.html %}
-
-{% include_relative /_plots/pol_dist.html %}
+{% include_relative /_plots/comp_dist.html %}
 
 {% include_relative /_plots/sub_dist.html %}
 
