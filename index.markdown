@@ -37,7 +37,7 @@ As you could see, there are some significant "holes" in the data set in 2016, ha
 
 #### Wikidata
 
-Well, that the quotations are attributed with links to the Wikidata entries mean that we could utilize the information about the speakers in an effortless way. Wikidata is an open database associated with Wikipedia, and is meant to provide standardized types of information such that it can be used easily.
+Well, that the quotations are attributed with links to the Wikidata entries mean that we could utilize information about the speakers in an effortless way. Wikidata is an open database associated with Wikipedia, and is meant to provide standardized types of information such that it can be used easily. We will primarily use Wikidata to identify the gender of the speakers, as well as whether they are politians or not.
 
 ## _Sentiments Analyses_ -- What Are They?
 
