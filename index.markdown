@@ -132,9 +132,10 @@ As you might have guessed, computing subjectivity scores is not a precise scienc
 As previously mentioned, we were curious about how the mood differs throughout time. More specifically, we wanted to test whether the temper changes across weekdays and seasons of the year. To determine the validness of our hypothesis, we utilize the previously mentioned sentiment analysis combined with statistical tests to identify the statistical significance.
 
 **Statistical tests**
+
 The statistical tests we will utilize are t-test and a variant named Welch's t-test. Shortly described, these tests test whether the mean of two groups is statistically significantly different. They will both be used for hypothesis testing, namely testing the null hypothesis:
 
-H0: The mean of group 1 equals the mean of group 2.
+__**H0:** The mean of group 1 equals the mean of group 2.__
 
 From the results of a t-test, we can infer a p-value that tells us how statistically significant the results are. The p-value describes how likely it is, under the null hypothesis, to observe results as extreme or more extreme than the result we observed. In this data story, we will use a significance level of 1%, i.e., if the p-value is lower than 1%, we will reject the null hypothesis. This is only a short and simplified explanation of t-tests. For a more thorough description, see SOURCE.
 
@@ -149,6 +150,7 @@ The plot above shows the distribution of compound sentiment scores over time. Th
 Firstly, we will investigate how the mood changes during the week.
 
 INPUT: # QUOTES WEEKDAYS
+
 As expected, there are more quotes from weekdays than from the weekend.
 
 {% include_relative /_plots/boxplot_day.html %}
@@ -160,6 +162,7 @@ We see that the sentiment scores across days are very similar by investigating t
 Disenchanted by the lack of differences across weekdays, we decided to study the differences across months.
 
 INPUT: #QUOTES Months
+
 There are some differences in the number of quotes per month in the dataset. These differences correspond to the previously mentioned periods with few quotes.
 
 
