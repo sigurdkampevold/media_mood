@@ -123,7 +123,7 @@ Not surprising, the distribution is heavily centered around at a compound score 
 
 {% include_relative /_plots/sub_dist.html %}
 
-Over to the subjectivity, a score of $0.0$ is once again the most frequent one. This could maybe be more surprising, as quotations and citations often refer to the opinions of the speaker. However, it seems like *TextBlob*'s methods overwhelmingly often end up with a score of $0.0$. Initially, one might think that as *TextBlob* doesn't capture the underlying context, it doesn't extract the subjectivity neither.
+Over to the subjectivity, a score of $0.0$ is once again the most frequent one. This could maybe be more surprising, as quotations and citations often refer to the opinions of the speaker. However, it seems like *TextBlob*'s methods overwhelmingly often end up with a score of $0.0$. Initially, one might think that as *TextBlob* doesn't capture the underlying context, it doesn't extract the subjectivity neither. Eventually, we do also mind that the remaining distribution is centered around $0.5$, but also having a clear upswing towards $1.0$.
 
 #### _Mood across time -- Do we really love Mondays deep inside?_
 
