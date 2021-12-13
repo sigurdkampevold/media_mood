@@ -113,17 +113,17 @@ As you might have guessed, computing subjectivity scores is not a precise scienc
   </blockquote>
 </div>
 
-- This is Our Data -- Milestone 2
-- Does the Mood in the Media Differ Throughout Time?
-- Does the Mood in the Media Differ Across Media Outlets?
-- Do Men and Women Differ in Mood?
-- Are Politicans More Negative or Positive Than Their Peers?
+#### The Initial Investigations
 
-#### _The data_
+So, after looking at some examples of quotes and their respective compound and subjectivity scores, you might wonder how these scores are distributed within the part of Quotebank we are working with. Firstly, we could take a look at how the compound scores are distributed:
 
 {% include_relative /_plots/comp_dist.html %}
 
+Not surprising, the distribution is heavily centered around at a compound score of $0.0$. As the compound score of *Vader* is computed through averaging, this seems reasonable. However, we do see that the distribution seems to be more heavy on the positive values, maybe indicating that the quotations in the media are more positive than negative, although neutrality sweeps the board. 
+
 {% include_relative /_plots/sub_dist.html %}
+
+Over to the subjectivity, a score of $0.0$ is once again the most frequent one. This could maybe be more surprising, as quotations and citations often refer to the opinions of the speaker. However, it seems like *TextBlob*'s methods overwhelmingly often end up with a score of $0.0$. Initially, one might think that as *TextBlob* doesn't capture the underlying context, it doesn't extract the subjectivity neither.
 
 #### _Mood across time -- Do we really love Mondays deep inside?_
 
@@ -133,7 +133,7 @@ As previously mentioned, we were curious about how the mood differs throughout t
 
 The statistical tests we will utilize are t-test and a variant named Welch's t-test. Shortly described, these tests test whether the mean of two groups is statistically significantly different. They will both be used for hypothesis testing, namely testing the null hypothesis:
 
-__**H0:** The mean of group 1 equals the mean of group 2.__
+****H0:** The mean of group 1 equals the mean of group 2.**
 
 From the results of a t-test, we can infer a p-value that tells us how statistically significant the results are. The p-value describes how likely it is, under the null hypothesis, to observe results as extreme or more extreme than the result we observed. In this data story, we will use a significance level of 1%, i.e., if the p-value is lower than 1%, we will reject the null hypothesis. This is only a short and simplified explanation of t-tests. For a more thorough description, see SOURCE.
 
@@ -141,7 +141,6 @@ From the results of a t-test, we can infer a p-value that tells us how statistic
 {% include_relative /_plots/line_comp.html %}
 
 The plot above shows the distribution of compound sentiment scores over time. The sentiment is mostly equal over time with slight variance, but the score is significantly lower in some periods. By comparing the plot to the distribution of quotes shown earlier, we see that these low sentiment periods correspond with periods with very few quotes. This is caused by high variance in periods with few quotes.
-
 
 **Are we happier on Fridays, or do we really love Mondays deep inside?**
 
@@ -155,7 +154,6 @@ As expected, there are more quotes from weekdays than from the weekend.
 
 We see that the sentiment scores across days are very similar by investigating the boxplot. The mean compound sentiment score for the different days are approximately equal. Disappointingly, this provides no evidence for the mood differing across weekdays.
 
-
 **We are happier during summer than the rainy autumn, right?**
 Disenchanted by the lack of differences across weekdays, we decided to study the differences across months.
 
@@ -163,39 +161,35 @@ Disenchanted by the lack of differences across weekdays, we decided to study the
 
 There are some differences in the number of quotes per month in the dataset. These differences correspond to the previously mentioned periods with few quotes.
 
-
 {% include_relative /_plots/boxplot_month.html %}
 
-As for the weekday analysis, the month analysis shows minimal differences. Even though the medians for the months vary some, the interquartile range is approximately equal for all five months. We can, therefore, not conclude with any differences in mood based on months and seasons. 
+As for the weekday analysis, the month analysis shows minimal differences. Even though the medians for the months vary some, the interquartile range is approximately equal for all five months. We can, therefore, not conclude with any differences in mood based on months and seasons.
 
 **Covid-19 made us less happy, shocker right?**
 
-As the illuminated reader may know, in March 2020, a certain pandemic hit the world. The Quotebank dataset provides a unique opportunity to assess how the mood in the media changed during this time. 
+As the illuminated reader may know, in March 2020, a certain pandemic hit the world. The Quotebank dataset provides a unique opportunity to assess how the mood in the media changed during this time.
 
 To assess the impact, we will study the media's mood differences in January and February 2020 (pre-Covid) vs. March and April 2020 (Covid). This is a simplification but adequate for our purposes.
 
-In the plot at the start of this section, where we show the distribution of compound sentiment score over time, the mood drops drastically in March 2020.  There are also other sections of the plot where the mood drops drastically, but this is the only section where there is no significant drop in the number of quotes, and the mood stays down for a period. This points towards there being some substance in our hypothesis. Furthermore, we calculate the mean compound score for the two periods. In the pre-Covid period, the mean compound score is 0.19. However, in the Covid period, the mean compound score is 0.16. In other words, the compound score is 18.75% higher in the Covid period.
+In the plot at the start of this section, where we show the distribution of compound sentiment score over time, the mood drops drastically in March 2020. There are also other sections of the plot where the mood drops drastically, but this is the only section where there is no significant drop in the number of quotes, and the mood stays down for a period. This points towards there being some substance in our hypothesis. Furthermore, we calculate the mean compound score for the two periods. In the pre-Covid period, the mean compound score is 0.19. However, in the Covid period, the mean compound score is 0.16. In other words, the compound score is 18.75% higher in the Covid period.
 
-To determine whether the observed difference is significant, we utilize the previously mentioned t-test. The p-value is 0.000, which signifies that the result is very significant. We reject the null hypothesis that the mood in the pre-Covid period equals the mood in the post-Covid period. In other words, there is clear evidence for the Covid-19 pandemic to have impacted the mood in the media. 
-
-
-
+To determine whether the observed difference is significant, we utilize the previously mentioned t-test. The p-value is 0.000, which signifies that the result is very significant. We reject the null hypothesis that the mood in the pre-Covid period equals the mood in the post-Covid period. In other words, there is clear evidence for the Covid-19 pandemic to have impacted the mood in the media.
 
 ##### _Media_
-Another interesting hypothesis is that the mood differs between different media outlets. Do you read the Wall Street Journal or Peoples magazine together with your morning coffee if you want to set the mood for the rest of the day? 
+
+Another interesting hypothesis is that the mood differs between different media outlets. Do you read the Wall Street Journal or Peoples magazine together with your morning coffee if you want to set the mood for the rest of the day?
 
 It seems plausible that the sentiment and subjectivity in a daily newspaper will be different than a celebrity or sports magazine. To investigate this hypothesis, a subsample of media outlets from the quote bank is chosen. The subsample is based on a selection of the most well-known English newspapers and magazines from different categories. The quotes are then assigned with values for compound and subjectivity score.
 
-Below is a scatterplot showing the connection between mean polarity and subjectivity score for the selected media outlets.  
-
+Below is a scatterplot showing the connection between mean polarity and subjectivity score for the selected media outlets.
 
 {% include_relative /_plots/scatterplot_medias.html %}
 
 Clearly, there is a difference!
 
-First let us have a look at the two extremes: New York Times and Woman’s Day. The reputable New York Times receives an average compound score of 0.085, while Woman’s Day providing recipes and relationship advice, get a score of 0.235. For the subjectivity score the same outlets get a score of respectively 0.344 and 0.426. The differences are clear, and statistically very significant. Is this a general trend for newspapers and magazines? 
+First let us have a look at the two extremes: New York Times and Woman’s Day. The reputable New York Times receives an average compound score of 0.085, while Woman’s Day providing recipes and relationship advice, get a score of 0.235. For the subjectivity score the same outlets get a score of respectively 0.344 and 0.426. The differences are clear, and statistically very significant. Is this a general trend for newspapers and magazines?
 
-To examine this, we further assign the media outlets with four subcategories: subcategories Newspapers, Sports and celebrity magazines and “others”.   Below, the distribution of the compound scores for the four subcategories are drawn. The amount of positive quotes in sport and celebrity magazines (average compound score 0.27 and 0.17) clearly surpasses those from the newspapers (average compound 0.2).   
+To examine this, we further assign the media outlets with four subcategories: subcategories Newspapers, Sports and celebrity magazines and “others”. Below, the distribution of the compound scores for the four subcategories are drawn. The amount of positive quotes in sport and celebrity magazines (average compound score 0.27 and 0.17) clearly surpasses those from the newspapers (average compound 0.2).
 
 {% include_relative /_plots/polarity_distribution_categories_same_plot.html %}
 
