@@ -19,7 +19,11 @@ intro:
 
 _People's moods differ throughout time_. Sometimes, we are affected by personal matters, social affairs, or the weather. Other times, more prominent aspects might affect our mood; we can be affected by the outcome of political elections, international disputes, or long-lasting pandemics. However, we constantly talk about our mood and its causes, and we might be affected by what we read in the media.
 
+#### Our Motivation
+
 Provided with the QuoteBank data set, we became interested in what it could reveal about the truth in the everyday talk about our mood. For example, does the temper become better towards the weekend, or do we all love Mondays deep inside? As the weather probably affects our mood, is the mood better during the summer and worse when the cold hits us in the winter? Moreover, as the data set consists of quotes from the media, what can we say about the trends of the mood in the media throughout time?
+
+#### Why Is It Important?
 
 Based on our initial questions, our thoughts wandered into what we could say specifically about the mood in the media. As the media sets the agenda for the public debate, it is interesting to see how much positivity and negativity reach the readers' minds. Which media outlets provide us with the most positivity, and which are more negative? Moreover, can we see any differences across the subsets of speakers in the data set? For example, are politicians more positive in their quotes than others? Do women tend to be more optimistic than their peers?
 
