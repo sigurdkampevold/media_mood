@@ -5,7 +5,7 @@ permalink: /about/
 classes: wide
 ---
 
-This is the page for the project of group _Gutta Boys_ in the EPFL course _CS-401 Applied Data Analysis_. In this data story, we will present the results of our project in which we have deep dived intom the _Quotebank_ data set provided by **dlab @ EPFL**.
+This is the page for the project of group _Gutta Boys_ in the EPFL course _CS-401 Applied Data Analysis_. In this data story, we will present the results of our project in which we have deep dived into the _Quotebank_ data set provided by **dlab @ EPFL**.
 
 We have focused on exploring how the mood in the media evolves throughout time, and are pleased that you have found your way to our data story. To read through our findings, you might click on _Main_ in the top bar.
 
