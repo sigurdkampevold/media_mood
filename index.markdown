@@ -191,7 +191,8 @@ As for the compound scores of the different weekdays, the analysis on the months
 
 Hitting of the analyses on how the mood evolves throughout time, we illustrated how the compound score develops through our data set. For simplicity, the visualization follows once again:
 
-{% include_relative /_plots/line_comp_2.html %}
+{% include_relative /_plots/line_comp.html %}
+[comment]: # (Include a new version of this one?)
 
 The compound score above drops drastically in March 2020. There are other sections of the plot where the compound drops drastically, but this in the only section havving no significant drop in the amount of quotations. Moreover, the mood stays down for some time, actually until the end of the data set.
 
@@ -199,7 +200,7 @@ As an illuminated reader, you have surely drawn the lines already. A certain pan
 
 To assess the changes in the mood, we will study the compound score in the media in January and February 2020, and call this the pre-COVID score. This score will be compared to the score in the March and April 2020, namely the COVID score. Indeed, this is a simplification, but it is adequate for our purpose.
 
-The mean compound score of pre-COVID is $0.19$, versus the mean compound score of COVID at $0.16$. In other words, the compound score was %18.75$ higher pre-COVID. Thus, the mood in the media was better before lockdowns.
+The mean compound score of pre-COVID is $0.19$, versus the mean compound score of COVID at $0.16$. In other words, the compound score was $%18.75$ higher pre-COVID. Thus, the mood in the media was better before lockdowns.
 
 To conclude on whether the observed difference is significant, we utilize the previously mentioned _t-test_, resulting in a p-value of $0.0$, signifying that the result is very significant. We could therefore conclude that the COVID-19 pandemic affected the mood in the media, and that it got worse.
 
