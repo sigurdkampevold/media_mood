@@ -185,7 +185,7 @@ There are some differences in the number of quotations per month in the our data
 
 {% include_relative /_plots/boxplot_month.html %}
 
-As for the compound scores of the different weekdays, the analysis on the months shows minimal differences. As for the weekday analysis, the month analysis shows minimal differences. Even though the medians vary some around $0.12$, the interquartile range, indicating where half of the data is placed, is approximately equal fo all twelve months. It is once again not possible to conclude on any differences in the mood of the quotations across months and seasons. Unluckily, there are not evidence for our first hypothesis, but during the work, the visualizations turned out as a blessing in disguise.
+As for the compound scores of the different weekdays, the analysis on the months shows minimal differences. As for the weekday analysis, the month analysis shows minimal differences. Even though the medians vary some around $0.12$, the interquartile range, indicating where half of the data is placed, is approximately equal fo all twelve months. It is once again not possible to conclude on any differences in the mood of the quotations across months and seasons, maybe implying that the weather does not affect our mood as much as we believed. Actually, further [investigations](https://www.houstonmethodist.org/blog/articles/2021/jul/can-weather-affect-your-mood/) shows that others also have found the evidence for such an hypothesis to be murky. Unluckily, there are not evidence for our first hypothesis, but during the work, the visualizations turned out as a blessing in disguise.
 
 ##### _The COVID-19 Effect_
 
