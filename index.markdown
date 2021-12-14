@@ -191,7 +191,8 @@ As for the compound scores of the different weekdays, the analysis on the months
 
 Hitting of the analyses on how the mood evolves throughout time, we illustrated how the compound score develops through our data set. For simplicity, the visualization follows once again:
 
-{% include_relative /_plots/line_comp_2.html %}
+{% include_relative /_plots/line_comp1.html %}
+
 
 The compound score above drops drastically in March 2020. There are other sections of the plot where the compound drops drastically, but this in the only section havving no significant drop in the amount of quotations. Moreover, the mood stays down for some time, actually until the end of the data set.
 
