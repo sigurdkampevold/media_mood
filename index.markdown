@@ -129,6 +129,8 @@ Over to the subjectivity, a score of $0.0$ is once again the most frequent one. 
 
 ## What We Have Found
 
+{% include_relative /_pages/header1.md %}
+
 ### Does the Mood in the Media Evolve Throughout Time?
 
 People do talk about their mood swings. The topic is a part of the everyday talk, and we want to investigate if such _everydays myths_ are present in the quotations of the media as well. To concretize our work, we decided to investigate whether the mood evolves during the week and across the seasons of the year.
