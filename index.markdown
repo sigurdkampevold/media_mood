@@ -32,7 +32,9 @@ We aim to present our findings on the abovementioned topics in the upcoming data
 
 ## What We Have
 
-#### Quotebank
+Initially, we want to give a feel about what data we have to work with, and give some initial analyses and comments on the methods we will use in our work.
+
+### Quotebank
 
 The Quotebank data set provides quotes in the media from more than a decade, having 178 million quotations from 2008 to 2020 attributed with their probable speakers and dates. Using machine learning methods, **dlab @ EPFL** has build a framework for recognizing and attributing quotations from media articles, thus building the data set. However, we have only utilized quotations from 2015 to 2020, distributed through the years as in the following diagram:
 
@@ -40,11 +42,11 @@ The Quotebank data set provides quotes in the media from more than a decade, hav
 
 As you could see, there are some significant "holes" in the data set in 2016, having significantly less quotations than the majority of the period. We also see that the amount of quotations each day decreases towards the end of the data set in 2020. This is a finding that could be important for our future investigations. As well as quotations and their respective speakers, Quotebank attributes quotations with the media outlet in which it was first discovered, how many times it has occurred and how the algorithm recognized it as a quote. Eventually, the algorithm has attributed the quotations with links to the Wikidata entries of its probable speaker.
 
-#### Wikidata
+### Wikidata
 
 Well, that the quotations are attributed with links to the Wikidata entries mean that we could utilize information about the speakers in an effortless way. Wikidata is an open database associated with Wikipedia, and is meant to provide standardized types of information such that it can be used easily. We will primarily use Wikidata to identify the gender of the speakers, as well as whether they are politians or not.
 
-## _Sentiments Analyses_ -- What Are They?
+### _Sentiments Analyses_ -- What Are They?
 
 Sentiment analyses aim to identify and extract subjective information in text, telling whether a phrase is positive, negative, or neutral. Using libraries, one could input a sentence, such as a quote from the media, and get a score. This will be our primary tool in finding trends in the mood of the media.
 
@@ -95,7 +97,7 @@ To make our analyses richer, we will also utilize a measure of _subjectivity_. H
   </blockquote>
 </div>
 
-Let's consider subjectivity score of the above quote. As the speaker of the quote is Donald Trump, you might not be surprised that it receives a subjectivity score of $1.00$. Actually, a large amount of the quotes in Quotebank receives high subjectivity scores, simply because they are communicating the opinions of the speaker. On the other hand, the following quote receives a subjectivity score of $0.00$. This is reasonable as it, for most of us, represent an objective fact:
+Let's consider the subjectivity score of the above quote. As the speaker of the quote is Donald Trump, you might not be surprised that it receives a subjectivity score of $1.00$. Actually, a large amount of the quotes in Quotebank receives high subjectivity scores, simply because they are communicating the opinions of the speaker. On the other hand, the following quote receives a subjectivity score of $0.00$. This is reasonable as it, for most of us, represent an objective fact:
 
 <div>
   <blockquote>
@@ -113,7 +115,7 @@ As you might have guessed, computing subjectivity scores is not a precise scienc
   </blockquote>
 </div>
 
-#### The Initial Investigations
+### The Initial Investigations
 
 So, after looking at some examples of quotes and their respective compound and subjectivity scores, you might wonder how these scores are distributed within the part of Quotebank we are working with. Firstly, we could take a look at how the compound scores are distributed:
 
@@ -125,17 +127,32 @@ Not surprising, the distribution is heavily centered around at a compound score 
 
 Over to the subjectivity, a score of $0.0$ is once again the most frequent one. This could maybe be more surprising, as quotations and citations often refer to the opinions of the speaker. However, it seems like _TextBlob_'s methods overwhelmingly often end up with a score of $0.0$. Initially, one might think that as _TextBlob_ doesn't capture the underlying context, it doesn't extract the subjectivity neither. Eventually, we do also mind that the remaining distribution is centered around $0.5$, but also having a clear upswing towards $1.0$.
 
-#### _Mood across time -- Do we really love Mondays deep inside?_
+## What We Have Found
 
-As previously mentioned, we were curious about how the mood differs throughout time. More specifically, we wanted to test whether the temper changes across weekdays and seasons of the year. To determine the validness of our hypothesis, we utilize the previously mentioned sentiment analysis combined with statistical tests to identify the statistical significance.
+### Does the Mood in the Media Evolve Throughout Time?
+
+People do talk about their mood swings. The topic is a part of the everyday talk, and we want to investigate if such *everydays myths* are present in the quotations of the media as well. To concretize our work, we decided to investigate whether the mood evolves during the week and across the seasons of the year.
+
+But first, we have to zoom out. How should we even be able to draw any conclusions from our data set and analyses, only by doing utilizing libraries for sentiment analysis and making visualizations? Luckily, we have a solution.
 
 **Statistical tests**
 
-The statistical tests we will utilize are t-test and a variant named Welch's t-test. Shortly described, these tests test whether the mean of two groups is statistically significantly different. They will both be used for hypothesis testing, namely testing the null hypothesis:
+To say whether our results are valid, we will utilize statistical tests. More precisely, we will use classical *t-tests* and an variant named *Welch's t-test*. In short, these methods test whether the mean of two groups is statistically significantly different. Both kind of tests will be used for hypothesis testing, where we will check whether the following null hypothesis is valid: 
 
-\***\*H0:** The mean of group 1 equals the mean of group 2.\*\*
+*The mean of group one equals the mean of group two.*
+
+Using the abovementioned methods, we will end up having a *p-value*. This value tells us how statistically significant our results are. Or, in other words, the p-value tells us how likely it is, given that the null hypothesis is true, to observe results as extreme, or even more extreme, than what we have observed. 
+
+For our work, we will use a significance level of 1%. This implies that if the p-value given by the methods is lower than 1%, we will conclude that the means of the two groups are different, given the significance level. Thus, we will say that the results are statistically significant.
+
+As this data story is not about statistical tricks and treat, we will leave the subject for now. If you would like a deeper a explanation of our methods, you could take a look at our [notebook](https://github.com/epfl-ada/ada-2021-project-gutta-boys). However, to sum up, we will test whether the means of two groups are equal, and if our results are too unlikely to happen with equal means, we will conclude that our results are significant.
+
+[comment]: # (Add link to the correct notebook.)
 
 From the results of a t-test, we can infer a p-value that tells us how statistically significant the results are. The p-value describes how likely it is, under the null hypothesis, to observe results as extreme or more extreme than the result we observed. In this data story, we will use a significance level of 1%, i.e., if the p-value is lower than 1%, we will reject the null hypothesis. This is only a short and simplified explanation of t-tests. For a more thorough description, see SOURCE.
+
+- Statistically significantly
+- Hypothesis testing
 
 **Score distribution over time**
 {% include_relative /_plots/line_comp.html %}
