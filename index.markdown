@@ -135,7 +135,7 @@ People do talk about their mood swings. The topic is a part of the everyday talk
 
 But first, we have to zoom out. How should we even be able to draw any conclusions from our data set and analyses, only by doing utilizing libraries for sentiment analysis and making visualizations? Luckily, we have a solution.
 
-**Statistical tests**
+##### Statistical Tests
 
 To say whether our results are valid, we will utilize statistical tests. More precisely, we will use classical *t-tests* and an variant named *Welch's t-test*. In short, these methods test whether the mean of two groups is statistically significantly different. Both kind of tests will be used for hypothesis testing, where we will check whether the following null hypothesis is valid: 
 
@@ -143,57 +143,64 @@ To say whether our results are valid, we will utilize statistical tests. More pr
 
 Using the abovementioned methods, we will end up having a *p-value*. This value tells us how statistically significant our results are. Or, in other words, the p-value tells us how likely it is, given that the null hypothesis is true, to observe results as extreme, or even more extreme, than what we have observed. 
 
-For our work, we will use a significance level of 1%. This implies that if the p-value given by the methods is lower than 1%, we will conclude that the means of the two groups are different, given the significance level. Thus, we will say that the results are statistically significant.
+For our work, we will use a significance level of $1\%$. This implies that if the p-value given by the methods is lower than $1\%$, we will conclude that the means of the two groups are different, given the significance level. Thus, we will say that the results are statistically significant.
 
-As this data story is not about statistical tricks and treat, we will leave the subject for now. If you would like a deeper a explanation of our methods, you could take a look at our [notebook](https://github.com/epfl-ada/ada-2021-project-gutta-boys). However, to sum up, we will test whether the means of two groups are equal, and if our results are too unlikely to happen with equal means, we will conclude that our results are significant.
+As this data story is not about statistical tricks and treat, we will leave the subject for now. If you would like a deeper a explanation of our methods, you could take a look at our [notebook](https://github.com/epfl-ada/ada-2021-project-gutta-boys). However, to sum up, we will test whether the means of two groups are equal: If our results are too unlikely to happen with equal means, we will conclude that our results are significant. Puh, that was the boring stuff, now, let us zoom in again!
 
 [comment]: # (Add link to the correct notebook.)
 
-From the results of a t-test, we can infer a p-value that tells us how statistically significant the results are. The p-value describes how likely it is, under the null hypothesis, to observe results as extreme or more extreme than the result we observed. In this data story, we will use a significance level of 1%, i.e., if the p-value is lower than 1%, we will reject the null hypothesis. This is only a short and simplified explanation of t-tests. For a more thorough description, see SOURCE.
+##### How Does the Compound Score Evolve?
 
-- Statistically significantly
-- Hypothesis testing
+As we will use the *compound score* of *Vader* to measure the mood in the media, we head off by looking at it is evolving througout the data set. We start by finding the average compound score of each date, resulting in the following plot:
 
-**Score distribution over time**
 {% include_relative /_plots/line_comp.html %}
 
-The plot above shows the distribution of compound sentiment scores over time. The sentiment is mostly equal over time with slight variance, but the score is significantly lower in some periods. By comparing the plot to the distribution of quotes shown earlier, we see that these low sentiment periods correspond with periods with very few quotes. This is caused by high variance in periods with few quotes.
+Looking at the vertical axis, we see that the compound scores are mostly around $0.12$ with some slight variances. However, there are some major deviations for the compound scores in 2016. The Argus-eyed reader may remember that the data set contains less quotations from the same period as the deviations, with only some hundreds of quotations a day. Therefore, it is likely that the deviations results from a lower amount of quotations, giving higher variance.
 
-**Are we happier on Fridays, or do we really love Mondays deep inside?**
+##### *The Weekend Effect*
 
-Firstly, we will investigate how the mood changes during the week.
+Indeed a part of everyday talk, people believe that their mood get better in the weekend, and also towards the weekend. *The soon weekend-feeling*, *the friday-feeling* and so on, people love the feeling of more autonomony, better sleep and a desired freedom from the stressfull everyday life. Actually, [researchers](https://www.rochester.edu/news/show.php?id=3525) have found the mood to be better in the end of the week. Therefore, we became interested in whether the quotations of the media reflect this as well.
+
+To get further understanding of the topic, we head off by looking at the number of media quotations each weekday:
 
 {% include_relative /_plots/quotesperday.html %}
 
-As expected, there are more quotes from weekdays than from the weekend.
+As expected, there are more quotations originating from weekdays than from the weekend. The journalists enjoy the weekend as well.
 
 {% include_relative /_plots/boxplot_day.html %}
 
-We see that the sentiment scores across days are very similar by investigating the boxplot. The mean compound sentiment score for the different days are approximately equal. Disappointingly, this provides no evidence for the mood differing across weekdays.
+Investigating the boxplot, we see that the compound scores across the weeks are very similar. The mean scores for the different days are approixmately equal, once again varying around $0.2$. Actually, the median compound is highest for Thursdays, Mondays and Sundays. However, the results are too similar to find any statistically differences in the mood across weekdays.
 
-**We are happier during summer than the rainy autumn, right?**
-Disenchanted by the lack of differences across weekdays, we decided to study the differences across months.
+[comment]: # (How does the mean vary from the median in the above boxplot?)
+
+##### *The Season Effect*
+Disenchanted by the lack of differences across weekdays, we move on towards the next everyday myth. That the weather affects the mood is indeed a belief in the society. When the sun is shining, we are hurrying outside, exploring the world and enjoying life. On the other hand, rainy days call for dark times, slight depression and frustration. So again, do the media represent the same deviations in the mood? To easen our analyses, we decide to rather search for differences across the months and seasons of the year, assuming that the weather is better during summer.
+
+To head off, we once again look at the distribution of quotations throughout the year:
 
 {% include_relative /_plots/quotespermonth.html %}
 
-There are some differences in the number of quotes per month in the dataset. These differences correspond to the previously mentioned periods with few quotes.
+There are some differences in the number of quotations per month in the our data set. These differences correspond to the previously mentioned periods with few quotes.
 
 {% include_relative /_plots/boxplot_month.html %}
 
-As for the weekday analysis, the month analysis shows minimal differences. Even though the medians for the months vary some, the interquartile range is approximately equal for all five months. We can, therefore, not conclude with any differences in mood based on months and seasons.
+As for the compound scores of the different weekdays, the analysis on the months shows minimal differences. As for the weekday analysis, the month analysis shows minimal differences. Even though the medians vary some around $0.12$, the interquartile range, indicating where half of the data is placed, is approximately equal fo all twelve months. It is once again not possible to conclude on any differences in the mood of the quotations across months and seasons. Unluckily, there are not evidence for our first hypothesis, but during the work, the visualizations turned out as a blessing in disguise.
 
-**Covid-19 made us less happy, shocker right?**
+##### *The COVID-19 Effect*
 
-As the illuminated reader may know, in March 2020, a certain pandemic hit the world. The Quotebank dataset provides a unique opportunity to assess how the mood in the media changed during this time.
+Hitting of the analyses on how the mood evolves throughout time, we illustrated how the compound score develops through our data set. For simplicity, the visualization follows once again:
 
-To assess the impact, we will study the media's mood differences in January and February 2020 (pre-Covid) vs. March and April 2020 (Covid). This is a simplification but adequate for our purposes.
+{% include_relative /_plots/line_comp.html %}
 
-In the plot at the start of this section, where we show the distribution of compound sentiment score over time, the mood drops drastically in March 2020. There are also other sections of the plot where the mood drops drastically, but this is the only section where there is no significant drop in the number of quotes, and the mood stays down for a period. This points towards there being some substance in our hypothesis. Furthermore, we calculate the mean compound score for the two periods. In the pre-Covid period, the mean compound score is 0.19. However, in the Covid period, the mean compound score is 0.16. In other words, the compound score is 18.75% higher in the Covid period.
+The compound score above drops drastically in March 2020. There are other sections of the plot where the compound drops drastically, but this in the only section havving no significant drop in the amount of quotations. Moreover, the mood stays down for some time, actually until the end of the data set.
 
-[comment]: # "We are writing about an hypothesis above, if this is a hypothesis, it should be pointed out earlier I guess?"
-[comment]: # "Double check the numbers above, don't seem right at first sight!"
+As an illuminated reader, you have surely drawn the lines already. A certain pandemic hit the western world in March 2020, resulting in lockdowns, fright and economic cracks. The mood in the population indeed fell in this period, and the diagram points out that the same yielded in the media. The Quotebank dataset provides a unique opportunity to assess how the mood in the media changed during the first lockdowns, and we decide to dive further into the topic. 
 
-To determine whether the observed difference is significant, we utilize the previously mentioned t-test. The p-value is 0.000, which signifies that the result is very significant. We reject the null hypothesis that the mood in the pre-Covid period equals the mood in the post-Covid period. In other words, there is clear evidence for the Covid-19 pandemic to have impacted the mood in the media.
+To assess the changes in the mood, we will study the compound score in the media in January and February 2020, and call this the pre-COVID score. This score will be compared to the score in the March and April 2020, namely the COVID score. Indeed, this is a simplification, but it is adequate for our purpose.
+
+The mean compound score of pre-COVID is $0.19$, versus the mean compound score of COVID at $0.16$. In other words, the compound score was %18.75$ higher pre-COVID. Thus, the mood in the media was better before lockdowns.
+
+To conclude on whether the observed difference is significant, we utilize the previously mentioned *t-test*, resulting in a p-value of $0.0$, signifying that the result is very significant. We could therefore conclude that the COVID-19 pandemic affected the mood in the media, and that it got worse.
 
 ##### _Media_
 
@@ -217,7 +224,6 @@ To conclude it seems safe to assume that if you are one of those who are influen
 
 {% include_relative /_plots/wsj_moving.html %}
 
-When concluding on mood through the week, we could use the following Google search: _Does the mood get better towards the weekend?_, as it gives some interesting researchs.
 
 
 
