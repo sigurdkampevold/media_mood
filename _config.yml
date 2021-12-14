@@ -23,8 +23,8 @@ title_separator: |
 description: >- # this means to ignore newlines until "baseurl:"
   The final data story of our project in CS-401: Applied Data Analysis. 
   The data story will present our findings on the mood in the media.
-baseurl: "/" # the subpath of your site, e.g. /blog
-url: https://media-mood.github.io # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "media_mood/" # the subpath of your site, e.g. /blog
+url: https://sigurdkampevold.github.io # the base hostname & protocol for your site, e.g. http://example.com
 
 # Added in hope of running
 encoding: utf-8
