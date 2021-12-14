@@ -131,35 +131,35 @@ Over to the subjectivity, a score of $0.0$ is once again the most frequent one. 
 
 ### Does the Mood in the Media Evolve Throughout Time?
 
-People do talk about their mood swings. The topic is a part of the everyday talk, and we want to investigate if such *everydays myths* are present in the quotations of the media as well. To concretize our work, we decided to investigate whether the mood evolves during the week and across the seasons of the year.
+People do talk about their mood swings. The topic is a part of the everyday talk, and we want to investigate if such _everydays myths_ are present in the quotations of the media as well. To concretize our work, we decided to investigate whether the mood evolves during the week and across the seasons of the year.
 
 But first, we have to zoom out. How should we even be able to draw any conclusions from our data set and analyses, only by doing utilizing libraries for sentiment analysis and making visualizations? Luckily, we have a solution.
 
 ##### Statistical Tests
 
-To say whether our results are valid, we will utilize statistical tests. More precisely, we will use classical *t-tests* and an variant named *Welch's t-test*. In short, these methods test whether the mean of two groups is statistically significantly different. Both kind of tests will be used for hypothesis testing, where we will check whether the following null hypothesis is valid: 
+To say whether our results are valid, we will utilize statistical tests. More precisely, we will use classical _t-tests_ and an variant named _Welch's t-test_. In short, these methods test whether the mean of two groups is statistically significantly different. Both kind of tests will be used for hypothesis testing, where we will check whether the following null hypothesis is valid:
 
-*The mean of group one equals the mean of group two.*
+_The mean of group one equals the mean of group two._
 
-Using the abovementioned methods, we will end up having a *p-value*. This value tells us how statistically significant our results are. Or, in other words, the p-value tells us how likely it is, given that the null hypothesis is true, to observe results as extreme, or even more extreme, than what we have observed. 
+Using the abovementioned methods, we will end up having a _p-value_. This value tells us how statistically significant our results are. Or, in other words, the p-value tells us how likely it is, given that the null hypothesis is true, to observe results as extreme, or even more extreme, than what we have observed.
 
 For our work, we will use a significance level of $1\%$. This implies that if the p-value given by the methods is lower than $1\%$, we will conclude that the means of the two groups are different, given the significance level. Thus, we will say that the results are statistically significant.
 
 As this data story is not about statistical tricks and treat, we will leave the subject for now. If you would like a deeper a explanation of our methods, you could take a look at our [notebook](https://github.com/epfl-ada/ada-2021-project-gutta-boys). However, to sum up, we will test whether the means of two groups are equal: If our results are too unlikely to happen with equal means, we will conclude that our results are significant. Puh, that was the boring stuff, now, let us zoom in again!
 
-[comment]: # (Add link to the correct notebook.)
+[comment]: # "Add link to the correct notebook."
 
 ##### How Does the Compound Score Evolve?
 
-As we will use the *compound score* of *Vader* to measure the mood in the media, we head off by looking at it is evolving througout the data set. We start by finding the average compound score of each date, resulting in the following plot:
+As we will use the _compound score_ of _Vader_ to measure the mood in the media, we head off by looking at it is evolving througout the data set. We start by finding the average compound score of each date, resulting in the following plot:
 
 {% include_relative /_plots/line_comp.html %}
 
 Looking at the vertical axis, we see that the compound scores are mostly around $0.12$ with some slight variances. However, there are some major deviations for the compound scores in 2016. The Argus-eyed reader may remember that the data set contains less quotations from the same period as the deviations, with only some hundreds of quotations a day. Therefore, it is likely that the deviations results from a lower amount of quotations, giving higher variance.
 
-##### *The Weekend Effect*
+##### _The Weekend Effect_
 
-Indeed a part of everyday talk, people believe that their mood get better in the weekend, and also towards the weekend. *The soon weekend-feeling*, *the friday-feeling* and so on, people love the feeling of more autonomony, better sleep and a desired freedom from the stressfull everyday life. Actually, [researchers](https://www.rochester.edu/news/show.php?id=3525) have found the mood to be better in the end of the week. Therefore, we became interested in whether the quotations of the media reflect this as well.
+Indeed a part of everyday talk, people believe that their mood get better in the weekend, and also towards the weekend. _The soon weekend-feeling_, _the friday-feeling_ and so on, people love the feeling of more autonomony, better sleep and a desired freedom from the stressfull everyday life. Actually, [researchers](https://www.rochester.edu/news/show.php?id=3525) have found the mood to be better in the end of the week. Therefore, we became interested in whether the quotations of the media reflect this as well.
 
 To get further understanding of the topic, we head off by looking at the number of media quotations each weekday:
 
@@ -171,9 +171,10 @@ As expected, there are more quotations originating from weekdays than from the w
 
 Investigating the boxplot, we see that the compound scores across the weeks are very similar. The mean scores for the different days are approixmately equal, once again varying around $0.2$. Actually, the median compound is highest for Thursdays, Mondays and Sundays. However, the results are too similar to find any statistically differences in the mood across weekdays.
 
-[comment]: # (How does the mean vary from the median in the above boxplot?)
+[comment]: # "How does the mean vary from the median in the above boxplot?"
 
-##### *The Season Effect*
+##### _The Season Effect_
+
 Disenchanted by the lack of differences across weekdays, we move on towards the next everyday myth. That the weather affects the mood is indeed a belief in the society. When the sun is shining, we are hurrying outside, exploring the world and enjoying life. On the other hand, rainy days call for dark times, slight depression and frustration. So again, do the media represent the same deviations in the mood? To easen our analyses, we decide to rather search for differences across the months and seasons of the year, assuming that the weather is better during summer.
 
 To head off, we once again look at the distribution of quotations throughout the year:
@@ -186,7 +187,7 @@ There are some differences in the number of quotations per month in the our data
 
 As for the compound scores of the different weekdays, the analysis on the months shows minimal differences. As for the weekday analysis, the month analysis shows minimal differences. Even though the medians vary some around $0.12$, the interquartile range, indicating where half of the data is placed, is approximately equal fo all twelve months. It is once again not possible to conclude on any differences in the mood of the quotations across months and seasons. Unluckily, there are not evidence for our first hypothesis, but during the work, the visualizations turned out as a blessing in disguise.
 
-##### *The COVID-19 Effect*
+##### _The COVID-19 Effect_
 
 Hitting of the analyses on how the mood evolves throughout time, we illustrated how the compound score develops through our data set. For simplicity, the visualization follows once again:
 
@@ -194,41 +195,40 @@ Hitting of the analyses on how the mood evolves throughout time, we illustrated 
 
 The compound score above drops drastically in March 2020. There are other sections of the plot where the compound drops drastically, but this in the only section havving no significant drop in the amount of quotations. Moreover, the mood stays down for some time, actually until the end of the data set.
 
-As an illuminated reader, you have surely drawn the lines already. A certain pandemic hit the western world in March 2020, resulting in lockdowns, fright and economic cracks. The mood in the population indeed fell in this period, and the diagram points out that the same yielded in the media. The Quotebank dataset provides a unique opportunity to assess how the mood in the media changed during the first lockdowns, and we decide to dive further into the topic. 
+As an illuminated reader, you have surely drawn the lines already. A certain pandemic hit the western world in March 2020, resulting in lockdowns, fright and economic cracks. The mood in the population indeed fell in this period, and the diagram points out that the same yielded in the media. The Quotebank dataset provides a unique opportunity to assess how the mood in the media changed during the first lockdowns, and we decide to dive further into the topic.
 
 To assess the changes in the mood, we will study the compound score in the media in January and February 2020, and call this the pre-COVID score. This score will be compared to the score in the March and April 2020, namely the COVID score. Indeed, this is a simplification, but it is adequate for our purpose.
 
 The mean compound score of pre-COVID is $0.19$, versus the mean compound score of COVID at $0.16$. In other words, the compound score was %18.75$ higher pre-COVID. Thus, the mood in the media was better before lockdowns.
 
-To conclude on whether the observed difference is significant, we utilize the previously mentioned *t-test*, resulting in a p-value of $0.0$, signifying that the result is very significant. We could therefore conclude that the COVID-19 pandemic affected the mood in the media, and that it got worse.
+To conclude on whether the observed difference is significant, we utilize the previously mentioned _t-test_, resulting in a p-value of $0.0$, signifying that the result is very significant. We could therefore conclude that the COVID-19 pandemic affected the mood in the media, and that it got worse.
 
-##### _Media_
+### How Does the Mood Differ Across Media Outlets?
 
-Another interesting hypothesis is that the mood differs between different media outlets. Do you read the Wall Street Journal or Peoples magazine together with your morning coffee if you want to set the mood for the rest of the day?
+We can say that the mood of the quotations in the media doesn't vary too much across, unless a global pandemic hits us. However, as the media eventually decides what reaches the public debate and your mind, it could be interesting to explore how the mood differs across the media. Which newspapers are more positive, and which are more negative? If you want to kick-off the day with a good mood, should you read Wall Street Journal or Peoples Magazine?
 
-It seems plausible that the sentiment and subjectivity in a daily newspaper will be different than a celebrity or sports magazine. To investigate this hypothesis, a subsample of media outlets from the quote bank is chosen. The subsample is based on a selection of the most well-known English newspapers and magazines from different categories. The quotes are then assigned with values for compound and subjectivity score.
+Initially, it is reasonable to believe that the compound and subjectivity score of daily newspaper is different from that of a celebrity magazine. But does the Quotebank data set provide evidence for such a hypothesis? To investigate this, we choose to focus on a subsample of the media outlets represented in Quotebank. The subsample is a selection of the most well-known English-writing newspapers and magazines aiming to represent different categories. As earlier, we use _Vader_ and _TextBlob_ to compute the compound score and subjectivity score of each quotes, eventually grouped by media outlet and outlet category.
 
-Below is a scatterplot showing the connection between mean polarity and subjectivity score for the selected media outlets.
+Starting the analyses, we plot the average compound score against the average subjectivity score for the selected media outlets:
 
 {% include_relative /_plots/scatterplot_medias.html %}
 
-Clearly, there is a difference!
+Clearly, there is a difference! Even though all the outlets are situated within a relative tiny part of the area, there seems significant variance in the two sores. Let's consider two of the extremes: New York Times and Woman's Day. The reputable New York Times, a daily newspaper, has an average compound score of $0.085$, while the celebrity magazine Woman's Day, providing recipes and relationship advices, receives a score of $0.235$ - nearly three times as high. On the other hand, the subjectivity scores of the outlets are $0.344$ and $0.426$ respectively. The differences are clear, and statistically significant by our methods. Is this an example of a general trend for newspapers and magazines?
 
-First let us have a look at the two extremes: New York Times and Woman’s Day. The reputable New York Times receives an average compound score of 0.085, while Woman’s Day providing recipes and relationship advice, get a score of 0.235. For the subjectivity score the same outlets get a score of respectively 0.344 and 0.426. The differences are clear, and statistically very significant. Is this a general trend for newspapers and magazines?
-
-To examine this, we further assign the media outlets with four subcategories: subcategories Newspapers, Sports and celebrity magazines and “others”. Below, the distribution of the compound scores for the four subcategories are drawn. The amount of positive quotes in sport and celebrity magazines (average compound score 0.27 and 0.17) clearly surpasses those from the newspapers (average compound 0.14).
+For further investigations, we assign each media outlet to one of four different subcategories: Newspapers, sports newspapers, celebrity magazines and "others". Averaging the scores within each subcategory, we get the following distributions:
 
 {% include_relative /_plots/polarity_distribution_categories_same_plot.html %}
 
-To conclude it seems safe to assume that if you are one of those who are influenced by what you read: Put away your newspapers and start reading some gossip!
+[comment]: # "Need to have x-axis!"
+
+The differences are significant. The amount of positive quotations in sports newspapers and celebrity magazines clearly surpasses the amount in the daily newspapers, having average compound scores of $0.27$ and $0.17$ versus $0.14$ respectively. This might be reasonable, as daily newspaper should cover all the suffering in the society, while sports newspapers might focus on victorious athletes.
+
+However, it seems safe to conclude that if you are getting influenced by what you read in the media: Put away your newspapers and start reading some gossip!
 
 {% include_relative /_plots/wsj_moving.html %}
 
-
-
-
-
 ##### _Gender_
+
 TODO: Få inn nøkkeltall og compound distribution histogram, evt også noe bonus
 
 Do the represented genders in the dataset differ in their sentiments?
@@ -239,11 +239,8 @@ Results show that there is a significant difference in the sentiment of males an
 
 On average women had a slightly, but significant, higher sentiment score than males. The shown graph also showcases that the graph for females vary more, but this is attributed to there being fewer quotations from women (ca. 1/8).
 
-
-
-
-
 ##### _Politicians_
+
 TODO: Få inn nøkkeltall og evt finn annen plot til dataene, evt også en enkelt-politiker
 
 Do politicians really represent the average person?
