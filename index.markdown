@@ -193,6 +193,7 @@ Hitting of the analyses on how the mood evolves throughout time, we illustrated 
 
 {% include_relative /_plots/line_comp1.html %}
 
+
 The compound score above drops drastically in March 2020. There are other sections of the plot where the compound drops drastically, but this in the only section havving no significant drop in the amount of quotations. Moreover, the mood stays down for some time, actually until the end of the data set.
 
 As an illuminated reader, you have surely drawn the lines already. A certain pandemic hit the western world in March 2020, resulting in lockdowns, fright and economic cracks. The mood in the population indeed fell in this period, and the diagram points out that the same yielded in the media. The Quotebank dataset provides a unique opportunity to assess how the mood in the media changed during the first lockdowns, and we decide to dive further into the topic.
