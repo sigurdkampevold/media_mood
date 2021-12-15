@@ -83,7 +83,7 @@ The above quotation has a compound score of $-0.9891$, indicating that it is qui
      </blockquote>
 </div>
 
-On the other hand, the above quotation receives a compound score of $0.8176$, which is reasonable as it contains some light, positive words. While these quotations show the extremes on the compound scale, the majority of quotations lie in the middle. For instance, the following quotation gets a score of $0.00$, and is therefore considered absolutely neutral:
+On the other hand, the quotation above receives a compound score of $0.8176$. This is reasonable as it contains light, positive words. However, while these quotations show the extremes on the compound scale, the majority of quotations lie in the middle. For instance, the following quote receives a score of $0.00$, and is therefore considered neutral:
 
 <div>
     <blockquote>
@@ -92,7 +92,9 @@ On the other hand, the above quotation receives a compound score of $0.8176$, wh
      </blockquote>
 </div>
 
-As you might have thought of, the art of dedicating compound scores to quotations is not perfect. Our tool, _Vader_, represents each document or text as a bag of words, without capturing the information in word proximity or context. Hence, a lot of the contextual information is lost. Moreover, _Vader_ gives additional weight to special words and phrases, for instance words written in uppercase or emojis. The methods are based on research done with actual humans, and are therefore not considered a machine learning method. On the other hand, the algorithm is likely not to discover the underlying context of a quotation, and could thus mark a quotation of positive, even if it is considering a deeply serious matter, such as we could see above.
+As you might have thought, the art of dedicating sentiment scores to quotations is not perfect. Our tool, _Vader_, represents each document or text as a bag of words without capturing the information in word proximity or context. Hence, a lot of the contextual information is lost. Moreover, _Vader_ gives additional weight to unique words and phrases, for instance, words written in uppercase or emojis. The methods are based on actual human research and are therefore not considered a machine learning method. On the other hand, the algorithm is likely not to discover the underlying context. It could thus mark a quotation positive, even if it considers a grave matter, such as in the quote above.
+
+[comment]: # Fjerne setningen om ML, evt. si litt om human research uten å nevne ML.
 
 #### _Subjectivity Scores_ -- Uhm?
 
