@@ -242,6 +242,11 @@ We can say that the mood of the quotations in the media doesn't vary too much ac
 
 Initially, it is reasonable to believe that the compound and subjectivity score of daily newspaper is different from that of a celebrity magazine. But does the Quotebank data set provide evidence for such a hypothesis? To investigate this, we choose to focus on a subsample of the media outlets represented in Quotebank. The subsample is a selection of the most well-known English-writing newspapers and magazines aiming to represent different categories. As earlier, we use _Vader_ and _TextBlob_ to compute the compound score and subjectivity score of each quotes, eventually grouped by media outlet and outlet category.
 
+The plot below display the amount of quotes from the different media outlets
+
+{% include_relative /_plots/treemap_media.html %}
+
+
 Starting the analyses, we plot the average compound score against the average subjectivity score for the selected media outlets:
 
 {% include_relative /_plots/scatterplot_medias.html %}
