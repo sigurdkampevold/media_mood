@@ -278,7 +278,7 @@ Maybe a bit quite surprising, the subjectivity score for politicians was lower (
 Both polarity and subjectivity showed the same amount of difference, meaning little. We guess this is good news, as we wouldn't want to hold it against one gender to be more of one thing or another in the public discussion.
 
 
-#### What have we learnt?
+## What have we learnt?
 
 So, what have we learnt about the mood in the media?
 
