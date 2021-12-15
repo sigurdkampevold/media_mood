@@ -36,7 +36,7 @@ We aim to present our findings on the abovementioned topics in the upcoming data
 -	There are no significant variations or trend in the mood in media quotes throughout the week or the year
 -	The mood in media fell significantly in the first phase of the covid pandemic 
 -	The mood and subjectivity across media outlets vary significantly. When subsampling the outlets based on category clusters appear. Sports newspapers and Celebrity magazines tend to be more positive and more objective than newspapers
--	The mood in the quotes saif by men and women are close to equal, woman scoring slightly higher
+-	The mood in the quotes said by men and women are close to equal, woman scoring slightly higher
 -	Politicians are on average more negative than the mean of the dataset. 
 
 <div
