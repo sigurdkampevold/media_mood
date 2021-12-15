@@ -98,7 +98,7 @@ As you might have thought, the art of dedicating sentiment scores to quotations 
 
 #### _Subjectivity Scores_ -- Uhm?
 
-To make our analyses richer, we will also utilize a measure of _subjectivity_. Here, we use the _TextBlob_ library to compute the subjectivity scores of the quotes in Quotebank, indicating whether a quote's content is subjective, objective or somewhere inbetween. A subjectivity score of $1.00$ indicate the most subjective quotes, while a score of $0.00$ indicate objectivity. Therefore, the subjectivity scores indicate the amount of personal opinions and factual information contained in a text, phrase or quote.
+To make our analyses richer, we will also utilize a measure of _subjectivity_. Here, we use the _TextBlob_ library to compute the subjectivity scores of the quotes. The subjectivity score indicates whether a quote's content is subjective, objective, or somewhere in-between. For example, a subjectivity score of $1.00$ indicates a subjective quote, while a score of $0.00$ indicates objectivity. In other words, the subjectivity scores indicate the amount of personal opinions and factual information contained in a text, phrase, or quote.
 
 <div>
   <blockquote>
@@ -107,7 +107,7 @@ To make our analyses richer, we will also utilize a measure of _subjectivity_. H
   </blockquote>
 </div>
 
-Let's consider the subjectivity score of the above quote. As the speaker of the quote is Donald Trump, you might not be surprised that it receives a subjectivity score of $1.00$. Actually, a large amount of the quotes in Quotebank receives high subjectivity scores, simply because they are communicating the opinions of the speaker. On the other hand, the following quote receives a subjectivity score of $0.00$. This is reasonable as it, for most of us, represent an objective fact:
+Let's consider the subjectivity score of the quote above. As the speaker of the quote is Donald Trump, you might not be surprised that it receives a subjectivity score of $1.00$. Actually, a large amount of the quotes in Quotebank receive high subjectivity scores simply because they are communicating the speaker's opinions. On the other hand, the following quotation receives a subjectivity score of $0.00$. This is reasonable as it represents an objective fact:
 
 <div>
   <blockquote>
@@ -116,7 +116,7 @@ Let's consider the subjectivity score of the above quote. As the speaker of the 
   </blockquote>
 </div>
 
-As you might have guessed, computing subjectivity scores is not a precise science either. As _Vader_, _TextBlob_ consider texts as bags of words, meaning that it doesn't capture the entire context. Thus, _TextBlob_ links words to their probable subjectivity, and averages over the phrase. In addition, the tool looks at _intensity_, determining whether a word affect the next, e.g., adverbs like _very_. However, as the library doesn't capture the entire context and averages the subjectivity scores of words over a phrase, we migth discover some weird results. For instance, it is probably not reasonable, at least for most of us, that the following quote, receives a subjectivity score of $0.00$, indicating that it is objective:
+As you might have guessed, computing subjectivity scores is not a precise science either. As _Vader_, _TextBlob_ consider texts as bags of words, meaning that it doesn't capture the entire context. Thus, _TextBlob_ gives each word a subjectivity score and averages over the phrase. In addition, the tool looks at _intensity_, determining whether a word affects the next, e.g., adverbs like _very_. However, as the library doesn't capture the entire context and averages the subjectivity scores of words over a phrase, we might discover weird results. For instance, it is probably not reasonable, at least for most of us, that the following quote receives a subjectivity score of $0.00$:
 
 <div>
   <blockquote>
