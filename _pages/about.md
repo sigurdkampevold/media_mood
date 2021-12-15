@@ -18,4 +18,6 @@ Our group consists of four Norwegian exchange students from the _Norwegian Unive
 
 You can find the source code for this project at GitHub: [ada-2021-project-gutta-boys](https://github.com/epfl-ada/ada-2021-project-gutta-boys).
 
-This GitHub page is powered by [Jekyll](https://jekyllrb.com/) and utilizes the theme [_Minimal Mistakes_](https://mmistakes.github.io/minimal-mistakes/).
+This GitHub page is powered by [Jekyll](https://jekyllrb.com/) and utilizes the theme [_Minimal Mistakes_](https://mmistakes.github.io/minimal-mistakes/). 
+
+All pictures are credited to [**Unsplash**](https://unsplash.com).

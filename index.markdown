@@ -8,7 +8,7 @@ header:
   overlay_filter: 0.3
   overlay_image: /images/md-mahdi-8SQ_wsDC0uY-unsplash.jpg
   caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
-excerpt: A data story investigating the mood in the media
+excerpt: Have you ever wondered whether the mood in the media differ throughout the week and across newspapers? We have.
 permalink: /
 intro:
   - excerpt: "*The most important decision you take is to be in a good mood.* -- Voltaire"
@@ -126,6 +126,7 @@ As you might have guessed, computing subjectivity scores is not a precise scienc
 </div>
 
 ## The Initial Investigations
+
 So, after looking at some examples of quotes and their respective compound and subjectivity scores, you might wonder how these scores are distributed within Quotebank. Firstly, we take a look at how the compound scores are distributed:
 
 {% include_relative /_plots/comp_dist.html %}
@@ -156,9 +157,9 @@ _The mean of group one equals the mean of group two._
 
 Using the aforementioned methods, we will get a _p-value_. This value tells us how statistically significant our results are. Or, in other words, the p-value tells us how likely it is, given that the null hypothesis is true, to observe results as extreme, or more extreme, than what we have observed.
 
-For our work, we will use a significance level of $1\%$. This implies that if the p-value given by the methods is lower than $1\%$, we will reject the null and conclude that the means of the two groups are different, given the significance level. Thus, we will say that the results are statistically significant.
+For our work, we will use a significance level of $1\%$. This implies that if the p-value given by the methods is lower than $1\%$, we will reject the null and conclude that the means of the two groups are different, given the significance level. Thus, we will say that the results are **statistically significant**.
 
-As this data story is not about statistical tricks and treat, we will leave the subject for now. If you would like a deeper explanation of our methods, you could take a look at our [notebook](https://github.com/epfl-ada/ada-2021-project-gutta-boys). However, to sum up, we will test whether the means of two groups are equal: If our results are too unlikely to happen with equal means, we will conclude that our results are significant. Puh, that was the boring stuff. Now, let us zoom in again!
+As this data story is not about statistical tricks and treat, we will leave the subject for now. If you would like a deeper explanation of our methods, you could take a look at our [notebook](https://github.com/epfl-ada/ada-2021-project-gutta-boys). However, to sum up, we will test whether the means of two groups are equal: If our results are too unlikely to happen with equal means, we will conclude that our results are significant. That was the boring stuff. Now, let us zoom in again!
 
 [comment]: # "Add link to the correct notebook."
 
@@ -216,6 +217,8 @@ The mean compound score of pre-COVID is $0.19$, versus the mean compound score o
 
 To conclude on whether the observed difference is significant, we utilize the previously mentioned _t-test_, resulting in a p-value of $0.0$, signifying that the result is very significant. We could therefore conclude that the COVID-19 pandemic affected the mood in the media, and that it got worse.
 
+[comment]: # "Could drop parts of the last paragraph."
+
 <div
   class="page__hero--overlay"
   style="height: 300px; background-image: url('./images/newspapers.jpg'); filter: grayscale(100%);">
@@ -244,13 +247,11 @@ The differences are significant. The amount of positive quotations in sports new
 
 However, it seems safe to conclude that if you are getting influenced by what you read in the media: Put away your newspapers and start reading some gossip!
 
-{% include_relative /_plots/wsj_moving.html %}
-
 ##### _Gender_
 
 Do the represented genders in the dataset differ in their sentiments?
 
-What can be said about the moods of the different genders? Not a lot apparently! While there is a slightly higher significant sentiment score for females, it's not very large. The average sentiment score for females was 0.196 while 0.194 for males. I guess we can say that it seems the women are a tiny tiny bit more positive than the guys.  
+What can be said about the moods of the different genders? Not a lot apparently! While there is a slightly higher significant sentiment score for females, it's not very large. The average sentiment score for females was 0.196 while 0.194 for males. I guess we can say that it seems the women are a tiny tiny bit more positive than the guys.
 
 Mapped over the entire timespan we see the average compound score for each month with respect to the genders:
 
@@ -259,8 +260,6 @@ Mapped over the entire timespan we see the average compound score for each month
 On average women had a slightly, but significant, higher sentiment score than males. The shown graph also showcases that the graph for females vary more, but this is attributed to there being fewer quotations from women (ca. 1/8). Below we also see the compound distribution for the genders:
 
 {% include_relative /_plots/marcus/bar_dist_comp_male_female.html %}
-
-
 
 ##### _Politicians_
 
@@ -272,12 +271,8 @@ One could speculate. Has there been a bit pessimistic or demagogic political cli
 
 {% include_relative /_plots/marcus/line_compound_pol_all_week.html %}
 
-
 Maybe a bit quite surprising, the subjectivity score for politicians was lower (0.107) than that of everyone (0.120). Does this mean politicians also are very objective people? Maybe not, as we remember the subjectivity analysis is not very sophisticated, and simply stating things as fact will give you a lower score. Maybe not the best measure of how who is a factual politician.
 
 {% include_relative /_plots/marcus/bar_dist_sub_pol_all.html %}
-
-
-
 
 Both polarity and subjectivity showed the same amount of difference, meaning little. We guess this is good news, as we wouldn't want to hold it against one gender to be more of one thing or another in the public discussion.
