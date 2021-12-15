@@ -31,7 +31,7 @@ Based on our initial questions, our thoughts wandered into what we could say spe
 We aim to present our findings on the abovementioned topics in the upcoming data story. Starting with the [QuoteBank](https://dlab.epfl.ch/people/west/pub/Vaucher-Spitz-Catasta-West_WSDM-21.pdf) data set provided by **dlab @ EPFL**, we will utilize information from Wikidata to research our questions by sentiment analyses.
 
 <div
-  class="page__hero--overlay" 
+  class="page__hero--overlay"
   style="height: 300px; background-image: url('./images/books.jpg'); filter: grayscale(100%);">
   <div class="wrapper">
     <h1 class="page__title" itemprop="headline"> Our Data and Methods </h1>
@@ -134,7 +134,7 @@ Not surprising, the distribution is heavily centered around at a compound score 
 Over to the subjectivity, a score of $0.0$ is once again the most frequent one. This could maybe be more surprising, as quotations and citations often refer to the opinions of the speaker. However, it seems like _TextBlob_'s methods overwhelmingly often end up with a score of $0.0$. Initially, one might think that as _TextBlob_ doesn't capture the underlying context, it doesn't extract the subjectivity neither. Eventually, we do also mind that the remaining distribution is centered around $0.5$, but also having a clear upswing towards $1.0$.
 
 <div
-  class="page__hero--overlay" 
+  class="page__hero--overlay"
   style="height: 300px; background-image: url('./images/printing_machine.jpg'); filter: grayscale(100%);">
   <div class="wrapper">
     <h1 class="page__title" itemprop="headline"> Does the Mood in the Media Evolve Throughout Time? </h1>
@@ -214,7 +214,7 @@ The mean compound score of pre-COVID is $0.19$, versus the mean compound score o
 To conclude on whether the observed difference is significant, we utilize the previously mentioned _t-test_, resulting in a p-value of $0.0$, signifying that the result is very significant. We could therefore conclude that the COVID-19 pandemic affected the mood in the media, and that it got worse.
 
 <div
-  class="page__hero--overlay" 
+  class="page__hero--overlay"
   style="height: 300px; background-image: url('./images/newspapers.jpg'); filter: grayscale(100%);">
   <div class="wrapper">
     <h1 class="page__title" itemprop="headline"> How Does the Mood Differ Across Media Outlets? </h1>
@@ -249,7 +249,9 @@ TODO: Få inn nøkkeltall og compound distribution histogram, evt også noe bonu
 
 Do the represented genders in the dataset differ in their sentiments?
 
-Results show that there is a significant difference in the sentiment of males and females.
+What can be said about the moods of the different genders? Not a lot apparently! While there is a slightly higher significant sentiment score for females, it's not very large. The average sentiment score for females was 0.196 while 0.194 for males. I guess we can say that it seems the women are a tiny tiny bit more positive than the guys.  
+
+Mapped over the entire timespan we see the average compound score for each month with respect to the genders:
 
 {% include_relative /_plots/marcus/line_compound_males_females_month.html %}
 
@@ -259,8 +261,14 @@ On average women had a slightly, but significant, higher sentiment score than ma
 
 TODO: Få inn nøkkeltall og evt finn annen plot til dataene, evt også en enkelt-politiker
 
-Do politicians really represent the average person?
+Do politicians really represent the rest of us? Not in mood it seems. The average compound score for politicians was lower (0.156) than that of everyone (0.191). Meaning we see that the politician's public expressions are a bit more negative than that of everyone on average.
 
-Shown below we see the significant difference between politicians and everyone's sentiment over time.
+One could speculate. Has there been a bit pessimistic or demagogic political climate in the second half of the last decade?
+
+Maybe a bit quite surprising, the subjectivity score for politicians was lower (0.107) than that of everyone (0.120). Does this mean politicians also are very objective people? Maybe not, as we remember the subjectivity analysis is not very sophisticated, and simply stating things as fact will give you a lower score. Maybe not the best measure of how who is a factual politician.
+
+Shown below we see the significant difference between politicians and everyone's sentiment over time:
 
 {% include_relative /_plots/marcus/line_compound_pol_all_week.html %}
+
+Both polarity and subjectivity showed the same amount of difference, meaning little. We guess this is good news, as we wouldn't want to hold it against one gender to be more of one thing or another in the public discussion.
