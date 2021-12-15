@@ -297,7 +297,7 @@ Maybe a bit quite surprising, the subjectivity score for politicians was lower (
 {% include_relative /_plots/marcus/bar_dist_sub_pol_all.html %}
 
 
-## Shortcomings and remarks
+## What could we improve?
 
 Before concluding that everyone should quit their NYTimes subscription, start reading beauty magazines, and classify politicians as moody, we should evaluate the weaknesses of our analysis.
 
