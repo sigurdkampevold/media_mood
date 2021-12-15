@@ -297,6 +297,23 @@ Maybe a bit quite surprising, the subjectivity score for politicians was lower (
 {% include_relative /_plots/marcus/bar_dist_sub_pol_all.html %}
 
 
+## Shortcomings and remarks
+
+Before concluding that everyone should quit their NYTimes subscription, start reading beauty magazines, and classify politicians as moody, we should evaluate the weaknesses of our analysis.
+
+The first and most apparent objection concerns the data. Quotebank is a vast dataset that gives unique insights into the media but only contains quotes. Quotations are only a small subset of the total text published in the press. Our conclusion about the mood in the media is thus only valid for quotations, not for mood in general. We believe it is plausible that articles containing positive quotes are also positive, but this is just our hypothesis. To determine the total mood in the media, further research must be done on other subsets of the media, not only quotations.
+
+Secondly, as previously mentioned, sentiment analysis is not an exact science. The methods we used in this analysis solely consider the sentences as a bag of words. They are not taking into account the context of the words. To increase the robustness of our results, we did also test our hypothesis with TextBlob’s polarity score in addition to Vader’s compound score. The TextBlob polarity score works in the same way as Vader by using a lexicon to score individual words. The distributions for TextBlob and Vader can be seen below:
+
+{% include_relative /_plots/marcus/comp_pol.html %}
+
+Even though the distributions of the scores for TextBlob differs from the one for Vader, we get similar results in our tests. This can be seen in the table below…
+
+
+This table shows that our results are relatively robust, but we have not considered context. A “smarter” sentiment analysis tool could be utilized to further analyze our hypothesis. For example, Bert, which also takes into the context of sentences…
+
+Finally, it is important to not mistake correlation for causation. For example, for the Covid effect, even though there is statistically significant evidence for the mood being drastically lower when Covid occurred, we cannot conclude that this is caused by Covid. There could be another variable that actually caused the mood to drop. To further investigate this, we could use instrumental variables to isolate the effect from Covid.
+
 
 ## What have we learnt?
 
