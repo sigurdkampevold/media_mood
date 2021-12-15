@@ -40,6 +40,15 @@ We aim to present our findings on the abovementioned topics in the upcoming data
 
 Initially, we want to give a feel about the data and provide some initial analyses and comments on the methods we will use in our work.
 
+## Key insights
+
+-	There are no significant variations in the mood in media quotes throughout the week or the year
+-	The mood in media fell significantly in the first phase of the covid pandemic 
+-	The mood and subjectivity across media outlets vary significantly. When subsampling the outlets based on category clusters appear
+-	The mood in the quotes said by men and women are close to equal, woman scoring slightly higher. 
+-	Politicians are on average more negative than the mean for the dataset. 
+
+
 ## Quotebank
 
 The Quotebank data set provides quotes in the media from more than a decade. In total, 178 million quotations from 2008 to 2020 are attributed with probable speakers and dates. Using machine learning methods, **dlab @ EPFL** has built a framework for recognizing and attributing quotations from media articles, thus building the data set. However, we have only utilized quotes from 2015 to 2020, distributed through the years as in the following diagram:
