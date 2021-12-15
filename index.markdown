@@ -307,10 +307,7 @@ Secondly, as previously mentioned, sentiment analysis is not an exact science. T
 
 {% include_relative /_plots/comp_pol.html %}
 
-Even though the distributions of the scores for TextBlob differs from the one for Vader, we get similar results in our tests. This can be seen in the table below…
-
-
-This table shows that our results are relatively robust, but we have not considered context. A “smarter” sentiment analysis tool could be utilized to further analyze our hypothesis. For example, Bert, which also takes into the context of sentences…
+The distributions for the two measures are evidently different. The compound score is more evenly spread out, while the polarity score has few extreme values. Even though the distributions of the scores for TextBlob differs from the one for Vader, the test results are similar. This is caused by even though the absolute value of the scores differs, they mostly agree on the relative direction. This table shows that our results are relatively robust. However, we have not considered context, and a “smarter” sentiment analysis tool could be utilized to further improve our analysis. For example, BERT, the natural language processing model from Google, also considers the context of sentences. The BERT method has outperformed more straightforward sentiment analysis methods, like Vader, for many applications and could improve our results’ accuracy.
 
 Finally, it is important to not mistake correlation for causation. For example, for the Covid effect, even though there is statistically significant evidence for the mood being drastically lower when Covid occurred, we cannot conclude that this is caused by Covid. There could be another variable that actually caused the mood to drop. To further investigate this, we could use instrumental variables to isolate the effect from Covid.
 
@@ -321,4 +318,6 @@ So, what have we learnt about the mood in the media?
 
 Through the analysis we have both confirmed and rejected some of our everyday hypothesis about the mood in the media. Normal people are happier than politicians, celebrity magazines are generally more subjective than newspapers and the late pandemic indeed affected the media mood. However, if there exist something like a Friday effect making us happy towards the weekend, it is not reflected in the quotes we have worked with.  Admittedly, women are happier than men, but unless you want to go into a detailed p-value discussion with your spouse, we recommend you not address the topic. The difference is after all very small.  
 
-So next them you hear a heated discussion about the mood in the media. Say listen, I will tell you a thing or two about mood...
+[comment]: #Vi har ikke funnet ut at kvinner er gladere enn menn. Husk å fiks det.
+
+So next time you hear a heated discussion about the mood in the media. Say listen, I will tell you a thing or two about mood...
