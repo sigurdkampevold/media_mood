@@ -305,7 +305,7 @@ The first and most apparent objection concerns the data. Quotebank is a vast dat
 
 Secondly, as previously mentioned, sentiment analysis is not an exact science. The methods we used in this analysis solely consider the sentences as a bag of words. They are not taking into account the context of the words. To increase the robustness of our results, we did also test our hypothesis with TextBlob’s polarity score in addition to Vader’s compound score. The TextBlob polarity score works in the same way as Vader by using a lexicon to score individual words. The distributions for TextBlob and Vader can be seen below:
 
-{% include_relative /_plots/marcus/comp_pol.html %}
+{% include_relative /_plots/comp_pol.html %}
 
 Even though the distributions of the scores for TextBlob differs from the one for Vader, we get similar results in our tests. This can be seen in the table below…
 
