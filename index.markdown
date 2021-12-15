@@ -167,9 +167,7 @@ Using the aforementioned methods, we will get a _p-value_. This value tells us h
 
 For our work, we will use a significance level of $1\%$. This implies that if the p-value given by the methods is lower than $1\%$, we will reject the null and conclude that the means of the two groups are different, given the significance level. Thus, we will say that the results are **statistically significant**.
 
-As this data story is not about statistical tricks and treat, we will leave the subject for now. If you would like a deeper explanation of our methods, you could take a look at our [notebook](https://github.com/epfl-ada/ada-2021-project-gutta-boys). However, to sum up, we will test whether the means of two groups are equal: If our results are too unlikely to happen with equal means, we will conclude that our results are significant. That was the boring stuff. Now, let us zoom in again!
-
-[comment]: # "Add link to the correct notebook."
+As this data story is not about statistical tricks and treat, we will leave the subject for now. If you would like a deeper explanation of our methods, you could take a look at our [notebook](https://github.com/epfl-ada/ada-2021-project-gutta-boys/blob/main/final_version.ipynb). However, to sum up, we will test whether the means of two groups are equal: If our results are too unlikely to happen with equal means, we will conclude that our results are significant. That was the boring stuff. Now, let us zoom in again!
 
 ## How Does the Compound Score Evolve?
 
@@ -267,48 +265,53 @@ However, it seems safe to conclude that if you are getting influenced by what yo
   </div>
 </div>
 
-Do the represented genders in the dataset differ in their sentiments?
+As well as wondering on how the mood differs across the different media outlets, we wondered whether we could find differences across the genders. Do the quotations in Quotebank reveal what we all know, that men are more moody than women?
 
-First of all we see a difference in the amount of quotes form each gender. From the approximately 16 Million quotes which could be identified be either male or female, around an eight of them where from the females. illustrated in the pie chart below:
+Diving in to the data set, we first see a difference in the amount of quotations spoken by each gender. Of approximately 16 million quotations that could be attributed to spoken by either men or women, only an eight of them are attributed to women.
 
 {% include_relative /_plots/marcus/pie_genders.html %}
 
-What can be said about the moods of the different genders? Not a lot apparently! While there is a slightly higher significant sentiment score for females, it's not very large. The average sentiment score for females was 0.196 while 0.194 for males. I guess we can say that it seems the women are a tiny tiny bit more positive than the guys.
-
-Mapped over the entire timespan we see the average compound score for each month with respect to the genders:
+Despite the differences in the number of quotations, we search after differences in the mood. Well, the data set reveals a glimt of our hypothesis: Quotations by women have a slightly higher compound scores than those spoken by men. The difference is significant, but nevertheless very small: The average sentiment score for women is $0.196$ and $0.194$ for men. All over, we might say the women represented in our data set is a tiny, tiny bit more positive than their peers.
 
 {% include_relative /_plots/marcus/line_compound_males_females_week.html %}
 
-On average women had a slightly, but significant, higher sentiment score than males. The shown graph also showcases that the graph for females vary more, but this is attributed to there being fewer quotations from women (ca. 1/8). Below we also see the compound distribution for the genders:
+As of the diagram above, it is not easy to see that the average compound score. The diagram also shows that the compound score for females vary more than that of men. However, this does not point towards women being more moody, but is probably related to the lower amount of quotations attributed to women. Below, we also see the compound score distributions of the gender plotted on each other:
 
 {% include_relative /_plots/marcus/line_dist_comp_males_females.html %}
 
-Both polarity and subjectivity showed the same amount of difference, meaning little. We guess this is good news, as we wouldn't want to hold it against one gender to be more of one thing or another in the public discussion.
+Summing up, we cannot point one of the gender out as the _moody gender_. However, maybe another group of the population differs from the rest of us?
+
+[comment]: # "Both polarity and subjectivity showed the same amount of difference, meaning little. We guess this is good news, as we wouldn't want to hold it against one gender to be more of one thing or another in the public discussion."
 
 <div
   class="page__hero--overlay"
   style="height: 300px; background-image: url('./images/rally.jpg'); filter: grayscale(100%);">
   <div class="wrapper">
-    <h1 class="page__title" itemprop="headline"> Are Politicans More Pessimistic? </h1>
+    <h1 class="page__title" itemprop="headline"> Are Politicans More Negative? </h1>
   </div>
 </div>
 
-Meaning to represent the people, politicians comprise both a small percentage of general society (sjekke stats på om politikere er overrrepresentert?). Of the quotes we were able to identify with our wikidata, around 2% were attributable to politicians:
+Elected by the people, for the people. Politicans are elected to represent and work for average Joe, and thus have a great responsibility. Therefore, it is reasonable that the politicans receive great attention by the Fourth Estate. After attributiong the quotations in Quotebank to whether it was spoken by a politican or not, we see that about $2\%$ of the quotations belong to politicans.
+
+[comment]: # "Er politikere overrepresent i Quotebank? Må eventuelt se på prosent av befolkningen som er politikere."
 
 {% include_relative /_plots/marcus/pie_pol.html %}
 
-Do politicians really represent the rest of us? Not in mood it seems. The average compound score for politicians was lower (0.156) than that of everyone (0.191). Meaning we see that the politician's public expressions are a bit more negative than that of everyone on average.
+As politicans are elected to represent us, do they represent us in the sense of their mood? As of the data, the answer is no. While the average compound score of politicans was $0.156$, the average compound score of the quotations in Quotebank was $0.191$. As the results are significant, we could actually say that the quotations spoken by politicans are more negative than the others.
 
-One could speculate. Has there been a bit pessimistic or demagogic political climate in the second half of the last decade? Below is a graph of these compounds over time:
+Stating that politicans are more negative, we have to remember that the quotations are from the six last years. The polarity in the society and the public debate has evolved dramatically through the same period. The politians have apparently been in the front line of this development. Therefore, it could be interesting to see whether this is reflected in Quotebank. Firstly, one could look at how the compound scores of the politicans develop throughout the period.
 
 {% include_relative /_plots/marcus/line_compound_pol_all_week.html %}
 
-Maybe a bit quite surprising, the subjectivity score for politicians was lower (0.107) than that of everyone (0.120). Does this mean politicians also are very objective people? Maybe not, as we remember the subjectivity analysis is not very sophisticated, and simply stating things as fact will give you a lower score. Maybe not the best measure of how who is a factual politician.
+As earlier, the overall compound score of the quotations are more or less stable throughout the period. On the other hand, we might
 
-{% include_relative /_plots/marcus/line_dist_comp_pol_all.html %}
+Furthermore, it is reasonable to think that politicans base their decisions on factual information, even though this belief might have been weakened the past years. It is intriguing to hope that Quotebank could give us answers to this, and the subjectivity score computed by _TextBlob_ might reflect this. Below, you could see how the subjectivity scores of politicans are distributed compared to the overall subjectivity.
+
 {% include_relative /_plots/marcus/bar_dist_sub_pol_all.html %}
 
-## What could we improve?
+Maybe a bit surprisingly, the subjectivity score for politicans are a bit lower than that of the overall data set, with a score of $0.107$ versus $0.120$. This indicates that politicans are more objective than the average. This is, in it self, quite positive to think about. Politicans should base their choices on factual information, and the data set indicates that the at least communicate this. However, one should remember the examples of subjecitivity scores we started off with: The computations of subjectivity scores are not a precise science, and simply using _objective_ words could give a better degree of objectivity. Do you remember the last, "objective" example of Donald Trump describind "Sleepy Joe"? Maybe not the most precise measure of objectivity...
+
+## What Could We Improve?
 
 Before concluding that everyone should quit their NYTimes subscription, start reading beauty magazines, and classify politicians as moody, we should evaluate the weaknesses of our analysis.
 
@@ -322,12 +325,12 @@ The distributions for the two measures are evidently different. The compound sco
 
 Finally, it is important to not mistake correlation for causation. For example, for the Covid effect, even though there is statistically significant evidence for the mood being drastically lower when Covid occurred, we cannot conclude that this is caused by Covid. There could be another variable that actually caused the mood to drop. To further investigate this, we could use instrumental variables to isolate the effect from Covid.
 
-## What have we learnt?
+## What Have We Learnt?
 
 So, what have we learnt about the mood in the media?
 
 Through the analysis we have both confirmed and rejected some of our everyday hypothesis about the mood in the media. Normal people are happier than politicians, celebrity magazines are generally more subjective than newspapers and the late pandemic indeed affected the media mood. However, if there exist something like a Friday effect making us happy towards the weekend, it is not reflected in the quotes we have worked with. Admittedly, women are happier than men, but unless you want to go into a detailed p-value discussion with your spouse, we recommend you not address the topic. The difference is after all very small.
 
-[comment]: #Vi har ikke funnet ut at kvinner er gladere enn menn. Husk å fiks det.
+[comment]: # "Vi har ikke funnet ut at kvinner er gladere enn menn. Husk å fiks det."
 
 So next time you hear a heated discussion about the mood in the media. Say listen, I will tell you a thing or two about mood...
