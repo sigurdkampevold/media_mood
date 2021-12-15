@@ -46,7 +46,7 @@ The Quotebank data set provides quotes in the media from more than a decade. In 
 
 {% include_relative /_plots/line_dig.html %}
 
-As you can see, there are some significant "holes" in the data set in 2016. Additionally, the amount of quotations each day decreases towards the end of the data set in 2020. This is a finding that could be important for our future investigations. As well as quotations and their respective speakers, Quotebank attributes quotations to the media outlet in which it was first discovered, how many times it has occurred and how the algorithm recognized it as a quote. Finally, the algorithm attributes the quotations with links to the Wikidata entries of its most plausible speaker.
+As you can see, there are some significant "holes" in the data set in 2016. This is a finding that could be important for our future investigations. As well as quotations and their respective speakers, Quotebank attributes quotations to the media outlet in which it was first discovered, how many times it has occurred and how the algorithm recognized it as a quote. Finally, the algorithm attributes the quotations with links to the Wikidata entries of its most plausible speaker.
 
 ## Wikidata
 
