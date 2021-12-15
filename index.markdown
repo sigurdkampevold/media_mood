@@ -241,6 +241,7 @@ For further investigations, we assign each media outlet to one of four different
 
 {% include_relative /_plots/polarity_distribution_categories_same_plot.html %}
 
+
 [comment]: # "Need to have x-axis!"
 
 The differences are significant. The amount of positive quotations in sports newspapers and celebrity magazines clearly surpasses the amount in the daily newspapers, having average compound scores of $0.27$ and $0.17$ versus $0.14$ respectively. This might be reasonable, as daily newspaper should cover all the suffering in the society, while sports newspapers might focus on victorious athletes.
