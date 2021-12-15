@@ -126,16 +126,15 @@ As you might have guessed, computing subjectivity scores is not a precise scienc
 </div>
 
 ## The Initial Investigations
-
-So, after looking at some examples of quotes and their respective compound and subjectivity scores, you might wonder how these scores are distributed within the part of Quotebank we are working with. Firstly, we could take a look at how the compound scores are distributed:
+So, after looking at some examples of quotes and their respective compound and subjectivity scores, you might wonder how these scores are distributed within Quotebank. Firstly, we take a look at how the compound scores are distributed:
 
 {% include_relative /_plots/comp_dist.html %}
 
-Not surprising, the distribution is heavily centered around at a compound score of $0.0$. As the compound score of _Vader_ is computed through averaging, this seems reasonable. However, we do see that the distribution seems to be more heavy on the positive values, maybe indicating that the quotations in the media are more positive than negative, although neutrality sweeps the board.
+Not surprisingly, the distribution is heavily centered around a compound score of $0.0$. As the compound score of _Vader_ is computed through averaging, this seems reasonable. However, we see that the distribution appears to be heavier on the positive values. This may indicate that the quotations in the media are more positive than negative, although neutrality sweeps the board.
 
 {% include_relative /_plots/sub_dist.html %}
 
-Over to the subjectivity, a score of $0.0$ is once again the most frequent one. This could maybe be more surprising, as quotations and citations often refer to the opinions of the speaker. However, it seems like _TextBlob_'s methods overwhelmingly often end up with a score of $0.0$. Initially, one might think that as _TextBlob_ doesn't capture the underlying context, it doesn't extract the subjectivity neither. Eventually, we do also mind that the remaining distribution is centered around $0.5$, but also having a clear upswing towards $1.0$.
+Over to the subjectivity, a score of $0.0$ is once again the most frequent. This may be more surprising, as quotations and citations often refer to the speaker's opinions. However, it seems like _TextBlob_'s methods overwhelmingly often end up with a score of $0.0$. This is because _TextBlob_ only gives scores to words in the lexicon. There are many quotes with no words in the lexicon, thereby receiving a score of $0.0$. Initially, one might think that as _TextBlob_ doesn't capture the underlying context, it doesn't extract the subjectivity either. Finally, we note that the remaining distribution is centered around $0.5$ but also has a clear upswing towards $1.0$.
 
 <div
   class="page__hero--overlay"
@@ -145,13 +144,13 @@ Over to the subjectivity, a score of $0.0$ is once again the most frequent one. 
   </div>
 </div>
 
-People do talk about their mood swings. The topic is a part of the everyday talk, and we want to investigate if such _everydays myths_ are present in the quotations of the media as well. To concretize our work, we decided to investigate whether the mood evolves during the week and across the seasons of the year.
+People talk about their mood swings. The topic is a part of everyday talk, and we want to investigate if such _everydays myths_ are present in the quotations of the media as well. To concretize our work, we decided to examine whether the mood evolves during the week and across the seasons of the year.
 
-But first, we have to zoom out. How should we even be able to draw any conclusions from our data set and analyses, only by doing utilizing libraries for sentiment analysis and making visualizations? Luckily, we have a solution.
+But first, we have to zoom out. How can we even draw any conclusions from our data set and analyses only by utilizing libraries for sentiment analysis and making visualizations? Luckily, we have a solution.
 
 ## Statistical Tests
 
-To say whether our results are valid, we will utilize statistical tests. More precisely, we will use classical _t-tests_ and an variant named _Welch's t-test_. In short, these methods test whether the mean of two groups is statistically significantly different. Both kind of tests will be used for hypothesis testing, where we will check whether the following null hypothesis is valid:
+To tell whether our results are valid, we will utilize statistical tests. More precisely, we will use classical _t-tests_ and an variant named _Welch's t-test_. In short, these methods test whether the mean of two groups is statistically significantly different. Both kind of tests will be used for hypothesis testing, where we will check whether the following null hypothesis is valid:
 
 _The mean of group one equals the mean of group two._
 
