@@ -276,3 +276,12 @@ Maybe a bit quite surprising, the subjectivity score for politicians was lower (
 {% include_relative /_plots/marcus/bar_dist_sub_pol_all.html %}
 
 Both polarity and subjectivity showed the same amount of difference, meaning little. We guess this is good news, as we wouldn't want to hold it against one gender to be more of one thing or another in the public discussion.
+
+
+#### What have we learnt?
+
+So, what have we learnt about the mood in the media?
+
+Through the analysis we have both confirmed and rejected some of our everyday hypothesis about the mood in the media. Normal people are happier than politicians, celebrity magazines are generally more subjective than newspapers and the late pandemic indeed affected the media mood. However, if there exist something like a Friday effect making us happy towards the weekend, it is not reflected in the quotes we have worked with.  Admittedly, women are happier than men, but unless you want to go into a detailed p-value discussion with your spouse, we recommend you not address the topic. The difference is after all very small.  
+
+So next them you hear a heated discussion about the mood in the media. Say listen, I will tell you a thing or two about mood...
