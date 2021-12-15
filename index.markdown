@@ -30,6 +30,15 @@ Based on our initial questions, our thoughts wandered into what we could say spe
 
 We aim to present our findings on the abovementioned topics in the upcoming data story. Starting with the [QuoteBank](https://dlab.epfl.ch/people/west/pub/Vaucher-Spitz-Catasta-West_WSDM-21.pdf) data set provided by **dlab @ EPFL**, we will utilize information from Wikidata to research our questions by sentiment analyses.
 
+
+## Key insights
+
+-	There are no significant variations in the mood in media quotes throughout the week or the year
+-	The mood in media fell significantly in the first phase of the covid pandemic 
+-	The mood and subjectivity across media outlets vary significantly. When subsampling the outlets based on category clusters appear
+-	The mood in the quotes said by men and women are close to equal, woman scoring slightly higher. 
+-	Politicians are on average more negative than the mean for the dataset. 
+
 <div
   class="page__hero--overlay"
   style="height: 300px; background-image: url('./images/books.jpg'); filter: grayscale(100%);">
@@ -40,13 +49,6 @@ We aim to present our findings on the abovementioned topics in the upcoming data
 
 Initially, we want to give a feel about the data and provide some initial analyses and comments on the methods we will use in our work.
 
-## Key insights
-
--	There are no significant variations in the mood in media quotes throughout the week or the year
--	The mood in media fell significantly in the first phase of the covid pandemic 
--	The mood and subjectivity across media outlets vary significantly. When subsampling the outlets based on category clusters appear
--	The mood in the quotes said by men and women are close to equal, woman scoring slightly higher. 
--	Politicians are on average more negative than the mean for the dataset. 
 
 
 ## Quotebank
