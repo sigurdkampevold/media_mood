@@ -245,8 +245,6 @@ However, it seems safe to conclude that if you are getting influenced by what yo
 
 ##### _Gender_
 
-TODO: Få inn nøkkeltall og compound distribution histogram, evt også noe bonus
-
 Do the represented genders in the dataset differ in their sentiments?
 
 What can be said about the moods of the different genders? Not a lot apparently! While there is a slightly higher significant sentiment score for females, it's not very large. The average sentiment score for females was 0.196 while 0.194 for males. I guess we can say that it seems the women are a tiny tiny bit more positive than the guys.  
@@ -255,7 +253,11 @@ Mapped over the entire timespan we see the average compound score for each month
 
 {% include_relative /_plots/marcus/line_compound_males_females_month.html %}
 
-On average women had a slightly, but significant, higher sentiment score than males. The shown graph also showcases that the graph for females vary more, but this is attributed to there being fewer quotations from women (ca. 1/8).
+On average women had a slightly, but significant, higher sentiment score than males. The shown graph also showcases that the graph for females vary more, but this is attributed to there being fewer quotations from women (ca. 1/8). Below we also see the compound distribution for the genders:
+
+{% include_relative /_plots/marcus/bar_dist_comp_male_female.html %}
+
+
 
 ##### _Politicians_
 
@@ -263,12 +265,16 @@ TODO: Få inn nøkkeltall og evt finn annen plot til dataene, evt også en enkel
 
 Do politicians really represent the rest of us? Not in mood it seems. The average compound score for politicians was lower (0.156) than that of everyone (0.191). Meaning we see that the politician's public expressions are a bit more negative than that of everyone on average.
 
-One could speculate. Has there been a bit pessimistic or demagogic political climate in the second half of the last decade?
+One could speculate. Has there been a bit pessimistic or demagogic political climate in the second half of the last decade? Below is a graph of these compounds over time:
+
+{% include_relative /_plots/marcus/line_compound_pol_all_week.html %}
+
 
 Maybe a bit quite surprising, the subjectivity score for politicians was lower (0.107) than that of everyone (0.120). Does this mean politicians also are very objective people? Maybe not, as we remember the subjectivity analysis is not very sophisticated, and simply stating things as fact will give you a lower score. Maybe not the best measure of how who is a factual politician.
 
-Shown below we see the significant difference between politicians and everyone's sentiment over time:
+{% include_relative /_plots/marcus/bar_dist_sub_pol_all.html %}
 
-{% include_relative /_plots/marcus/line_compound_pol_all_week.html %}
+
+
 
 Both polarity and subjectivity showed the same amount of difference, meaning little. We guess this is good news, as we wouldn't want to hold it against one gender to be more of one thing or another in the public discussion.
