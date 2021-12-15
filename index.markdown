@@ -34,10 +34,10 @@ We aim to present our findings on the abovementioned topics in the upcoming data
 ## Key insights
 
 -	There are no significant variations or trend in the mood in media quotes throughout the week or the year
--	The mood in media fell significantly in the first phase of the covid pandemic 
+-	The mood in media fell significantly in the first phase of the covid pandemic
 -	The mood and subjectivity across media outlets vary significantly. When subsampling the outlets based on category clusters appear. Sports newspapers and Celebrity magazines tend to be more positive and more objective than newspapers
 -	The mood in the quotes said by men and women are close to equal, woman scoring slightly higher
--	Politicians are on average more negative than the mean of the dataset. 
+-	Politicians are on average more negative than the mean of the dataset.
 
 <div
   class="page__hero--overlay"
@@ -263,19 +263,27 @@ However, it seems safe to conclude that if you are getting influenced by what yo
 
 Do the represented genders in the dataset differ in their sentiments?
 
+First of all we see a difference in the amount of quotes form each gender. From the approximately 16 Million quotes which could be identified be either male or female, around an eight of them where from the females. illustrated in the pie chart below:
+
+{% include_relative /_plots/marcus/pie_genders.html %}
+
 What can be said about the moods of the different genders? Not a lot apparently! While there is a slightly higher significant sentiment score for females, it's not very large. The average sentiment score for females was 0.196 while 0.194 for males. I guess we can say that it seems the women are a tiny tiny bit more positive than the guys.
 
 Mapped over the entire timespan we see the average compound score for each month with respect to the genders:
 
-{% include_relative /_plots/marcus/line_compound_males_females_month.html %}
+{% include_relative /_plots/marcus/line_compound_males_females_week.html %}
 
 On average women had a slightly, but significant, higher sentiment score than males. The shown graph also showcases that the graph for females vary more, but this is attributed to there being fewer quotations from women (ca. 1/8). Below we also see the compound distribution for the genders:
 
-{% include_relative /_plots/marcus/bar_dist_comp_male_female.html %}
+{% include_relative /_plots/marcus/line_dist_comp_males_females.html %}
+
+Both polarity and subjectivity showed the same amount of difference, meaning little. We guess this is good news, as we wouldn't want to hold it against one gender to be more of one thing or another in the public discussion.
+
 
 ##### _Politicians_
+Meaning to represent the people, politicians comprise both a small percentage of general society (sjekke stats på om politikere er overrrepresentert?). Of the quotes we were able to identify with our wikidata, around 2% were attributable to politicians:
 
-TODO: Få inn nøkkeltall og evt finn annen plot til dataene, evt også en enkelt-politiker
+{% include_relative /_plots/marcus/pie_pol.html %}
 
 Do politicians really represent the rest of us? Not in mood it seems. The average compound score for politicians was lower (0.156) than that of everyone (0.191). Meaning we see that the politician's public expressions are a bit more negative than that of everyone on average.
 
@@ -285,9 +293,9 @@ One could speculate. Has there been a bit pessimistic or demagogic political cli
 
 Maybe a bit quite surprising, the subjectivity score for politicians was lower (0.107) than that of everyone (0.120). Does this mean politicians also are very objective people? Maybe not, as we remember the subjectivity analysis is not very sophisticated, and simply stating things as fact will give you a lower score. Maybe not the best measure of how who is a factual politician.
 
+{% include_relative /_plots/marcus/line_dist_comp_pol_all.html %}
 {% include_relative /_plots/marcus/bar_dist_sub_pol_all.html %}
 
-Both polarity and subjectivity showed the same amount of difference, meaning little. We guess this is good news, as we wouldn't want to hold it against one gender to be more of one thing or another in the public discussion.
 
 
 ## What have we learnt?
