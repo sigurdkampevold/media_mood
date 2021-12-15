@@ -150,15 +150,15 @@ But first, we have to zoom out. How can we even draw any conclusions from our da
 
 ## Statistical Tests
 
-To tell whether our results are valid, we will utilize statistical tests. More precisely, we will use classical _t-tests_ and an variant named _Welch's t-test_. In short, these methods test whether the mean of two groups is statistically significantly different. Both kind of tests will be used for hypothesis testing, where we will check whether the following null hypothesis is valid:
+To tell whether our results are valid, we utilize statistical tests. More precisely, we use classical _t-tests_ and a variant named _Welch's t-test_. In short, these methods test whether the mean of two groups is statistically significantly different. Both kinds of tests will be used for hypothesis testing, where we will examine whether the following null hypothesis is valid:
 
 _The mean of group one equals the mean of group two._
 
-Using the abovementioned methods, we will end up having a _p-value_. This value tells us how statistically significant our results are. Or, in other words, the p-value tells us how likely it is, given that the null hypothesis is true, to observe results as extreme, or even more extreme, than what we have observed.
+Using the aforementioned methods, we will get a _p-value_. This value tells us how statistically significant our results are. Or, in other words, the p-value tells us how likely it is, given that the null hypothesis is true, to observe results as extreme, or more extreme, than what we have observed.
 
-For our work, we will use a significance level of $1\%$. This implies that if the p-value given by the methods is lower than $1\%$, we will conclude that the means of the two groups are different, given the significance level. Thus, we will say that the results are statistically significant.
+For our work, we will use a significance level of $1\%$. This implies that if the p-value given by the methods is lower than $1\%$, we will reject the null and conclude that the means of the two groups are different, given the significance level. Thus, we will say that the results are statistically significant.
 
-As this data story is not about statistical tricks and treat, we will leave the subject for now. If you would like a deeper a explanation of our methods, you could take a look at our [notebook](https://github.com/epfl-ada/ada-2021-project-gutta-boys). However, to sum up, we will test whether the means of two groups are equal: If our results are too unlikely to happen with equal means, we will conclude that our results are significant. Puh, that was the boring stuff, now, let us zoom in again!
+As this data story is not about statistical tricks and treat, we will leave the subject for now. If you would like a deeper explanation of our methods, you could take a look at our [notebook](https://github.com/epfl-ada/ada-2021-project-gutta-boys). However, to sum up, we will test whether the means of two groups are equal: If our results are too unlikely to happen with equal means, we will conclude that our results are significant. Puh, that was the boring stuff. Now, let us zoom in again!
 
 [comment]: # "Add link to the correct notebook."
 
