@@ -11,7 +11,7 @@ header:
 excerpt: Have you ever wondered whether the mood in the media differ throughout the week and across newspapers? We have.
 permalink: /
 intro:
-  - excerpt: "*The most important decision you take is to be in a good mood.* -- Voltaire"
+  - excerpt: '*"The most important decision you take is to be in a good mood."* -- Voltaire'
 ---
 
 {% include feature_row id="intro" type="center" %}
@@ -30,14 +30,13 @@ Based on our initial questions, our thoughts wandered into what we could say spe
 
 We aim to present our findings on the abovementioned topics in the upcoming data story. Starting with the [QuoteBank](https://dlab.epfl.ch/people/west/pub/Vaucher-Spitz-Catasta-West_WSDM-21.pdf) data set provided by **dlab @ EPFL**, we will utilize information from Wikidata to research our questions by sentiment analyses.
 
+## Key Insights
 
-## Key insights
-
--	There are no significant variations or trend in the mood in media quotes throughout the week or the year
--	The mood in media fell significantly in the first phase of the covid pandemic
--	The mood and subjectivity across media outlets vary significantly. When subsampling the outlets based on category clusters appear. Sports newspapers and Celebrity magazines tend to be more positive and more objective than newspapers
--	The mood in the quotes said by men and women are close to equal, woman scoring slightly higher
--	Politicians are on average more negative than the mean of the dataset.
+- There are no significant variations or trends in the mood in media quotations throughout the week days or months.
+- The mood in the media became significantly more negative in the first phase of the COVID-19 pandemic.
+- The mood and subjectivity across media outlets vary significantly. When subsampling the outlets based on category, clusters appear. Sports newspapers and celebrity magazines tend to be more positive and more subjective than daily newspapers.
+- The mood in the quotations said by men and women is very similiar, but women are slightly more positive.
+- Quotations spoken by politicans are on average more negative than the average quotation in the data set.
 
 <div
   class="page__hero--overlay"
@@ -48,8 +47,6 @@ We aim to present our findings on the abovementioned topics in the upcoming data
 </div>
 
 Initially, we want to give a feel about the data and provide some initial analyses and comments on the methods we will use in our work.
-
-
 
 ## Quotebank
 
@@ -67,7 +64,7 @@ Since the quotations are attributed with links to Wikidata entries, we can effor
 
 Sentiment analyses aim to identify and extract subjective information in text, telling whether a phrase is positive, negative, or neutral. Using libraries, one could input a sentence, such as a quote from the media, and get a score. This will be our primary tool in finding trends in the mood of the media.
 
-[comment]: #avnsittet over bør skrives om
+[comment]: # "Avsnittet over bør skrives om"
 
 <p style="text-align: center">
 <img src="./images/sentiment_tweets.gif" style="position: relative; ">
@@ -246,7 +243,6 @@ The plot below display the amount of quotes from the different media outlets
 
 {% include_relative /_plots/treemap_media.html %}
 
-
 Starting the analyses, we plot the average compound score against the average subjectivity score for the selected media outlets:
 
 {% include_relative /_plots/scatterplot_medias.html %}
@@ -257,14 +253,19 @@ For further investigations, we assign each media outlet to one of four different
 
 {% include_relative /_plots/polarity_distribution_categories_same_plot.html %}
 
-
 [comment]: # "Need to have x-axis!"
 
 The differences are significant. The amount of positive quotations in sports newspapers and celebrity magazines clearly surpasses the amount in the daily newspapers, having average compound scores of $0.27$ and $0.17$ versus $0.14$ respectively. This might be reasonable, as daily newspaper should cover all the suffering in the society, while sports newspapers might focus on victorious athletes.
 
 However, it seems safe to conclude that if you are getting influenced by what you read in the media: Put away your newspapers and start reading some gossip!
 
-##### _Gender_
+<div
+  class="page__hero--overlay"
+  style="height: 300px; background-image: url('./images/people.jpg'); filter: grayscale(100%);">
+  <div class="wrapper">
+    <h1 class="page__title" itemprop="headline"> Does The Mood Differ Between The Genders? </h1>
+  </div>
+</div>
 
 Do the represented genders in the dataset differ in their sentiments?
 
@@ -284,8 +285,14 @@ On average women had a slightly, but significant, higher sentiment score than ma
 
 Both polarity and subjectivity showed the same amount of difference, meaning little. We guess this is good news, as we wouldn't want to hold it against one gender to be more of one thing or another in the public discussion.
 
+<div
+  class="page__hero--overlay"
+  style="height: 300px; background-image: url('./images/rally.jpg'); filter: grayscale(100%);">
+  <div class="wrapper">
+    <h1 class="page__title" itemprop="headline"> Are Politicans More Pessimistic? </h1>
+  </div>
+</div>
 
-##### _Politicians_
 Meaning to represent the people, politicians comprise both a small percentage of general society (sjekke stats på om politikere er overrrepresentert?). Of the quotes we were able to identify with our wikidata, around 2% were attributable to politicians:
 
 {% include_relative /_plots/marcus/pie_pol.html %}
@@ -301,7 +308,6 @@ Maybe a bit quite surprising, the subjectivity score for politicians was lower (
 {% include_relative /_plots/marcus/line_dist_comp_pol_all.html %}
 {% include_relative /_plots/marcus/bar_dist_sub_pol_all.html %}
 
-
 ## What could we improve?
 
 Before concluding that everyone should quit their NYTimes subscription, start reading beauty magazines, and classify politicians as moody, we should evaluate the weaknesses of our analysis.
@@ -316,12 +322,11 @@ The distributions for the two measures are evidently different. The compound sco
 
 Finally, it is important to not mistake correlation for causation. For example, for the Covid effect, even though there is statistically significant evidence for the mood being drastically lower when Covid occurred, we cannot conclude that this is caused by Covid. There could be another variable that actually caused the mood to drop. To further investigate this, we could use instrumental variables to isolate the effect from Covid.
 
-
 ## What have we learnt?
 
 So, what have we learnt about the mood in the media?
 
-Through the analysis we have both confirmed and rejected some of our everyday hypothesis about the mood in the media. Normal people are happier than politicians, celebrity magazines are generally more subjective than newspapers and the late pandemic indeed affected the media mood. However, if there exist something like a Friday effect making us happy towards the weekend, it is not reflected in the quotes we have worked with.  Admittedly, women are happier than men, but unless you want to go into a detailed p-value discussion with your spouse, we recommend you not address the topic. The difference is after all very small.  
+Through the analysis we have both confirmed and rejected some of our everyday hypothesis about the mood in the media. Normal people are happier than politicians, celebrity magazines are generally more subjective than newspapers and the late pandemic indeed affected the media mood. However, if there exist something like a Friday effect making us happy towards the weekend, it is not reflected in the quotes we have worked with. Admittedly, women are happier than men, but unless you want to go into a detailed p-value discussion with your spouse, we recommend you not address the topic. The difference is after all very small.
 
 [comment]: #Vi har ikke funnet ut at kvinner er gladere enn menn. Husk å fiks det.
 
