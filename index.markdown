@@ -295,7 +295,7 @@ The diagram above shows that the average scores across gender are pretty equal, 
   </div>
 </div>
 
-Elected by the people, for the people. Politicians are elected to represent and work for the average Joe and thus have a great responsibility. Ti is, therefore, reasonable that the politicians receive significant attention from the Fourth Estate. By attributing the quotations in Quotebank to whether it was spoken by a politician or not, we see that about $2\%$ of the quotations belong to politicians.
+Elected by the people, for the people. Politicians are elected to represent and work for the average Joe and thus have a great responsibility. It is, therefore, reasonable that the politicians receive significant attention from the Fourth Estate. By attributing the quotations in Quotebank to whether it was spoken by a politician or not, we see that about $2\%$ of the quotations belong to politicians.
 
 [comment]: # "Er politikere overrepresent i Quotebank? Må eventuelt se på prosent av befolkningen som er politikere."
 
@@ -336,4 +336,4 @@ So, what have we learnt about the mood in the media?
 
 Through our analysis, we have confirmed and rejected some of our everyday hypotheses about the mood in the media. For example, ordinary people's quotations are more positive than politicians', celebrity magazines are generally more subjective than newspapers, and the late pandemic did indeed affect the media mood. However, if something like a Friday effect makes us happy towards the weekend, it is not reflected in the quotes we have worked with. 
 
-So next time you hear a heated discussion about the mood in the media. Say listen, I will tell you a thing or two about mood...
+So next time you hear a heated discussion about the mood in the media. Say, listen, I will tell you a thing or two about mood...
