@@ -139,11 +139,11 @@ So, after looking at some examples of quotes and their respective compound and s
 
 {% include_relative /_plots/comp_dist.html %}
 
-Not surprisingly, the distribution is heavily centered around a compound score of $0.0$. As the compound score of _Vader_ is computed through averaging, this seems reasonable. However, we see that the distribution appears to be heavier on the positive values. This may indicate that the quotations in the media are more positive than negative, although neutrality sweeps the board.
+Not surprisingly, the distribution is heavily centered around a compound score of $0.0$. As the compound score of _Vader_ is computed through averaging and only gives weight to certain words, this seems reasonable. However, we see that the distribution appears to be heavier on the positive values. This may indicate that the quotations in the media are more positive than negative, although neutrality sweeps the board.
 
 {% include_relative /_plots/sub_dist.html %}
 
-Over to the subjectivity, a score of $0.0$ is once again the most frequent. This may be more surprising, as quotations and citations often refer to the speaker's opinions. However, it seems like _TextBlob_'s methods overwhelmingly often end up with a score of $0.0$. This is because _TextBlob_ only gives scores to words in the lexicon. There are many quotes with no words in the lexicon, thereby receiving a score of $0.0$. Initially, one might think that as _TextBlob_ doesn't capture the underlying context, it doesn't extract the subjectivity either. Finally, we note that the remaining distribution is centered around $0.5$ but also has a clear upswing towards $1.0$.
+Over to the subjectivity, a score of $0.0$ is once again the most frequent. This may be more surprising, as quotations and citations often refer to the speaker's opinions. However, it seems like _TextBlob_'s methods overwhelmingly often end up with a score of $0.0$. This is because _TextBlob_ only gives scores to words existent in the lexicon. There are many quotes with no words in the lexicon, thereby receiving a score of $0.0$. Initially, one might think that as _TextBlob_ doesn't capture the underlying context, it doesn't extract the subjectivity either. Finally, we note that the remaining distribution is centered around $0.5$ but has a clear upswing towards $1.0$.
 
 <div
   class="page__hero--overlay"
@@ -153,7 +153,7 @@ Over to the subjectivity, a score of $0.0$ is once again the most frequent. This
   </div>
 </div>
 
-People talk about their mood swings. The topic is a part of everyday talk, and we want to investigate if such _everydays myths_ are present in the quotations of the media as well. To concretize our work, we decided to examine whether the mood evolves during the week and across the seasons of the year.
+People talk about their mood swings in everyday talk. We want to investigate if such _everydays myths_ are present in the quotations of the media as well. To concretize our work, we decided to examine whether the mood evolves during the week and across the year's seasons.
 
 But first, we have to zoom out. How can we even draw any conclusions from our data set and analyses only by utilizing libraries for sentiment analysis and making visualizations? Luckily, we have a solution.
 
@@ -171,41 +171,41 @@ As this data story is not about statistical tricks and treat, we will leave the 
 
 ## How Does the Compound Score Evolve?
 
-As we will use the _compound score_ of _Vader_ to measure the mood in the media, we head off by looking at it is evolving througout the data set. We start by finding the average compound score of each date, resulting in the following plot:
+As we will use the _compound score_ of _Vader_ to measure the mood in the media, we head off by looking at its evolution throughout the data set. We start by finding the average compound score of each date, resulting in the following plot:
 
 {% include_relative /_plots/line_comp.html %}
 
-Looking at the vertical axis, we see that the compound scores are mostly around $0.12$ with some slight variances. However, there are some major deviations for the compound scores in 2016. The Argus-eyed reader may remember that the data set contains less quotations from the same period as the deviations, with only some hundreds of quotations a day. Therefore, it is likely that the deviations results from a lower amount of quotations, giving higher variance.
+The vertical axis shows that the compound scores are primarily around $0.12$ with some slight variances. However, there are some significant deviations for the compound scores in 2016. The Argus-eyed reader may remember that the data set contains fewer quotations from the same period as the deviations, with only some hundreds of quotes a day. Therefore, it is likely that the deviations result from a lower amount of quotations, giving higher variance.
 
 ## _The Weekend Effect_
 
-Indeed a part of everyday talk, people believe that their mood get better in the weekend, and also towards the weekend. _The soon weekend-feeling_, _the friday-feeling_ and so on, people love the feeling of more autonomony, better sleep and a desired freedom from the stressfull everyday life. Actually, [researchers](https://www.rochester.edu/news/show.php?id=3525) have found the mood to be better in the end of the week. Therefore, we became interested in whether the quotations of the media reflect this as well.
+Indeed, as part of everyday talk, people believe that their mood gets better on the weekend and towards the weekend. _The soon weekend-feeling_, _the friday-feeling_ and so on, people love the feeling of more autonomy, better sleep and a desired freedom from the stressful everyday life. Actually, [researchers](https://www.rochester.edu/news/show.php?id=3525) have found the mood to be better at the end of the week. Therefore, we became interested in whether the quotations of the media reflect this as well.
 
-To get further understanding of the topic, we head off by looking at the number of media quotations each weekday:
+To further understand the topic, we head off by looking at the number of media quotations each weekday:
 
 {% include_relative /_plots/quotesperday.html %}
 
-As expected, there are more quotations originating from weekdays than from the weekend. The journalists enjoy the weekend as well.
+As expected, more quotations originate from weekdays than from the weekend. The journalists enjoy the weekend as well.
 
 {% include_relative /_plots/boxplot_day.html %}
 
-Investigating the boxplot, we see that the compound scores across the weeks are very similar. The mean scores for the different days are approixmately equal, once again varying around $0.2$. Actually, the median compound is highest for Thursdays, Mondays and Sundays. However, the results are too similar to find any statistically differences in the mood across weekdays.
+Investigating the boxplot, we see that the compound scores across the week are very similar. The mean scores for the different days are approximately equal, once again varying around $0.2$. Actually, the median compound is highest for Thursdays, Mondays, and Sundays. However, the results are too similar to conclude any significant differences in the mood across weekdays.
 
 [comment]: # "How does the mean vary from the median in the above boxplot?"
 
 ## _The Season Effect_
 
-Disenchanted by the lack of differences across weekdays, we move on towards the next everyday myth. That the weather affects the mood is indeed a belief in the society. When the sun is shining, we are hurrying outside, exploring the world and enjoying life. On the other hand, rainy days call for dark times, slight depression and frustration. So again, do the media represent the same deviations in the mood? To easen our analyses, we decide to rather search for differences across the months and seasons of the year, assuming that the weather is better during summer.
+Disenchanted by the lack of differences across weekdays, we move towards the next everyday myth. That the weather affects the mood is indeed a belief in society. When the sun is shining, we hurry outside, explore the world, and enjoy life. On the other hand, rainy days call for dark times, slight depression, and frustration. So again, do the media represent the same deviations in the mood? To ease our analyses, we decide to rather search for differences across the months and seasons of the year, assuming that the weather is better during summer.
 
 To head off, we once again look at the distribution of quotations throughout the year:
 
 {% include_relative /_plots/quotespermonth.html %}
 
-There are some differences in the number of quotations per month in the our data set. These differences correspond to the previously mentioned periods with few quotes.
+There are some differences in the number of quotations per month in our data set. These differences correspond to the previously mentioned periods with few quotes.
 
 {% include_relative /_plots/boxplot_month.html %}
 
-As for the compound scores of the different weekdays, the analysis on the months shows minimal differences. As for the weekday analysis, the month analysis shows minimal differences. Even though the medians vary some around $0.12$, the interquartile range, indicating where half of the data is placed, is approximately equal fo all twelve months. It is once again not possible to conclude on any differences in the mood of the quotations across months and seasons, maybe implying that the weather does not affect our mood as much as we believed. Actually, further [investigations](https://www.houstonmethodist.org/blog/articles/2021/jul/can-weather-affect-your-mood/) shows that researchers also have found the evidence for such an hypothesis to be murky. Unluckily, there are not evidence for our first hypothesis, but during the work, the visualizations turned out as a blessing in disguise.
+As for the weekday analysis, the month analysis shows minimal differences. Even though the medians vary slightly around $0.12$, the interquartile range, indicating where half of the data is placed, is approximately equal for all twelve months. It is once again not possible to conclude on any differences in the mood of the quotations across months and seasons, maybe implying that the weather does not affect our mood as much as we believed. Actually, further [investigations](https://www.houstonmethodist.org/blog/articles/2021/jul/can-weather-affect-your-mood/) shows that researchers also have found evidence for such a hypothesis to be murky. Unluckily, there is no evidence for our first hypothesis, but during the work, the visualizations turned out to be a blessing in disguise.
 
 ##### _The COVID-19 Effect_
 
@@ -213,15 +213,15 @@ Hitting of the analyses on how the mood evolves throughout time, we illustrated 
 
 {% include_relative /_plots/covid_line.html %}
 
-The compound score above drops drastically in March 2020. There are other sections of the plot where the compound drops drastically, but this in the only section havving no significant drop in the amount of quotations. Moreover, the mood stays down for some time, actually until the end of the data set.
+The compound score above drops drastically in March 2020. There are other sections of the plot where the compound drops drastically, but this is the only section with no significant reduction in quotations. Moreover, the mood stays down for some time, actually until the end of the data set.
 
-As an illuminated reader, you have surely drawn the lines already. A certain pandemic hit the western world in March 2020, resulting in lockdowns, fright and economic cracks. The mood in the population indeed fell in this period, and the diagram points out that the same yielded in the media. The Quotebank dataset provides a unique opportunity to assess how the mood in the media changed during the first lockdowns, and we decide to dive further into the topic.
+As an illuminated reader, you have surely drawn the lines already. A particular pandemic hit the western world in March 2020, resulting in lockdowns, fright, and economic cracks. The mood in the population indeed fell in this period, and the diagram points out that the same yielded in the media. The Quotebank dataset provides a unique opportunity to assess how the mood in the media changed during the first lockdowns, and we decided to dive further into the topic.
 
-To assess the changes in the mood, we will study the compound score in the media in January and February 2020, and call this the pre-COVID score. This score will be compared to the score in the March and April 2020, namely the COVID score. Indeed, this is a simplification, but it is adequate for our purpose.
+To assess the changes in the mood, we will study the compound score in the media in January and February 2020 and call this the pre-COVID score. Then, this score will be compared to the score in March and April 2020, namely the COVID score. Indeed, this is a simplification, but it is adequate for our purpose.
 
 The mean compound score of pre-COVID is $0.19$, versus the mean compound score of COVID at $0.16$. In other words, the compound score was $%18.75$ higher pre-COVID. Thus, the mood in the media was better before lockdowns.
 
-To conclude on whether the observed difference is significant, we utilize the previously mentioned _t-test_, resulting in a p-value of $0.0$, signifying that the result is very significant. We could therefore conclude that the COVID-19 pandemic affected the mood in the media, and that it got worse.
+To conclude whether the observed difference is significant, we utilize the previously mentioned _t-test_, resulting in a p-value of $0.0$, signifying that the result is very significant. We could therefore conclude that the COVID-19 pandemic affected the mood in the media and that it got worse.
 
 [comment]: # "Could drop parts of the last paragraph."
 
