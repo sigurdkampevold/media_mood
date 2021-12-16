@@ -242,9 +242,7 @@ The plot below display the number of quotes from the different media outlets
 
 {% include_relative /_plots/pieechart_category.html %}
 
-{% include_relative /_plots/treemap_media.html %}
-
-Starting the analyses, we plot the average compound score against the average subjectivity score for the selected media outlets:
+Starting the analyses, we plot the average compound score against the average subjectivity score for the selected media outlets. The size of the bubbles refers to the corresponding number of quotations attributed to the media outlet.:
 
 {% include_relative /_plots/scatterplot_medias.html %}
 
@@ -297,25 +295,26 @@ The diagram above shows that the average scores across gender are pretty equal, 
   </div>
 </div>
 
-Elected by the people, for the people. Politicans are elected to represent and work for average Joe, and thus have a great responsibility. Therefore, it is reasonable that the politicans receive great attention by the Fourth Estate. After attributiong the quotations in Quotebank to whether it was spoken by a politican or not, we see that about $2\%$ of the quotations belong to politicans.
+Elected by the people, for the people. Politicians are elected to represent and work for the average Joe and thus have a great responsibility. Ti is, therefore, reasonable that the politicians receive significant attention from the Fourth Estate. By attributing the quotations in Quotebank to whether it was spoken by a politician or not, we see that about $2\%$ of the quotations belong to politicians.
 
 [comment]: # "Er politikere overrepresent i Quotebank? Må eventuelt se på prosent av befolkningen som er politikere."
 
+[comment]: # "Svar: har det noe å si? Men ja, de vil nok være det av natur"
+
 {% include_relative /_plots/marcus/pie_pol.html %}
 
-As politicans are elected to represent us, do they represent us in the sense of their mood? As of the data, the answer is no. While the average compound score of politicans was $0.156$, the average compound score of the quotations in Quotebank was $0.191$. As the results are significant, we could actually say that the quotations spoken by politicans are more negative than the others.
-
-Stating that politicans are more negative, we have to remember that the quotations are from the six last years. The polarity in the society and the public debate has evolved dramatically through the same period. The politians have apparently been in the front line of this development. Therefore, it could be interesting to see whether this is reflected in Quotebank. Firstly, one could look at how the compound scores of the politicans develop throughout the period.
+As politicians are elected to represent us, do they represent us in the sense of their mood? As of the data, the answer is no. While the average compound score of politicians was $0.156$, the mean compound score of the quotations in Quotebank was $0.191$. As the results are significant, we could say that politicians’ quotes are more negative than the others. The results are also reflected in the plot below. 
 
 {% include_relative /_plots/marcus/line_compound_pol_all_week.html %}
 
-As earlier, the overall compound score of the quotations are more or less stable throughout the period. On the other hand, we might
+We observe that the average compound score for the whole data set is consistently higher than the mean score for politicians. The score for politicians varies more, but that is likely due to low sample sizes. 
 
-Furthermore, it is reasonable to think that politicans base their decisions on factual information, even though this belief might have been weakened the past years. It is intriguing to hope that Quotebank could give us answers to this, and the subjectivity score computed by _TextBlob_ might reflect this. Below, you could see how the subjectivity scores of politicans are distributed compared to the overall subjectivity.
+Furthermore, it is reasonable to believe that politicians base their decisions on factual information, even though this belief might have been weakened in the past years. It is intriguing to hope that Quotebank could give us answers to this through the subjectivity score computed by _TextBlob_. Below, you can see the distribution of subjectivity politicians’ subjectivity scores versus overall subjectivity.
 
 {% include_relative /_plots/marcus/bar_dist_sub_pol_all.html %}
+[comment]: #"Decrease binsize"
 
-Maybe a bit surprisingly, the subjectivity score for politicans are a bit lower than that of the overall data set, with a score of $0.107$ versus $0.120$. This indicates that politicans are more objective than the average. This is, in it self, quite positive to think about. Politicans should base their choices on factual information, and the data set indicates that the at least communicate this. However, one should remember the examples of subjecitivity scores we started off with: The computations of subjectivity scores are not a precise science, and simply using _objective_ words could give a better degree of objectivity. Do you remember the last, "objective" example of Donald Trump describind "Sleepy Joe"? Maybe not the most precise measure of objectivity...
+Maybe slightly surprisingly, the subjectivity score for politicians is a bit lower than that of the overall data set, with a score of $0.107$ versus $0.120$. This indicates that politicians are slightly more objective than the average. This is, in itself, quite positive. Politicians should base their choices on factual information, and the data set indicates that they at least communicate this. However, one should remember the examples of subjectivity scores we started with. The computations of subjectivity scores are not a precise science, and simply using _objective_ words could give a better degree of objectivity. Do you remember the last “objective” example of Donald Trump describing “Sleepy Joe”? Maybe not the most precise measure of objectivity...
 
 ## What Could We Improve?
 
