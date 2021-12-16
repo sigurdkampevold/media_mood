@@ -239,6 +239,7 @@ Initially, it is reasonable to believe that the compound and subjectivity score 
 
 The plot below display the amount of quotes from the different media outlets
 
+
 {% include_relative /_plots/pieechart_category.html %}
 
 {% include_relative /_plots/treemap_media.html %}
