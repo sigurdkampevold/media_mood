@@ -254,9 +254,11 @@ For further investigations, we assign each media outlet to one of four different
 
 {% include_relative /_plots/polarity_distribution_categories_same_plot.html %}
 
-The differences are significant. The amount of positive quotations in sports newspapers and celebrity magazines clearly surpasses the amount in the daily newspapers, having average compound scores of $0.27$ and $0.17$ versus $0.14$ respectively. This might be reasonable, as daily newspaper should cover all the suffering in the society, while sports newspapers might focus on victorious athletes.
+The differences are significant. The amount of positive quotations in sports newspapers and celebrity magazines clearly surpasses the amount in the daily newspapers, having average compound scores of $0.27$ and $0.17$ versus $0.14$, respectively. This might be reasonable, as daily newspapers should cover all the suffering in society, while sports newspapers might focus on victorious athletes.
 
-However, it seems safe to conclude that if you are getting influenced by what you read in the media: Put away your newspapers and start reading some sports news!
+However, it seems safe to conclude that if you are influenced by what you read in the media, put away your newspapers and start reading some sports news!
+
+[comment]: # Too harsh?
 
 <div
   class="page__hero--overlay"
@@ -266,13 +268,16 @@ However, it seems safe to conclude that if you are getting influenced by what yo
   </div>
 </div>
 
-As well as wondering on how the mood differs across the different media outlets, we wondered whether we could find differences across the genders. Do the quotations in Quotebank reveal what we all know, that men are more moody than women?
+As well as wondering how the mood differs across different media outlets, we asked whether we could find differences across the genders. Do the quotations in Quotebank reveal what we all know, that men are more moody than women?
+[comment]: #Føler ikke vi kan bruke siste setningen.
 
-Diving in to the data set, we first see a difference in the amount of quotations spoken by each gender. Of approximately 16 million quotations that could be attributed to spoken by either men or women, only an eight of them are attributed to women.
+Diving into the data set, we first see a difference in the number of quotations spoken by each gender. Of approximately 16 million quotations that could be attributed to men or women, only one-eight are attributed to women.
 
 {% include_relative /_plots/marcus/pie_genders.html %}
 
-Despite the differences in the number of quotations, we search after differences in the mood. Well, the data set reveals a glimt of our hypothesis: Quotations by women have a slightly higher compound scores than those spoken by men. The difference is significant, but nevertheless very small: The average sentiment score for women is $0.196$ and $0.194$ for men. All over, we might say the women represented in our data set is a tiny, tiny bit more positive than their peers.
+Despite the differences in the number of quotations, we search after differences in the mood. Well, the data set reveals a glimt of our hypothesis: Quotations by women have slightly higher compound scores than those spoken by men. The difference is statistically significant but minimal. The average sentiment score for women is $0.196$ and $0.194$ for men. All over, the difference is too small to conclude on any difference between genders. Men and women seem to be just as positive.
+
+[comment]: #glimt is unrecognized by Grammarly
 
 {% include_relative /_plots/marcus/line_compound_males_females_week.html %}
 
