@@ -233,11 +233,11 @@ To conclude whether the observed difference is significant, we utilize the previ
   </div>
 </div>
 
-We can say that the mood of the quotations in the media doesn't vary too much across, unless a global pandemic hits us. However, as the media eventually decides what reaches the public debate and your mind, it could be interesting to explore how the mood differs across the media. Which newspapers are more positive, and which are more negative? If you want to kick-off the day with a good mood, should you read Wall Street Journal or Peoples Magazine?
+We can say that the mood of the quotations in the media doesn't seem to vary too much across time except for when a global pandemic hits. However, as the press eventually decides what reaches the public debate and your mind, exploring how the mood differs across the media could be exciting. Which newspapers are more positive, and which are more negative? If you want to kick-off the day in a good mood, should you read Wall Street Journal or Peoples Magazine?
 
-Initially, it is reasonable to believe that the compound and subjectivity score of daily newspaper is different from that of a celebrity magazine. But does the Quotebank data set provide evidence for such a hypothesis? To investigate this, we choose to focus on a subsample of the media outlets represented in Quotebank. The subsample is a selection of the most well-known English-writing newspapers and magazines aiming to represent different categories. As earlier, we use _Vader_ and _TextBlob_ to compute the compound score and subjectivity score of each quotes, eventually grouped by media outlet and outlet category.
+Initially, it is reasonable to believe that the compound and subjectivity score of daily newspapers are different from that of a celebrity magazine. But does the Quotebank data set provide evidence for such a hypothesis? To investigate this, we focus on a subsample of the media outlets represented in Quotebank. The subsample is a selection of the most well-known English-writing newspapers and magazines aiming to represent different categories. As earlier, we use _Vader_ and _TextBlob_ to compute each quote's compound score and subjectivity score, eventually grouped by media outlet and outlet category.
 
-The plot below display the amount of quotes from the different media outlets
+The plot below display the number of quotes from the different media outlets
 
 
 {% include_relative /_plots/pieechart_category.html %}
@@ -248,13 +248,11 @@ Starting the analyses, we plot the average compound score against the average su
 
 {% include_relative /_plots/scatterplot_medias.html %}
 
-Clearly, there is a difference! Even though all the outlets are situated within a relative tiny part of the area, there seems significant variance in the two sores. Let's consider two of the extremes: New York Times and ESPN. The reputable New York Times, a daily newspaper, has an average compound score of $0.085$, while the sports magazine ESPN, providing the latest updates from the american sportslife, receives a score of $0.278$ - nearly three times as high. On the other hand, the subjectivity scores of the outlets are $0.344$ and $0.405$ respectively. The differences are clear, and statistically significant by our methods. Is this an example of a general trend for newspapers and sports magazines?
+Clearly, there is a difference! Even though the outlets are situated within a relatively tiny part of the area, there are significant differences in the two sores. Let's consider two extremes: the New York Times and ESPN. The reputable New York Times, a daily newspaper, has an average compound score of $0.085$, while the sports magazine ESPN, providing the latest updates from the American sports life, receives a score of $0.278$ - nearly three times as high. On the other hand, the subjectivity scores of the outlets are $0.344$ and $0.405$, respectively. The differences are clear and statistically significant by our methods. Is this an example of a general trend for newspapers and sports magazines?
 
-For further investigations, we assign each media outlet to one of four different subcategories: Newspapers, sports newspapers, celebrity magazines and "others". Averaging the scores within each subcategory, we get the following distributions:
+For further investigations, we assign each media outlet to one of four different subcategories: Newspapers, sports newspapers, celebrity magazines, and "others." Then, averaging the scores within each subcategory, we get the following distributions:
 
 {% include_relative /_plots/polarity_distribution_categories_same_plot.html %}
-
-[comment]: # "Need to have x-axis!"
 
 The differences are significant. The amount of positive quotations in sports newspapers and celebrity magazines clearly surpasses the amount in the daily newspapers, having average compound scores of $0.27$ and $0.17$ versus $0.14$ respectively. This might be reasonable, as daily newspaper should cover all the suffering in the society, while sports newspapers might focus on victorious athletes.
 
