@@ -339,3 +339,4 @@ So, what have we learnt about the mood in the media?
 Through our analysis, we have confirmed and rejected some of our everyday hypotheses about the mood in the media. For example, ordinary people's quotations are more positive than politicians', celebrity magazines are generally more subjective than newspapers, and the late pandemic did indeed affect the media mood. However, if something like a Friday effect makes us happy towards the weekend, it is not reflected in the quotes we have worked with.
 
 So next time you hear a heated discussion about the mood in the media. Say, listen, I will tell you a thing or two about mood...
+
