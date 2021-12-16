@@ -32,11 +32,12 @@ We aim to present our findings on the abovementioned topics in the upcoming data
 
 ## Key Insights
 
-- There are no significant variations or trends in the mood in media quotations throughout the week days or months.
-- The mood in the media became significantly more negative in the first phase of the COVID-19 pandemic.
-- The mood and subjectivity across media outlets vary significantly. When subsampling the outlets based on category, clusters appear. Sports newspapers and celebrity magazines tend to be more positive and more subjective than daily newspapers.
-- The mood in the quotations said by men and women is very similiar, but women are slightly more positive.
-- Quotations spoken by politicans are on average more negative than the average quotation in the data set.
+
+- There is no evidence for significant variations in the mood in media quotations across weekdays or months
+- The mood in the media became significantly more negative in the first phase of the COVID-19 pandemic
+- There are statistically significant differences in mood and subjectivity across media outlets. For example, sports and celebrity magazines tend to be more positive and subjective than daily newspapers
+- There are no significant differences in mood in quotes from men and women
+- On average, quotations from politicians are more negative than the average quotation
 
 <div
   class="page__hero--overlay"
@@ -312,7 +313,7 @@ We observe that the average compound score for the whole data set is consistentl
 Furthermore, it is reasonable to believe that politicians base their decisions on factual information, even though this belief might have been weakened in the past years. It is intriguing to hope that Quotebank could give us answers to this through the subjectivity score computed by _TextBlob_. Below, you can see the distribution of subjectivity politicians’ subjectivity scores versus overall subjectivity.
 
 {% include_relative /_plots/marcus/bar_dist_sub_pol_all.html %}
-[comment]: #"Decrease binsize"
+[comment]: #"Decrease bin size" 
 
 Maybe slightly surprisingly, the subjectivity score for politicians is a bit lower than that of the overall data set, with a score of $0.107$ versus $0.120$. This indicates that politicians are slightly more objective than the average. This is, in itself, quite positive. Politicians should base their choices on factual information, and the data set indicates that they at least communicate this. However, one should remember the examples of subjectivity scores we started with. The computations of subjectivity scores are not a precise science, and simply using _objective_ words could give a better degree of objectivity. Do you remember the last “objective” example of Donald Trump describing “Sleepy Joe”? Maybe not the most precise measure of objectivity...
 
