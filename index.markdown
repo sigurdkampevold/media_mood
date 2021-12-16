@@ -32,7 +32,6 @@ We aim to present our findings on the abovementioned topics in the upcoming data
 
 ## Key Insights
 
-
 - There is no evidence for significant variations in the mood in media quotations across weekdays or months
 - The mood in the media became significantly more negative in the first phase of the COVID-19 pandemic
 - There are statistically significant differences in mood and subjectivity across media outlets. For example, sports and celebrity magazines tend to be more positive and subjective than daily newspapers
@@ -335,8 +334,6 @@ Finally, it is important to not mistake correlation for causation. For example, 
 
 So, what have we learnt about the mood in the media?
 
-Through the analysis we have both confirmed and rejected some of our everyday hypothesis about the mood in the media. Normal people are happier than politicians, celebrity magazines are generally more subjective than newspapers and the late pandemic indeed affected the media mood. However, if there exist something like a Friday effect making us happy towards the weekend, it is not reflected in the quotes we have worked with. Admittedly, women are happier than men, but unless you want to go into a detailed p-value discussion with your spouse, we recommend you not address the topic. The difference is after all very small.
-
-[comment]: # "Vi har ikke funnet ut at kvinner er gladere enn menn. Husk å fiks det."
+Through our analysis, we have confirmed and rejected some of our everyday hypotheses about the mood in the media. For example, ordinary people's quotations are more positive than politicians', celebrity magazines are generally more subjective than newspapers, and the late pandemic did indeed affect the media mood. However, if something like a Friday effect makes us happy towards the weekend, it is not reflected in the quotes we have worked with. 
 
 So next time you hear a heated discussion about the mood in the media. Say listen, I will tell you a thing or two about mood...
