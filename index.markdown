@@ -281,15 +281,13 @@ Despite the differences in the number of quotations, we search after differences
 
 {% include_relative /_plots/marcus/line_compound_males_females_week.html %}
 
-The diagram above shows that the average scores across gender is quite equal, but the compound score for females vary more than that of men. However, this does not point towards women being more moody, but is probably related to the lower amount of quotations attributed to women. Below, we also see the compound score distributions of the gender plotted on each other:
+The diagram above shows that the average scores across gender are pretty equal, but the compound score for females varies more than that of men over time. However, this does not point towards women being more moody, but is probably related to the lower number of quotations attributed to women. We also see this from visualizing the normalized distributions of the two subsets as below: 
 
 {% include_relative /_plots/marcus/line_dist_comp_males_females.html %}
 
-Summing up, we cannot point one of the gender out as the _moody gender_. However, maybe another group of the population differs from the rest of us?
+ Summing up, we cannot point one gender out as the _moody gender_. However, maybe another group of the population differs from the rest of us?
 
 [comment]: # "Both polarity and subjectivity showed the same amount of difference, meaning little. We guess this is good news, as we wouldn't want to hold it against one gender to be more of one thing or another in the public discussion."
-
-[comment]: # "Ta en ny titt på de siste diagrammene her. Må gjøres på ny."
 
 <div
   class="page__hero--overlay"
