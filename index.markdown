@@ -247,7 +247,7 @@ Starting the analyses, we plot the average compound score against the average su
 
 {% include_relative /_plots/scatterplot_medias.html %}
 
-Clearly, there is a difference! Even though all the outlets are situated within a relative tiny part of the area, there seems significant variance in the two sores. Let's consider two of the extremes: New York Times and Woman's Day. The reputable New York Times, a daily newspaper, has an average compound score of $0.085$, while the celebrity magazine Woman's Day, providing recipes and relationship advices, receives a score of $0.235$ - nearly three times as high. On the other hand, the subjectivity scores of the outlets are $0.344$ and $0.426$ respectively. The differences are clear, and statistically significant by our methods. Is this an example of a general trend for newspapers and magazines?
+Clearly, there is a difference! Even though all the outlets are situated within a relative tiny part of the area, there seems significant variance in the two sores. Let's consider two of the extremes: New York Times and ESPN. The reputable New York Times, a daily newspaper, has an average compound score of $0.085$, while the sports magazine ESPN, providing the latest updates from the american sportslife, receives a score of $0.278$ - nearly three times as high. On the other hand, the subjectivity scores of the outlets are $0.344$ and $0.405$ respectively. The differences are clear, and statistically significant by our methods. Is this an example of a general trend for newspapers and sports magazines?
 
 For further investigations, we assign each media outlet to one of four different subcategories: Newspapers, sports newspapers, celebrity magazines and "others". Averaging the scores within each subcategory, we get the following distributions:
 
@@ -257,7 +257,7 @@ For further investigations, we assign each media outlet to one of four different
 
 The differences are significant. The amount of positive quotations in sports newspapers and celebrity magazines clearly surpasses the amount in the daily newspapers, having average compound scores of $0.27$ and $0.17$ versus $0.14$ respectively. This might be reasonable, as daily newspaper should cover all the suffering in the society, while sports newspapers might focus on victorious athletes.
 
-However, it seems safe to conclude that if you are getting influenced by what you read in the media: Put away your newspapers and start reading some gossip!
+However, it seems safe to conclude that if you are getting influenced by what you read in the media: Put away your newspapers and start reading some sports news!
 
 <div
   class="page__hero--overlay"
