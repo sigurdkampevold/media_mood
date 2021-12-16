@@ -340,7 +340,7 @@ Furthermore, it is reasonable to believe that politicians base their decisions o
 {% include_relative /_plots/marcus/bar_dist_sub_pol_all.html %}
 [comment]: # "Decrease bin size"
 
-Maybe slightly surprisingly, the subjectivity score for politicians is a bit lower than that of the overall data set, with a score of $0.107$ versus $0.120$. This indicates that politicians are slightly more objective than the average. This is, in itself, quite positive. Politicians should base their choices on factual information, and the data set indicates that they at least communicate this. However, one should remember the examples of subjectivity scores we started with. The computations of subjectivity scores are not a precise science, and simply using _objective_ words could give a better degree of objectivity. Do you remember the last “objective” example of Donald Trump describing “Sleepy Joe”? Maybe not the most precise measure of objectivity...
+The subjectivity score for politicians is a bit lower than that of the overall data set, with a score of $0.107$ versus $0.120$. This indicates that politicians are slightly more objective than the average. This is, in itself, quite positive. Politicians should base their choices on factual information, and the data set indicates that they at least communicate this. However, one should remember the examples of subjectivity scores we started with. The computations of subjectivity scores are not a precise science, and simply using _objective_ words could give a better degree of objectivity. Do you remember the last “objective” example of Donald Trump describing “Sleepy Joe”? Maybe not the most precise measure of objectivity...
 
 <div
   class="page__hero--overlay"
