@@ -269,25 +269,27 @@ However, it seems safe to conclude that if you are influenced by what you read i
 </div>
 
 As well as wondering how the mood differs across different media outlets, we asked whether we could find differences across the genders. Do the quotations in Quotebank reveal what we all know, that men are more moody than women?
-[comment]: #Føler ikke vi kan bruke siste setningen.
+[comment]: #"Føler ikke vi kan bruke siste setningen."
 
 Diving into the data set, we first see a difference in the number of quotations spoken by each gender. Of approximately 16 million quotations that could be attributed to men or women, only one-eight are attributed to women.
 
 {% include_relative /_plots/marcus/pie_genders.html %}
 
-Despite the differences in the number of quotations, we search after differences in the mood. Well, the data set reveals a glimt of our hypothesis: Quotations by women have slightly higher compound scores than those spoken by men. The difference is statistically significant but minimal. The average sentiment score for women is $0.196$ and $0.194$ for men. All over, the difference is too small to conclude on any difference between genders. Men and women seem to be just as positive.
+Despite the differences in the number of quotations, we search after differences in the mood. Well, the data set reveals a glimt of our hypothesis: Quotations by women have slightly higher compound scores than those spoken by men. The difference is statistically significant but minimal. The average sentiment score for women is $0.196$ and $0.194$ for men. All over, the difference is too small to conclude on any differences between genders. Men and women seem to be just as positive.
 
-[comment]: #glimt is unrecognized by Grammarly
+[comment]: #"glimt is unrecognized by Grammarly"
 
 {% include_relative /_plots/marcus/line_compound_males_females_week.html %}
 
-As of the diagram above, it is not easy to see that the average compound score. The diagram also shows that the compound score for females vary more than that of men. However, this does not point towards women being more moody, but is probably related to the lower amount of quotations attributed to women. Below, we also see the compound score distributions of the gender plotted on each other:
+The diagram above shows that the average scores across gender is quite equal, but the compound score for females vary more than that of men. However, this does not point towards women being more moody, but is probably related to the lower amount of quotations attributed to women. Below, we also see the compound score distributions of the gender plotted on each other:
 
 {% include_relative /_plots/marcus/line_dist_comp_males_females.html %}
 
 Summing up, we cannot point one of the gender out as the _moody gender_. However, maybe another group of the population differs from the rest of us?
 
 [comment]: # "Both polarity and subjectivity showed the same amount of difference, meaning little. We guess this is good news, as we wouldn't want to hold it against one gender to be more of one thing or another in the public discussion."
+
+[comment]: # "Ta en ny titt på de siste diagrammene her. Må gjøres på ny."
 
 <div
   class="page__hero--overlay"
