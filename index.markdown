@@ -1,7 +1,4 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: single
 title: "A Thing or Two About Mood"
 header:
@@ -50,7 +47,7 @@ Initially, we want to give a feel about the data and provide some initial analys
 
 ## Quotebank
 
-The Quotebank data set provides quotes in the media from more than a decade. In total, 178 million quotations from 2008 to 2020 are attributed with probable speakers and dates. Using machine learning methods, **dlab @ EPFL** has built a framework for recognizing and attributing quotations from media articles, thus building the data set. However, we have only utilized quotes from 2015 to 2020, distributed through the years as in the following diagram:
+The Quotebank data set provides quotations in the media from more than a decade. In total, 178 million quotations from 2008 to 2020 are attributed with probable speakers and dates. Using machine learning methods, **dlab @ EPFL** has built a framework for recognizing and attributing quotations from media articles, thus building the data set. However, we have only utilized quotations from 2015 to 2020, distributed through the years as in the following diagram:
 
 {% include_relative /_plots/line_dig.html %}
 
@@ -62,7 +59,7 @@ Since the quotations are attributed with links to Wikidata entries, we can effor
 
 ## _Sentiments Analyses_ -- What Are They?
 
-Sentiment analyses aim to identify and extract subjective information in text, telling whether a phrase is positive, negative, or neutral. Using libraries, one could input a sentence, such as a quote from the media, and get a score. This will be our primary tool in finding trends in the mood of the media.
+Sentiment analyses aim to identify and extract subjective information in text, telling whether a phrase is positive, negative, or neutral. One may input a sentence, such as a quote, into a sentiment analysis tool and get as output a score representing the sentiment. This will be our primary tool in finding trends in the mood of the media.
 
 [comment]: # "Avsnittet over bør skrives om"
 
@@ -100,7 +97,7 @@ On the other hand, the quotation above receives a compound score of $0.8176$. Th
      </blockquote>
 </div>
 
-As you might have thought, the art of dedicating sentiment scores to quotations is not perfect. Our tool, _Vader_, represents each document or text as a bag of words without capturing the information in word proximity or context. Hence, a lot of the contextual information is lost. Moreover, _Vader_ gives additional weight to unique words and phrases, for instance, words written in uppercase or emojis. The methods are based on actual human research and are therefore not considered a machine learning method. On the other hand, the algorithm is likely not to discover the underlying context. It could thus mark a quotation positive, even if it considers a grave matter, such as in the quote above.
+As you might have thought, the art of dedicating compound scores to quotations is not perfect. Our tool, _Vader_, represents each document or text as a bag of words without capturing the information in word proximity or context. Hence, a lot of the contextual information is lost. Moreover, _Vader_ gives additional weight to unique words and phrases, for instance, words written in uppercase or emojis. The methods are based on actual human research and are therefore not considered a machine learning method. On the other hand, the algorithm is likely not to discover the underlying context. It could thus mark a quotation positive, even if it considers a grave matter, such as in the quote above.
 
 [comment]: # Fjerne setningen om ML, evt. si litt om human research uten å nevne ML.
 
@@ -167,7 +164,7 @@ Using the aforementioned methods, we will get a _p-value_. This value tells us h
 
 For our work, we will use a significance level of $1\%$. This implies that if the p-value given by the methods is lower than $1\%$, we will reject the null and conclude that the means of the two groups are different, given the significance level. Thus, we will say that the results are **statistically significant**.
 
-As this data story is not about statistical tricks and treat, we will leave the subject for now. If you would like a deeper explanation of our methods, you could take a look at our [notebook](https://github.com/epfl-ada/ada-2021-project-gutta-boys/blob/main/final_version.ipynb). However, to sum up, we will test whether the means of two groups are equal: If our results are too unlikely to happen with equal means, we will conclude that our results are significant. That was the boring stuff. Now, let us zoom in again!
+As this data story is not about statistical tricks and treat, we will leave the subject for now. If you would like a deeper explanation of our methods, you could take a look at our [notebook](https://github.com/epfl-ada/ada-2021-project-gutta-boys/blob/main/project_notebook.ipynb). However, to sum up, we will test whether the means of two groups are equal: If our results are too unlikely to happen with equal means, we will conclude that our results are significant. That was the boring stuff. Now, let us zoom in again.
 
 ## How Does the Compound Score Evolve?
 
@@ -209,11 +206,11 @@ As for the weekday analysis, the month analysis shows minimal differences. Even 
 
 ## _The COVID-19 Effect_
 
-Hitting of the analyses on how the mood evolves throughout time, we illustrated how the compound score develops through our data set. For simplicity, the visualization follows once again:
+Hitting of the analyses on how the mood evolves throughout time, we illustrated how the compound score develops through our data set. For simplicity, the latter part of the visualization follows once again:
 
 {% include_relative /_plots/covid_line.html %}
 
-The compound score above drops drastically in March 2020. There are other sections of the plot where the compound drops drastically, but this is the only section with no significant reduction in quotations. Moreover, the mood stays down for some time, actually until the end of the data set.
+The compound score above drops drastically in March 2020. There are other sections of the plot where the compound also drops drastically, but this is the only section with no significant reduction in quotations. Moreover, the mood stays down for some time, actually until the end of the data set.
 
 As an illuminated reader, you have surely drawn the lines already. A particular pandemic hit the western world in March 2020, resulting in lockdowns, fright, and economic cracks. The mood in the population indeed fell in this period, and the diagram points out that the same yielded in the media. The Quotebank dataset provides a unique opportunity to assess how the mood in the media changed during the first lockdowns, and we decided to dive further into the topic.
 
@@ -221,9 +218,9 @@ To assess the changes in the mood, we will study the compound score in the media
 
 The mean compound score of pre-COVID is $0.19$, versus the mean compound score of COVID at $0.16$. In other words, the compound score was $%18.75$ higher pre-COVID. Thus, the mood in the media was better before lockdowns.
 
-To conclude whether the observed difference is significant, we utilize the previously mentioned _t-test_, resulting in a p-value of $0.0$, signifying that the result is very significant. We could therefore conclude that the COVID-19 pandemic affected the mood in the media and that it got worse.
+Eventually, these results are significant by our methods. We could there conclude, maybe not surprisingly, that the COVID-19 pandemic affected the mood in the media in a negative way.
 
-[comment]: # "Could drop parts of the last paragraph."
+[comment]: # "Tried to simplify the last paragraph."
 
 <div
   class="page__hero--overlay"
@@ -235,28 +232,27 @@ To conclude whether the observed difference is significant, we utilize the previ
 
 We can say that the mood of the quotations in the media doesn't seem to vary too much across time except for when a global pandemic hits. However, as the press eventually decides what reaches the public debate and your mind, exploring how the mood differs across the media could be exciting. Which newspapers are more positive, and which are more negative? If you want to kick-off the day in a good mood, should you read Wall Street Journal or Peoples Magazine?
 
-Initially, it is reasonable to believe that the compound and subjectivity score of daily newspapers are different from that of a celebrity magazine. But does the Quotebank data set provide evidence for such a hypothesis? To investigate this, we focus on a subsample of the media outlets represented in Quotebank. The subsample is a selection of the most well-known English-writing newspapers and magazines aiming to represent different categories. As earlier, we use _Vader_ and _TextBlob_ to compute each quote's compound score and subjectivity score, eventually grouped by media outlet and outlet category.
+Initially, it is reasonable to believe that the compound and subjectivity scores of a daily newspaper are different from those of a celebrity magazine. But does the Quotebank data set provide evidence for such a hypothesis? To investigate this, we focus on a subsample of the media outlets represented in Quotebank. The subsample is a selection of the most well-known English-writing newspapers and magazines aiming to represent different categories. As earlier, we use _Vader_ and _TextBlob_ to compute each quote's compound score and subjectivity score, eventually grouped by media outlet and outlet category.
 
-The plot below display the number of quotes from the different media outlets
-
+The following plot show the relative amount of quotations in each of the chosen categories: Newspapers, sports newspapers, celebrity magazines, and "others.".
 
 {% include_relative /_plots/pieechart_category.html %}
 
-Starting the analyses, we plot the average compound score against the average subjectivity score for the selected media outlets. The size of the bubbles refers to the corresponding number of quotations attributed to the media outlet.:
+Starting the analyses, we plot the average compound score against the average subjectivity score for the selected media outlets. The size of the bubbles refers to the corresponding number of quotations attributed to the media outlet:
 
 {% include_relative /_plots/scatterplot_medias.html %}
 
 Clearly, there is a difference! Even though the outlets are situated within a relatively tiny part of the area, there are significant differences in the two sores. Let's consider two extremes: the New York Times and ESPN. The reputable New York Times, a daily newspaper, has an average compound score of $0.085$, while the sports magazine ESPN, providing the latest updates from the American sports life, receives a score of $0.278$ - nearly three times as high. On the other hand, the subjectivity scores of the outlets are $0.344$ and $0.405$, respectively. The differences are clear and statistically significant by our methods. Is this an example of a general trend for newspapers and sports magazines?
 
-For further investigations, we assign each media outlet to one of four different subcategories: Newspapers, sports newspapers, celebrity magazines, and "others." Then, averaging the scores within each subcategory, we get the following distributions:
+For further investigations, we average the scores within each category, eventually getting the following distributions:
 
 {% include_relative /_plots/polarity_distribution_categories_same_plot.html %}
 
 The differences are significant. The amount of positive quotations in sports newspapers and celebrity magazines clearly surpasses the amount in the daily newspapers, having average compound scores of $0.27$ and $0.17$ versus $0.14$, respectively. This might be reasonable, as daily newspapers should cover all the suffering in society, while sports newspapers might focus on victorious athletes.
 
-However, it seems safe to conclude that if you are influenced by what you read in the media, put away your newspapers and start reading some sports news!
+However, analyses of our data set seem to suggest that if you are influenced by what you read in the media, put away your newspapers and start reading some sports news!
 
-[comment]: # Too harsh?
+[comment]: # "Tried to rephrase the conclusion."
 
 <div
   class="page__hero--overlay"
@@ -266,24 +262,25 @@ However, it seems safe to conclude that if you are influenced by what you read i
   </div>
 </div>
 
-As well as wondering how the mood differs across different media outlets, we asked whether we could find differences across the genders. Do the quotations in Quotebank reveal what we all know, that men are more moody than women?
-[comment]: #"Føler ikke vi kan bruke siste setningen."
+As well as wondering how the mood differs across different media outlets, we asked whether we could find differences across the genders. Do the quotations in Quotebank reveal any relationship between the genders, for instance that one is more moody than the other?
+
+[comment]: # "Tried to rephrase."
 
 Diving into the data set, we first see a difference in the number of quotations spoken by each gender. Of approximately 16 million quotations that could be attributed to men or women, only one-eight are attributed to women.
 
 {% include_relative /_plots/marcus/pie_genders.html %}
 
-Despite the differences in the number of quotations, we search after differences in the mood. Well, the data set reveals a glimt of our hypothesis: Quotations by women have slightly higher compound scores than those spoken by men. The difference is statistically significant but minimal. The average sentiment score for women is $0.196$ and $0.194$ for men. All over, the difference is too small to conclude on any differences between genders. Men and women seem to be just as positive.
+Despite the differences in the number of quotations, we could still search after differences in the mood. Well, the data set reveals a glimpse of our hypothesis: Quotations by women have slightly higher compound scores than those spoken by men. The difference is statistically significant, but minimal. The average sentiment score for women is $0.196$ and $0.194$ for men. All over, the difference is too small to conclude on any differences. Men and women seem to be just as moody.
 
-[comment]: #"glimt is unrecognized by Grammarly"
+[comment]: # "Glimt is unrecognized by Grammarly. Well, I meant glimpse."
 
 {% include_relative /_plots/marcus/line_compound_males_females_week.html %}
 
-The diagram above shows that the average scores across gender are pretty equal, but the compound score for females varies more than that of men over time. However, this does not point towards women being more moody, but is probably related to the lower number of quotations attributed to women. We also see this from visualizing the normalized distributions of the two subsets as below: 
+The diagram above shows that the average scores across gender are pretty equal, but the compound score for females varies more than that of men over time. However, this does not point towards women being more moody, but is probably related to the lower number of quotations attributed to women. We also see this from visualizing the normalized distributions of the two subsets as below:
 
 {% include_relative /_plots/marcus/line_dist_comp_males_females.html %}
 
- Summing up, we cannot point one gender out as the _moody gender_. However, maybe another group of the population differs from the rest of us?
+Summing up, we cannot point one gender out as the _moody gender_. However, maybe another group of the population differs from the rest of us?
 
 [comment]: # "Both polarity and subjectivity showed the same amount of difference, meaning little. We guess this is good news, as we wouldn't want to hold it against one gender to be more of one thing or another in the public discussion."
 
@@ -298,31 +295,36 @@ The diagram above shows that the average scores across gender are pretty equal, 
 Elected by the people, for the people. Politicians are elected to represent and work for the average Joe and thus have a great responsibility. It is, therefore, reasonable that the politicians receive significant attention from the Fourth Estate. By attributing the quotations in Quotebank to whether it was spoken by a politician or not, we see that about $2\%$ of the quotations belong to politicians.
 
 [comment]: # "Er politikere overrepresent i Quotebank? Må eventuelt se på prosent av befolkningen som er politikere."
-
 [comment]: # "Svar: har det noe å si? Men ja, de vil nok være det av natur"
 
 {% include_relative /_plots/marcus/pie_pol.html %}
 
-As politicians are elected to represent us, do they represent us in the sense of their mood? As of the data, the answer is no. While the average compound score of politicians was $0.156$, the mean compound score of the quotations in Quotebank was $0.191$. As the results are significant, we could say that politicians’ quotes are more negative than the others. The results are also reflected in the plot below. 
+As politicians are elected to represent us, do they represent us in the sense of their mood? As of the data, the answer is no. While the average compound score of politicians was $0.156$, the mean compound score of the quotations in Quotebank was $0.191$. As the results are significant, we could say that politicians’ quotes are more negative than the others. The results are also reflected in the plot below.
 
 {% include_relative /_plots/marcus/line_compound_pol_all_week.html %}
 
-We observe that the average compound score for the whole data set is consistently higher than the mean score for politicians. The score for politicians varies more, but that is likely due to low sample sizes. 
+We observe that the average compound score for the whole data set is consistently higher than the mean score for politicians. The score for politicians varies more, but that is likely due to low sample sizes.
 
 Furthermore, it is reasonable to believe that politicians base their decisions on factual information, even though this belief might have been weakened in the past years. It is intriguing to hope that Quotebank could give us answers to this through the subjectivity score computed by _TextBlob_. Below, you can see the distribution of subjectivity politicians’ subjectivity scores versus overall subjectivity.
 
 {% include_relative /_plots/marcus/bar_dist_sub_pol_all.html %}
-[comment]: #"Decrease bin size" 
+[comment]: # "Decrease bin size"
 
 Maybe slightly surprisingly, the subjectivity score for politicians is a bit lower than that of the overall data set, with a score of $0.107$ versus $0.120$. This indicates that politicians are slightly more objective than the average. This is, in itself, quite positive. Politicians should base their choices on factual information, and the data set indicates that they at least communicate this. However, one should remember the examples of subjectivity scores we started with. The computations of subjectivity scores are not a precise science, and simply using _objective_ words could give a better degree of objectivity. Do you remember the last “objective” example of Donald Trump describing “Sleepy Joe”? Maybe not the most precise measure of objectivity...
 
-## What Could We Improve?
+<div
+  class="page__hero--overlay"
+  style="height: 300px; background-image: url('./images/tools.jpg'); filter: grayscale(100%);">
+  <div class="wrapper">
+    <h1 class="page__title" itemprop="headline"> What Could We Improve? </h1>
+  </div>
+</div>
 
-Before concluding that everyone should quit their NYTimes subscription, start reading beauty magazines, and classify politicians as moody, we should evaluate the weaknesses of our analysis.
+Before concluding that everyone should quit their New York Times subscription, start reading celebrity magazines, and classify politicians as moody, we should take a look on the weaknesses of our analyses.
 
-The first and most apparent objection concerns the data. Quotebank is a vast dataset that gives unique insights into the media but only contains quotes. Quotations are only a small subset of the total text published in the press. Our conclusion about the mood in the media is thus only valid for quotations, not for mood in general. We believe it is plausible that articles containing positive quotes are also positive, but this is just our hypothesis. To determine the total mood in the media, further research must be done on other subsets of the media, not only quotations.
+The first and most apparent objection concerns the data. Quotebank is a vast data set giving unique insights in the media, but is only containing quotations. Quotations makes out only a small subset of the total text published by the media. Therefore, our conclusions on the media are only valid for the __quotations__ in the media, and not for the media in general. The quotations do not necessarily reflect the mood of the editorial staff. However, one might believe that articles containing positive quotations are mainly positive, but this is nothing but a hypothesis. To say anything about the total mood in the media, one must do further research on articles, comments and other texts as well.
 
-Secondly, as previously mentioned, sentiment analysis is not an exact science. The methods we used in this analysis solely consider the sentences as a bag of words. They are not taking into account the context of the words. To increase the robustness of our results, we did also test our hypothesis with TextBlob’s polarity score in addition to Vader’s compound score. The TextBlob polarity score works in the same way as Vader by using a lexicon to score individual words. The distributions for TextBlob and Vader can be seen below:
+Secondly, sentiment analysis is not a precise science. As previously mentioned, the methods we have utilized solely consider the sentences as bags of words. The methods do not take the context into accound. To increase the robustness of our resutls, we did also test our hypotheses using *TextBlob's* polarity score in addition to Vader’s compound score. *TextBlob's* polarity score works in the same manner as *Vader's* compund score, by using a lexicon to score individual words. The distributions for TextBlob and Vader are compared in the following plot:
 
 {% include_relative /_plots/comp_pol.html %}
 
@@ -334,6 +336,6 @@ Finally, it is important to not mistake correlation for causation. For example, 
 
 So, what have we learnt about the mood in the media?
 
-Through our analysis, we have confirmed and rejected some of our everyday hypotheses about the mood in the media. For example, ordinary people's quotations are more positive than politicians', celebrity magazines are generally more subjective than newspapers, and the late pandemic did indeed affect the media mood. However, if something like a Friday effect makes us happy towards the weekend, it is not reflected in the quotes we have worked with. 
+Through our analysis, we have confirmed and rejected some of our everyday hypotheses about the mood in the media. For example, ordinary people's quotations are more positive than politicians', celebrity magazines are generally more subjective than newspapers, and the late pandemic did indeed affect the media mood. However, if something like a Friday effect makes us happy towards the weekend, it is not reflected in the quotes we have worked with.
 
 So next time you hear a heated discussion about the mood in the media. Say, listen, I will tell you a thing or two about mood...
