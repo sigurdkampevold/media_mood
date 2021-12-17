@@ -385,3 +385,4 @@ Throughout our analyses, we have both confirmed and rejected some of our initial
 Even though we did not find evidence for some of our _everyday myths_, analyzing Quotebank revealed that COVID-19 affected the mood in the media negatively. Thus, the analyses have offered some results, even though we still don't know whether we love Mondays deep inside, or whether the dark winters lower our mood. If such effect exists, they are not reflected in the quotations we have analyzed.
 
 So next time you hear a heated discussion on the mood in the media, you could say "Listen, I will tell you a thing or two about mood."
+
