@@ -248,7 +248,7 @@ We can say that the mood of the quotations in the media doesn't seem to vary too
 
 Initially, it is reasonable to believe that the compound and subjectivity scores of a daily newspaper are different from those of a celebrity magazine. But does the Quotebank data set provide evidence for such a hypothesis? To investigate this, we focus on a subsample of the media outlets represented in Quotebank. The subsample is a selection of the most well-known English-writing newspapers and magazines aiming to represent different categories. As earlier, we use _Vader_ and _TextBlob_ to compute each quote's compound score and subjectivity score, eventually grouped by media outlet and outlet category.
 
-The following plot shows the relative amount of quotations in each of the chosen categories: Newspapers, sports newspapers, celebrity magazines, and "others.".
+The following plot shows the relative amount of quotations in each of the chosen categories: Newspapers, sports magazines, celebrity magazines, and "others.".
 
 {% include_relative /_plots/pieechart_category.html %}
 
@@ -262,7 +262,7 @@ For further investigations, we average the scores within each category, eventual
 
 {% include_relative /_plots/polarity_distribution_categories_same_plot.html %}
 
-The differences are significant. The amount of positive quotations in sports newspapers and celebrity magazines clearly surpasses the amount in the daily newspapers, having average compound scores of $0.27$ and $0.17$ versus $0.14$, respectively. This might be reasonable, as daily newspapers should cover all the suffering in society, while sports newspapers might focus on victorious athletes.
+The differences are significant. The amount of positive quotations in sports magazines and celebrity magazines clearly surpasses the amount in the daily newspapers, having average compound scores of $0.27$ and $0.17$ versus $0.14$, respectively. This might be reasonable, as daily newspapers should cover all the suffering in society, while sports magazines might focus on victorious athletes.
 
 However, analyses of our data set seem to suggest that if you are influenced by what you read in the media, put away your newspapers and start reading some sports news!
 
@@ -284,7 +284,7 @@ As well as wondering how the mood differs across different media outlets, we ask
 
 [comment]: # "Tried to rephrase."
 
-Diving into the data set, we first see a difference in the number of quotations spoken by each gender. Of approximately 16 million quotations that could be attributed to men or women, only one-eight are attributed to women.
+Diving into the data set, we first see a difference in the number of quotations spoken by each gender. Of approximately 16 million attributed quotations, only one-eight are attributed to women.
 
 {% include_relative /_plots/marcus/pie_genders.html %}
 
