@@ -288,7 +288,7 @@ Diving into the data set, we first see a difference in the number of quotations 
 
 {% include_relative /_plots/marcus/pie_genders.html %}
 
-Despite the differences in the number of quotations, we could still search after differences in the mood. Well, the data set reveals a glimpse of our hypothesis: Quotations by women have slightly higher compound scores than quotes by men. The difference is statistically significant, but minimal as can be seen in the plot below. All over, the difference is too small to conclude on any differences. Men and women seem to be just as happy.
+Despite the differences in the number of quotations, we could still search after differences in the mood. Well, the data set reveals a glimpse of our hypothesis: Quotations by women have slightly higher compound scores than quotes by men. The difference is statistically significant, but minimal, as can be seen in the plot below. All over, the difference is too small to conclude on any differences. Men and women seem to be just as happy.
 
 {% include_relative /_plots/marcus/line_dist_comp_males_females.html %}
 
