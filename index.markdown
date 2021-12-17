@@ -5,7 +5,7 @@ header:
   overlay_filter: 0.3
   overlay_image: /images/md-mahdi-8SQ_wsDC0uY-unsplash.jpg
   caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
-excerpt: Have you ever wondered whether the mood in the media differ throughout the week and across newspapers? We have.
+excerpt: Have you ever wondered whether the mood in the media differs throughout the week and across newspapers? We have.
 permalink: /
 intro:
   - excerpt: '*"The most important decision you take is to be in a good mood."* -- Voltaire'
