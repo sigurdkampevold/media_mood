@@ -85,7 +85,7 @@ In our analyses, we utilize the _Vader Lexicon_ in the _NLTK_ library to generat
      </blockquote>
 </div>
 
-The above quotation has a compound score of $-0.9891$, indicating that it is quite negative, as you probably could predict when reading it.
+The above quotation has a compound score of $-0.9891$, indicating that it is quite negative, as you probably predicted when reading it.
 
 <div>
     <blockquote>
