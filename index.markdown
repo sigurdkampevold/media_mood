@@ -312,25 +312,22 @@ Summing up, we cannot point one gender out as the _moody gender_. However, maybe
   </span>
 </div>
 
-Elected by the people, for the people. Politicians are elected to represent and work for the average Joe and thus have a great responsibility. It is, therefore, reasonable that the politicians receive significant attention from the Fourth Estate. By attributing the quotations in Quotebank to whether it was spoken by a politician or not, we see that about $2\%$ of the quotations belong to politicians.
-
-[comment]: # "Er politikere overrepresent i Quotebank? Må eventuelt se på prosent av befolkningen som er politikere."
-[comment]: # "Svar: har det noe å si? Men ja, de vil nok være det av natur"
+Elected by the people, for the people. Politicians are elected to represent and work for the average Joe and thus have a great responsibility. It is, therefore, reasonable that the politicians receive significant attention from the Fourth Estate. By attributing the quotations in Quotebank to whether it was said by a politician or not, we see that about $3\%$ of the quotations belong to politicians.
 
 {% include_relative /_plots/marcus/pie_pol.html %}
 
-As politicians are elected to represent us, do they represent us in the sense of their mood? As of the data, the answer is no. While the average compound score of politicians was $0.156$, the mean compound score of the quotations in Quotebank was $0.191$. As the results are significant, we could say that politicians’ quotes are more negative than the others. The results are also reflected in the plot below.
+As politicians are elected to represent us, do they represent us in the sense of their mood? As of the data, the answer is no. While the average compound score of politicians was $0.156$, the mean compound score of the quotations in Quotebank was $0.191$. As the results are significant, we could say that politicians’ quotes are more negative than the others.
 
 {% include_relative /_plots/marcus/line_compound_pol_all_week.html %}
 
 We observe that the average compound score for the whole data set is consistently higher than the mean score for politicians. The score for politicians varies more, but that is likely due to low sample sizes.
 
-Furthermore, it is reasonable to believe that politicians base their decisions on factual information, even though this belief might have been weakened in the past years. It is intriguing to hope that Quotebank could give us answers to this through the subjectivity score computed by _TextBlob_. Below, you can see the distribution of subjectivity politicians’ subjectivity scores versus overall subjectivity.
+Furthermore, it is reasonable to believe that politicians base their decisions on factual information, even though this belief might have been weakened in the past years. It is intriguing to hope that Quotebank could answer this through the subjectivity score computed by _TextBlob_. Below, you can see the distribution of politicians’ subjectivity scores versus overall subjectivity.
 
 {% include_relative /_plots/marcus/bar_dist_sub_pol_all.html %}
 [comment]: # "Decrease bin size"
 
-The subjectivity score for politicians is a bit lower than that of the overall data set, with a score of $0.107$ versus $0.120$. This indicates that politicians are slightly more objective than the average. This is, in itself, quite positive. Politicians should base their choices on factual information, and the data set indicates that they at least communicate this. However, one should remember the examples of subjectivity scores we started with. The computations of subjectivity scores are not a precise science, and simply using _objective_ words could give a better degree of objectivity. Do you remember the last “objective” example of Donald Trump describing “Sleepy Joe”? Maybe not the most precise measure of objectivity...
+The subjectivity score for politicians is a bit lower than that of the overall data set, with a score of $0.107$ versus $0.120$. This indicates that politicians are slightly more objective than the average. This is, in itself, quite positive. Politicians should base their choices on factual information, and the data set indicates that they at least communicate this. However, one should remember the examples of subjectivity scores we started with. The computations of subjectivity scores are not a precise science, and simply using _objective_ words could give a better degree of objectivity. Do you remember the last “objective” example of Donald Trump describing “Sleepy Joe”? Maybe not the most precise measure of objectivity.
 
 <div
   class="page__hero--overlay"
@@ -348,15 +345,15 @@ The subjectivity score for politicians is a bit lower than that of the overall d
 
 Before concluding that everyone should quit their New York Times subscription, start reading celebrity magazines, and classify politicians as moody, we should take a look on the weaknesses of our analyses.
 
-The first and most apparent objection concerns the data. Quotebank is a vast data set giving unique insights in the media, but is only containing quotations. Quotations makes out only a small subset of the total text published by the media. Therefore, our conclusions on the media are only valid for the **quotations** in the media, and not for the media in general. The quotations do not necessarily reflect the mood of the editorial staff. However, one might believe that articles containing positive quotations are mainly positive, but this is nothing but a hypothesis. To say anything about the total mood in the media, one must do further research on articles, comments and other texts as well.
+The first and most apparent objection concerns the data. Quotebank is a vast data set giving unique insights in the media, but is only containing quotations. Quotations make out only a small subset of the total text published by the media. Therefore, our conclusions on the media are only valid for the **quotations** in the media, and not for the media in general. The quotations do not necessarily reflect the mood of the editorial staff. However, one might believe that articles containing positive quotations are mainly positive, but this is nothing but a hypothesis. To say anything about the total mood in the media, one must do further research on articles, comments and other content as well.
 
 Secondly, sentiment analysis is not a precise science. As previously mentioned, the methods we have utilized solely consider the sentences as bags of words. The methods do not take the context into account. To increase the robustness of our results, we did also test our hypotheses using _TextBlob's_ polarity score in addition to Vader’s compound score. _TextBlob's_ polarity score works in the same manner as _Vader's_ compund score, by using a lexicon to score individual words. The distributions for TextBlob and Vader are compared in the following plot:
 
 {% include_relative /_plots/comp_pol.html %}
 
-The distributions for the two measures are evidently different. _Vader's_ compound score is more evenly spread out, while the polarity score has few extreme values. Even though the distributions of the scores for _TextBlob_ differs from the one for _Vader_, the test results are similar. This is because they agree on the relative direction, even though the absolute value of the scores differs. This indicates that our results are relatively robust. However, neither _TextBlob_ or _Vader_ consider the content, and a smarter sentiment analysis tool could be utilized to further improve our analyses. For instance, _BERT_, the natural language processing model of Google, takes the context of sentences and words into consideration. _BERT_ has outperformed more straightforward sentiment analysis methods, like _Vader_, for many applications, and could have improved our results' accuracy.
+The distributions for the two measures are evidently different. _Vader's_ compound score is more evenly spread out, while _TextBlob's_ polarity score has fewer extreme values. Even though the distributions of the scores for _TextBlob_ differs from the one for _Vader_, the test results are similar. This is because they agree on the relative direction, even though the absolute value of the scores differs. This indicates that our results are relatively robust. However, neither _TextBlob_ or _Vader_ consider the context, and a smarter sentiment analysis tool could be utilized to further improve our analyses. For instance, _BERT_, the natural language processing model of Google, takes the context of sentences and words into consideration. _BERT_ has outperformed more straightforward sentiment analysis methods, like _Vader_, for many applications, and could have improved our results' accuracy.
 
-Finally, we would like to point out the importance of not mistaking correlation for causation. For instance, for the COVID-19 effect, even though there is statistically significant evidence for the mood in the quotations being drastically lower when the pandemic hit the western world, we cannot conclude that this is caused by COVID-19. There could be another variable causing the mood and the compound to drop. To further investigate ths, we could utilize instrumental variables to isolate the effect of the pandemic.
+Finally, we would like to point out the importance of not mistaking correlation for causation. For instance, for the COVID-19 effect, even though there is statistically significant evidence for the mood in the quotations being drastically lower when the pandemic hit, we cannot conclude that this is caused by COVID-19. There could be another variable causing the mood and the compound score to drop.
 
 <div
   class="page__hero--overlay"
@@ -374,7 +371,7 @@ Finally, we would like to point out the importance of not mistaking correlation 
 
 Throughout our analyses, we have both confirmed and rejected some of our initial ideas about the mood, and how it is reflected in the media. Analyzing the quotations in Quotebank have shown us that people's quotations are more positive than those of politicans, while celebrity magazines are generally more subjective than daily newspapers.
 
-Even though we did not find evidence for some of our _everyday myths_, analyzing Quotebank revealed that COVID-19 affected the mood in the media negatively. Thus, the analyses have offered some results, even though we still don't know whether we love Mondays deep inside, or whether the dark winters lower our mood. If such effect exists, they are not reflected in the quotations we have analyzed.
+Even though we did not find evidence for some of our _everyday myths_, analyzing Quotebank revealed that the COVID-19 pandemic may have affected the mood in the media negatively. Thus, the analyses have provided some results, even though we can't say that we love Mondays deep inside, or that the dark winters lower our mood. If such effect exists, they are not reflected in the quotations we have analyzed.
 
-So next time you hear a heated discussion on the mood in the media, you could say "Listen, I will tell you a thing or two about mood."
+So next time you hear a heated discussion on the mood in the media, say: "Listen, I will tell you a thing or two about mood."
 
