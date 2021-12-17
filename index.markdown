@@ -103,7 +103,7 @@ On the other hand, the quotation above receives a compound score of $0.8176$. Th
      </blockquote>
 </div>
 
-As you might have thought, the art of dedicating compound scores to quotations is not perfect. Our tool, _Vader_, represents each document or text as a bag of words without capturing the information in word proximity or context. Hence, a lot of the contextual information is lost. Moreover, _Vader_ gives additional weight to unique words and phrases, for instance, words written in uppercase or emojis. The methods are based on actual human research and are therefore not considered a machine learning method. On the other hand, the algorithm is likely not to discover the underlying context. It could thus mark a quotation positive, even if it considers a grave matter, such as in the quote above.
+As you might have thought, the art of dedicating compound scores to quotations is not perfect. Our tool, _Vader_, represents each document or text as a bag of words without capturing the information in word proximity or context. Hence, a lot of the contextual information is lost. Moreover, _Vader_ gives additional weight to unique words and phrases, for instance, words written in uppercase or emojis. On the other hand, the algorithm is not likely to discover the underlying context. It could thus mark a quotation positive, even if it considers a grave matter, such as the quote above.
 
 [comment]: # Fjerne setningen om ML, evt. si litt om human research uten å nevne ML.
 
@@ -142,11 +142,11 @@ So, after looking at some examples of quotes and their respective compound and s
 
 {% include_relative /_plots/comp_dist.html %}
 
-Not surprisingly, the distribution is heavily centered around a compound score of $0.0$. As the compound score of _Vader_ is computed through averaging and only gives weight to certain words, this seems reasonable. However, we see that the distribution appears to be heavier on the positive values. This may indicate that the quotations in the media are more positive than negative, although neutrality sweeps the board.
+Not surprisingly, the distribution is heavily centered around a compound score of $0.0$. As the compound score of _Vader_ is computed through averaging and only gives weight to certain words, this seems reasonable. However, we see that the distribution appears to be heavier towards the positive values. This may indicate that the quotations in the media are more positive than negative, although neutrality sweeps the board.
 
 {% include_relative /_plots/sub_dist.html %}
 
-Over to the subjectivity, a score of $0.0$ is once again the most frequent. This may be more surprising, as quotations and citations often refer to the speaker's opinions. However, it seems like _TextBlob_'s methods overwhelmingly often end up with a score of $0.0$. This is because _TextBlob_ only gives scores to words existent in the lexicon. There are many quotes with no words in the lexicon, thereby receiving a score of $0.0$. Initially, one might think that as _TextBlob_ doesn't capture the underlying context, it doesn't extract the subjectivity either. Finally, we note that the remaining distribution is centered around $0.5$ but has a clear upswing towards $1.0$.
+Over to the subjectivity, a score of $0.0$ is once again the most frequent. This may be more surprising, as quotations and citations often refer to the speaker's opinions. However, it seems like _TextBlob_'s methods overwhelmingly often end up with a score of $0.0$. This is because _TextBlob_ only gives scores to words existent in the _TextBlob_ lexicon. There are many quotes with no words in the lexicon, thereby receiving a score of $0.0$. Initially, one might think that as _TextBlob_ doesn't capture the underlying context, it doesn't extract the subjectivity either.
 
 <div
   class="page__hero--overlay"
@@ -164,7 +164,7 @@ Over to the subjectivity, a score of $0.0$ is once again the most frequent. This
 
 People talk about their mood swings in everyday talk. We want to investigate if such _everydays myths_ are present in the quotations of the media as well. To concretize our work, we decided to examine whether the mood evolves during the week and across the year's seasons.
 
-But first, we have to zoom out. How can we even draw any conclusions from our data set and analyses only by utilizing libraries for sentiment analysis and making visualizations? Luckily, we have a solution.
+But first, we must zoom out. How can we even draw any conclusions from our data set and analyses only by utilizing libraries for sentiment analysis and making visualizations? Luckily, we have a solution.
 
 ## Statistical Tests
 
@@ -184,11 +184,11 @@ As we will use the _compound score_ of _Vader_ to measure the mood in the media,
 
 {% include_relative /_plots/line_comp.html %}
 
-The vertical axis shows that the compound scores are primarily around $0.12$ with some slight variances. However, there are some significant deviations for the compound scores in 2016. The Argus-eyed reader may remember that the data set contains fewer quotations from the same period as the deviations, with only some hundreds of quotes a day. Therefore, it is likely that the deviations result from a lower amount of quotations, giving higher variance.
+The vertical axis shows that the daily average compound score mostly is in the 0.15-0.21 range. However, there are some significant deviations for the compound scores in 2016 and some smaller deviations in other years. The Argus-eyed reader may remember that the data set contains fewer quotations in the corresponding periods, with only some hundreds of quotes a day. Therefore, it is likely that the deviations result from a lower amount of quotations, giving higher variance.
 
 ## _The Weekend Effect_
 
-Indeed, as part of everyday talk, people believe that their mood gets better on the weekend and towards the weekend. _The soon weekend-feeling_, _the friday-feeling_ and so on, people love the feeling of more autonomy, better sleep and a desired freedom from the stressful everyday life. Actually, [researchers](https://www.rochester.edu/news/show.php?id=3525) have found the mood to be better at the end of the week. Therefore, we became interested in whether the quotations of the media reflect this as well.
+Indeed, as part of everyday talk, people believe that their mood gets better towards the weekend. _The soon weekend-feeling_, _the friday-feeling_ and so on, people love the feeling of more autonomy, better sleep and a desired freedom from the stressful everyday life. Actually, [researchers](https://www.rochester.edu/news/show.php?id=3525) have found the mood to be better at the end of the week. Therefore, we became interested in whether the quotations of the media reflect this as well.
 
 To further understand the topic, we head off by looking at the number of media quotations each weekday:
 
@@ -198,9 +198,7 @@ As expected, more quotations originate from weekdays than from the weekend. The 
 
 {% include_relative /_plots/boxplot_day.html %}
 
-Investigating the boxplot, we see that the compound scores across the week are very similar. The mean scores for the different days are approximately equal, once again varying around $0.2$. Actually, the median compound is highest for Thursdays, Mondays, and Sundays. However, the results are too similar to conclude any significant differences in the mood across weekdays.
-
-[comment]: # "How does the mean vary from the median in the above boxplot?"
+Investigating the boxplot, we see that the compound scores across the week are very similar. The median scores for the different days are quite similar, but have some variation. However, the mean scores are too similar to conclude on any significant differences in the mood across weekdays.
 
 ## _The Season Effect_
 
@@ -222,7 +220,7 @@ Hitting of the analyses on how the mood evolves throughout time, we illustrated 
 
 {% include_relative /_plots/covid_line.html %}
 
-The compound score above drops drastically in March 2020. There are other sections of the plot where the compound also drops drastically, but this is the only section with no significant reduction in quotations. Moreover, the mood stays down for some time, actually until the end of the data set.
+The compound score above drops drastically in March 2020. There are other sections of the plot where the compound drops, but it quickly bounces back. For March 2020, the mood seems to stabilize at a lower level.
 
 As an illuminated reader, you have surely drawn the lines already. A particular pandemic hit the western world in March 2020, resulting in lockdowns, fright, and economic cracks. The mood in the population indeed fell in this period, and the diagram points out that the same yielded in the media. The Quotebank dataset provides a unique opportunity to assess how the mood in the media changed during the first lockdowns, and we decided to dive further into the topic.
 
