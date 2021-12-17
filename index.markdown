@@ -296,7 +296,6 @@ The diagram below shows that the average scores across gender are pretty equal, 
 
 {% include_relative /_plots/marcus/line_compound_males_females_week.html %}
 
-
 Summing up, we cannot point out one gender as the _moody gender_. However, maybe another group of the population differs from the rest of us?
 
 <div
