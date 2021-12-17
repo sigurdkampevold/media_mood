@@ -184,7 +184,7 @@ As we will use the _compound score_ of _Vader_ to measure the mood in the media,
 
 {% include_relative /_plots/line_comp.html %}
 
-The vertical axis shows that the daily average compound score mostly is in the 0.15-0.21 range. However, there are some significant deviations for the compound scores in 2016 and some smaller deviations in other years. The Argus-eyed reader may remember that the data set contains fewer quotations in the corresponding periods, with only some hundreds of quotes a day. Therefore, it is likely that the deviations result from a lower amount of quotations, giving higher variance.
+The vertical axis shows that the daily average compound score mostly is in the $0.15-0.21$ range. However, there are some significant deviations for the compound scores in 2016 and some smaller deviations in other years. The Argus-eyed reader may remember that the data set contains fewer quotations in the corresponding periods, with only some hundreds of quotes a day. Therefore, it is likely that the deviations result from a lower amount of quotations, giving higher variance.
 
 ## _The Weekend Effect_
 
@@ -228,9 +228,7 @@ To assess the changes in the mood, we will study the compound score in the media
 
 The mean compound score of pre-COVID is $0.19$, versus the mean compound score of COVID at $0.16$. In other words, the compound score was $%18.75$ higher pre-COVID. Thus, the mood in the media was better before lockdowns.
 
-Eventually, these results are significant by our methods. We could there conclude, maybe not surprisingly, that the COVID-19 pandemic affected the mood in the media in a negative way.
-
-[comment]: # "Tried to simplify the last paragraph."
+Unsurprisingly, our results provide evidence towards the _The COVID-19 Effect_. However, it is important to keep in mind that the results do not prove causation, only correlation. That is, there could be another factor, outside our analysis, that impacted the mood in media.
 
 <div
   class="page__hero--overlay"
@@ -250,7 +248,7 @@ We can say that the mood of the quotations in the media doesn't seem to vary too
 
 Initially, it is reasonable to believe that the compound and subjectivity scores of a daily newspaper are different from those of a celebrity magazine. But does the Quotebank data set provide evidence for such a hypothesis? To investigate this, we focus on a subsample of the media outlets represented in Quotebank. The subsample is a selection of the most well-known English-writing newspapers and magazines aiming to represent different categories. As earlier, we use _Vader_ and _TextBlob_ to compute each quote's compound score and subjectivity score, eventually grouped by media outlet and outlet category.
 
-The following plot show the relative amount of quotations in each of the chosen categories: Newspapers, sports newspapers, celebrity magazines, and "others.".
+The following plot shows the relative amount of quotations in each of the chosen categories: Newspapers, sports newspapers, celebrity magazines, and "others.".
 
 {% include_relative /_plots/pieechart_category.html %}
 
@@ -258,7 +256,7 @@ Starting the analyses, we plot the average compound score against the average su
 
 {% include_relative /_plots/scatterplot_medias.html %}
 
-Clearly, there is a difference! Even though the outlets are situated within a relatively tiny part of the area, there are significant differences in the two sores. Let's consider two extremes: the New York Times and ESPN. The reputable New York Times, a daily newspaper, has an average compound score of $0.085$, while the sports magazine ESPN, providing the latest updates from the American sports life, receives a score of $0.278$ - more than three times as high. On the other hand, the subjectivity scores of the outlets are $0.344$ and $0.405$, respectively. The differences are clear and statistically significant by our methods. Is this an example of a general trend for newspapers and sports magazines?
+Clearly, there is a difference! Even though the outlets are situated within a relatively tiny part of the area, there are significant differences in the two scores. Let's consider two extremes: the New York Times and ESPN. The reputable New York Times, a daily newspaper, has an average compound score of $0.085$, while the sports magazine ESPN, providing the latest updates from the American sports life, receives a score of $0.278$ - more than three times as high. On the other hand, the subjectivity scores of the outlets are $0.344$ and $0.405$, respectively. The differences are clear and statistically significant by our methods. Is this an example of a general trend for newspapers and sports magazines?
 
 For further investigations, we average the scores within each category, eventually getting the following distributions:
 
@@ -267,8 +265,6 @@ For further investigations, we average the scores within each category, eventual
 The differences are significant. The amount of positive quotations in sports newspapers and celebrity magazines clearly surpasses the amount in the daily newspapers, having average compound scores of $0.27$ and $0.17$ versus $0.14$, respectively. This might be reasonable, as daily newspapers should cover all the suffering in society, while sports newspapers might focus on victorious athletes.
 
 However, analyses of our data set seem to suggest that if you are influenced by what you read in the media, put away your newspapers and start reading some sports news!
-
-[comment]: # "Tried to rephrase the conclusion."
 
 <div
   class="page__hero--overlay"
@@ -284,7 +280,7 @@ However, analyses of our data set seem to suggest that if you are influenced by 
   </span>
 </div>
 
-As well as wondering how the mood differs across different media outlets, we asked whether we could find differences across the genders. Do the quotations in Quotebank reveal any relationship between the genders, for instance that one is more moody than the other?
+As well as wondering how the mood differs across different media outlets, we asked whether we could find any differences across the genders. Do the quotations in Quotebank reveal any relationship between the genders, for instance that one is more moody than the other?
 
 [comment]: # "Tried to rephrase."
 
