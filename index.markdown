@@ -105,8 +105,6 @@ On the other hand, the quotation above receives a compound score of $0.8176$. Th
 
 As you might have thought, the art of dedicating compound scores to quotations is not perfect. Our tool, _Vader_, represents each document or text as a bag of words without capturing the information in word proximity or context. Hence, a lot of the contextual information is lost. Moreover, _Vader_ gives additional weight to unique words and phrases, for instance, words written in uppercase or emojis. On the other hand, the algorithm is not likely to discover the underlying context. It could thus mark a quotation positive, even if it considers a grave matter, such as the quote above.
 
-[comment]: # Fjerne setningen om ML, evt. si litt om human research uten å nevne ML.
-
 #### _Subjectivity Scores_ -- Uhm?
 
 To make our analyses richer, we will also utilize a measure of _subjectivity_. Here, we use the _TextBlob_ library to compute the subjectivity scores of the quotes. The subjectivity score indicates whether a quote's content is subjective, objective, or somewhere in-between. For example, a subjectivity score of $1.00$ indicates a subjective quote, while a score of $0.00$ indicates objectivity. In other words, the subjectivity scores indicate the amount of personal opinions and factual information contained in a text, phrase, or quote.
@@ -282,8 +280,6 @@ However, analyses of our data set seem to suggest that if you are influenced by 
 
 As well as wondering how the mood differs across different media outlets, we asked whether we could find any differences across the genders. Do the quotations in Quotebank reveal any relationship between the genders, for instance that one is more moody than the other?
 
-[comment]: # "Tried to rephrase."
-
 Diving into the data set, we first see a difference in the number of quotations spoken by each gender. Of approximately 16 million attributed quotations, only one-eight are attributed to women.
 
 {% include_relative /_plots/marcus/pie_genders.html %}
@@ -325,7 +321,6 @@ We observe that the average compound score for the whole data set is consistentl
 Furthermore, it is reasonable to believe that politicians base their decisions on factual information, even though this belief might have been weakened in the past years. It is intriguing to hope that Quotebank could answer this through the subjectivity score computed by _TextBlob_. Below, you can see the distribution of politicians’ subjectivity scores versus overall subjectivity.
 
 {% include_relative /_plots/marcus/bar_dist_sub_pol_all.html %}
-[comment]: # "Decrease bin size"
 
 The subjectivity score for politicians is a bit lower than that of the overall data set, with a score of $0.107$ versus $0.120$. This indicates that politicians are slightly more objective than the average. This is, in itself, quite positive. Politicians should base their choices on factual information, and the data set indicates that they at least communicate this. However, one should remember the examples of subjectivity scores we started with. The computations of subjectivity scores are not a precise science, and simply using _objective_ words could give a better degree of objectivity. Do you remember the last “objective” example of Donald Trump describing “Sleepy Joe”? Maybe not the most precise measure of objectivity.
 
@@ -374,4 +369,3 @@ Throughout our analyses, we have both confirmed and rejected some of our initial
 Even though we did not find evidence for some of our _everyday myths_, analyzing Quotebank revealed that the COVID-19 pandemic may have affected the mood in the media negatively. Thus, the analyses have provided some results, even though we can't say that we love Mondays deep inside, or that the dark winters lower our mood. If such effect exists, they are not reflected in the quotations we have analyzed.
 
 So next time you hear a heated discussion on the mood in the media, say: "Listen, I will tell you a thing or two about mood."
-
