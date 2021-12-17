@@ -288,13 +288,11 @@ Diving into the data set, we first see a difference in the number of quotations 
 
 {% include_relative /_plots/marcus/pie_genders.html %}
 
-Despite the differences in the number of quotations, we could still search after differences in the mood. Well, the data set reveals a glimpse of our hypothesis: Quotations by women have slightly higher compound scores than those spoken by men. The difference is statistically significant, but minimal. The average sentiment score for women is $0.196$ and $0.194$ for men. All over, the difference is too small to conclude on any differences. Men and women seem to be just as moody.
-
-[comment]: # "Glimt is unrecognized by Grammarly. Well, I meant glimpse."
+Despite the differences in the number of quotations, we could still search after differences in the mood. Well, the data set reveals a glimpse of our hypothesis: Quotations by women have slightly higher compound scores than quotes by men. The difference is statistically significant, but minimal. All over, the difference is too small to conclude on any differences. Men and women seem to be just as happy.
 
 {% include_relative /_plots/marcus/line_compound_males_females_week.html %}
 
-The diagram above shows that the average scores across gender are pretty equal, but the compound score for females varies more than that of men over time. However, this does not point towards women being more moody, but is probably related to the lower number of quotations attributed to women. We also see this from visualizing the normalized distributions of the two subsets as below:
+The diagram above shows that the average scores across gender are pretty equal, but the compound score for females varies more than that of men over time. However, this does not prove that women are more moody, but is probably related to the lower number of quotations attributed to women. We also see this from visualizing the normalized distributions of the two subsets as below:
 
 {% include_relative /_plots/marcus/line_dist_comp_males_females.html %}
 
